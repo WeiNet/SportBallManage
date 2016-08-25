@@ -6,13 +6,13 @@
     <title>无标题页</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-1.8.3.min.js" type="text/javascript"></script>
 
-    <script src="jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="../../Styles/jquery.tmpl.min.js" type="text/javascript"></script>
 
-    <script src="jquery.json.js" type="text/javascript"></script>
+    <script src="../../Styles/jquery.json.js" type="text/javascript"></script>
 
-    <script src="unlimitdigital.webcontrols.pager.js" type="text/javascript"></script>
+    <script src="../../Styles/unlimitdigital.webcontrols.pager.js" type="text/javascript"></script>
 
     <script src="game.js" type="text/javascript"></script>
     <link href="../../Styles/football.css" rel="stylesheet" />
