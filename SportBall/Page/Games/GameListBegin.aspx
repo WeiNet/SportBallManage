@@ -71,9 +71,13 @@
     </div>
     <input id="hidPlayType" name="hidPlayType" type="hidden" value="7" />
     <div style="width: 90%; margin: auto">
-        <table class="table">
-            <tr>
-                <td class="auto-style1">
+       <table class="rightbartable" cellspacing="0" cellpadding="0" border="0">
+        
+        <tr>
+            <td class="ct-lf">
+            </td>
+            <td class="ctmain">
+                <div class="tabtop">
                     <select name="drpCourtType" id="drpCourtType">
                         <option value="0">全部</option>
                         <option value="1">全場</option>
@@ -94,7 +98,7 @@
                         <option value="60">每60秒更新</option>
                     </select>
                     <span id="lblMintus"></span>
-                    <input type="button" name="btnUpdate" value="更新" id="btnUpdate" class="button" />
+                    <input type="button" name="btnUpdate" value="更新" id="btnUpdate" class="STYLE1" />
                     <select name="drpPageSize" onchange="" id="drpPageSize">
                         <option value="15">每頁顯示15筆</option>
                         <option value="30">每頁顯示30筆</option>
@@ -103,10 +107,10 @@
                         <option value="100">每頁顯示100筆</option>
                     </select>
                     排序
-                        <select name="drpSort" id="drpSort">
-                            <option selected="selected" value="0">按比赛时间</option>
-                            <option value="1">按球赛場次</option>
-                        </select>
+                    <select name="drpSort" id="drpSort">
+                        <option selected="selected" value="0">按比赛时间</option>
+                        <option value="1">按球赛場次</option>
+                    </select>
                     <select name="drpAccDate" id="drpAccDate" style="display: none">
                     </select>
                     <select name="drpSetting" id="drpSetting">
@@ -116,43 +120,76 @@
                         <option value="6">回滚球</option>
                     </select>
                     <span id="footContainerId"></span>
-                    <input type="button" onclick="openLeague()" value="选择联盟" class="button" />
-                </td>
-            </tr>
-        </table>
-        <table class="grid">
-            <tr>
-                <th>帳務日期</th>
-                <th>比賽時間</th>
-                <th>球隊</th>
-                <th>獨贏</th>
-                <th>讓分</th>
-                <th>大小</th>
-                <th>单双</th>
-                <th>操作</th>
-                <th>
-                    <input id="chkAllGame" type="checkbox" onclick="checkAllGame(this);" />
-                </th>
-            </tr>
-            <tbody id="gameContainerId">
-            </tbody>
-        </table>
-        <!--footballs end-->
-        <!--选择联盟-->
-        <div class="allianceFlow" style="display: none" id="divLeague">
-            <p class="topbox">
-                <input type="checkbox" onclick="checkAllLeague(this)" id="chkAll" value="" />所有聯盟
-            </p>
-            <ul id="leagueContainerId">
-            </ul>
-            <div class="bottonbtn">
-                <input type="button" onclick="selectLeague()" value="確定" id="btnSure" />
-                <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel" />
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(function () { pageLoad(); });
-    </script>
+                    <input type="button" onclick="openLeague()" value="选择联盟" class="btnlm" />
+                </div>
+                <div class="footballs">
+                    <table cellspacing="0" cellpadding="0" border="0" class="correct2">
+                        <tr class="headpink">
+                            <td>
+                                帳務日期
+                            </td>
+                            <td>
+                                比賽時間
+                            </td>
+                            <td>
+                                球隊
+                            </td>
+                            <td>
+                                獨贏
+                            </td>
+                            <td>
+                                讓分
+                            </td>
+                            <td>
+                                大小
+                            </td>
+                            <td>
+                                单双
+                            </td>
+                            <td>
+                                操作
+                            </td>
+                            <td class="mgmiddle">
+                                <input id="chkAllGame" type="checkbox" onclick="checkAllGame(this);" />
+                            </td>
+                        </tr>
+                        <tbody id="gameContainerId">
+                        </tbody>
+                    </table>
+                </div>
+                <!--footballs end-->
+                <!--选择联盟-->
+                <div class="allianceFlow" style="display: none" id="divLeague">
+                         <input type="button" onclick="selectLeague()" value="確定" id="btnConfirm" />
+                        <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel1" />
+                    <p class="topbox">
+                        <input type="checkbox" onclick="checkAllLeague(this)" id="chkAll" value="" />所有聯盟</p>
+                    <ul id="leagueContainerId">
+                    </ul>
+                    <div class="bottonbtn">
+                        <input type="button" onclick="selectLeague()" value="確定" id="btnSure" />
+                        <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel" />
+                    </div>
+                </div>
+                <!--选择联盟 end-->
+            </td>
+            <td class="ct-rg">
+            </td>
+        </tr>
+        <tr>
+            <td class="bt-lf">
+            </td>
+            <td class="bt-ct">
+            </td>
+            <td class="bt-rg">
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<script type="text/javascript">
+    $(function () { pageLoad(); });
+</script>
 </asp:Content>
 

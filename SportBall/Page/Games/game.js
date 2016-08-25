@@ -906,7 +906,7 @@ function changeStatus(actionId, idList, playType) {//改变状态
     $.ajax({
         type: "post",
         dataType: "json",//返回json格式的数据
-        url: "game_ajax.aspx",
+        url: "GameAjax.aspx",
         cache: false,
         async: true,
         data: {
@@ -963,7 +963,7 @@ function getTeamList(obj, flag) {
     $.ajax({
         type: "post",
         dataType: "json",//返回json格式的数据
-        url: "game_ajax.aspx",
+        url: "GameAjax.aspx",
         cache: false,
         async: true,
         data: {
@@ -1185,7 +1185,7 @@ function changeRate(nid, sFiled, nValue) {//改变rate
     $.ajax({
         type: "post",
         dataType: "json",//返回json格式的数据
-        url: "game_ajax.aspx",
+        url: "GameAjax.aspx",
         cache: false,
         async: true,
         data: {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
-  public partial class Gamelist  : System.Web.UI.Page
+  public partial class Gamelist  :BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
