@@ -83,15 +83,15 @@ public class BasePage : System.Web.UI.Page
         string strScript = "";
         //頁面相應的編碼方式
         ////公用JS函數        
-        strScript += "<script type='text/javascript' src='/Scripts/Common.js'></script>\n";
-        strScript += "<script type='text/javascript' src='/Scripts/MessageBox.js'></script>\n";
+        //strScript += "<script type='text/javascript' src='/Scripts/Common.js'></script>\n";
+        //strScript += "<script type='text/javascript' src='/Scripts/MessageBox.js'></script>\n";
         strScript += "<script type='text/javascript' src='/Scripts/Public.js'></script>\n";
-        strScript += "<script type='text/javascript' src='/Scripts/jquery-1.7.2.min.js'></script>\n";
-        strScript += "<script type='text/javascript' src='/Scripts/jquery-ui-1.8.20.custom.min.js'></script>\n";
+        //strScript += "<script type='text/javascript' src='/Scripts/jquery-1.7.2.min.js'></script>\n";
+        //strScript += "<script type='text/javascript' src='/Scripts/jquery-ui-1.8.20.custom.min.js'></script>\n";
         strScript += "<script type='text/javascript' src='/Scripts/Common.js'></script>\n";
         strScript += "<script type='text/javascript' src='/Scripts/MessageBox.js'></script>\n";
-        strScript += "<script type='text/javascript' src='/Scripts/jquery-1.7.2.min.js'></script>\n";
-        strScript += "<script type='text/javascript' src='/Scripts/jquery-ui-1.8.20.custom.min.js'></script>\n"; 
+        //strScript += "<script type='text/javascript' src='/Scripts/jquery-1.7.2.min.js'></script>\n";
+        //strScript += "<script type='text/javascript' src='/Scripts/jquery-ui-1.8.20.custom.min.js'></script>\n"; 
         this.ClientScript.RegisterStartupScript(this.Page.GetType(), "basePageScript", strScript); //RegisterStartupScript
     }
     private void SetSession()
