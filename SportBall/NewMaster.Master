@@ -1,0 +1,302 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewMaster.master.cs" Inherits="SportBall.Styles.NewMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>后台管理系统</title>
+
+    <link rel="stylesheet" href="/Styles/bootstrap.css" />
+    <link rel="stylesheet" href="/Styles/css.css" />
+    <link href="/Styles/master.css" rel="stylesheet" />
+    <link href="Styles/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="/Scripts/jquery1.9.0.min.js"></script> 
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/sdmenu.js"></script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header11">
+            <div class="logo">
+                <img src="/Images/logo.png" />
+            </div>
+            <div class="header-right">
+                <i class="icon-question-sign icon-white"></i><a href="#">帮助</a> <i class="icon-off icon-white"></i><a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">注销</a> <i class="icon-user icon-white"></i><a ><asp:Label runat="server" ID="username" Text="11"></asp:Label></a> <i class="icon-envelope icon-white"></i><a href="#">发送短信</a>
+                <div id="modal-container-973558" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" style="width: 300px; margin-left: -150px; top: 30%">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×</button>
+                        <h3 id="myModalLabel">注销系统
+                        </h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            您确定要注销退出系统吗？
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">
+                            关闭</button>
+
+                        <a class="btn btn-primary" style="line-height: 20px;" href="/Page/Login.aspx?ACT=Logout">确定退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 顶部 -->
+        <div id="middle">
+            <div class="left">
+
+                <script type="text/javascript">
+                    var myMenu;
+                    window.onload = function () {
+                        myMenu = new SDMenu("my_menu");
+                        myMenu.init();
+                    };
+                </script>
+
+                <div id="my_menu" class="sdmenu">
+                    <div>
+                        <span>系统管理</span> <a href="/Page/Welcome.aspx">每日过账</a> <a href="/Page/SystemSet/SystemSet.aspx">系统设定</a>
+                        <a href="/Page/GameLimit.aspx">单场单注限额</a> <a href="/Page/Union.aspx">联盟管理</a> <a href="/Page/Team.aspx">队伍管理</a>
+
+                    </div>
+                    <div class="collapsed">
+                        <span>超级用户管理</span> <a href="/Page/UserManagement.aspx">超级用户管理</a>
+                        <a href="/Page/IpManagement.aspx">ip过滤</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>会员管理</span> <a href="#">总代理管理</a> <a href="#">代理商管理</a> <a href="#">会员管理</a>
+                        <a href="#">搜索会员</a> <a href="#">搜索六级</a> <a href="#">子账号管理</a> <a href="#">会员额度记录</a>
+
+                    </div>
+                    <div class="collapsed">
+                        <span>足球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">早餐</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">入球数</a>
+                        <a href="#">半全场</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_zq">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">单式垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>篮球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>棒球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>棒球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>网球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>排球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>特殊投注</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>冰球操盘</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+
+                    <div class="collapsed">
+                        <span>及时注单</span>
+                        <a href="#">单式</a>
+
+                    </div>
+                    <div class="collapsed">
+                        <span>走地注单</span>
+                        <a href="#">单式</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>报表查询</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+                    <div class="collapsed">
+                        <span>网站公告</span>
+                        <a href="#">单式</a>
+                        <a href="#">滚球</a>
+                        <a href="#">过关</a>
+                        <a href="#">已开赛</a>
+                        <a href="#">历史比赛</a>
+                        <a href="#">比赛控管</a>
+                        <a href="#">新比赛预设</a>
+                        <a href="#">新比赛建立</a>
+                        <a href="#">历史查询</a>
+                        <a href="#">计算过关</a>
+                        <a href="#">联盟管理</a>
+                        <a href="#">队伍管理</a>
+                        <a href="#">历史过关</a>
+                        <a href="#">垃圾桶</a>
+                        <a href="#">早餐垃圾桶</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="Switch">
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function (e) {
+                    $(".Switch").click(function () {
+                        $(".left").toggle();
+
+                    });
+                });
+            </script>
+
+            <div class="right" id="mainFrame">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder11" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div id="footer">
+            版权所有：晶科客流 &copy; 2015&nbsp;&nbsp;&nbsp;&nbsp;服务热线：0371-88888888
+        </div>
+
+
+    </form>
+ 
+</body>
+</html>

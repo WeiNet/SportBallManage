@@ -1,0 +1,128 @@
+2016/08/13 09:46:00; ::1:64380;166:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 GameLimit.grvLimitBase_RowDataBound(Object sender, GridViewRowEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 60
+   在 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   在 JXGridView.JXGrid.OnRowDataBound(GridViewRowEventArgs e)
+   在 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   在 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   在 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   在 System.Web.UI.WebControls.GridView.DataBind()
+   在 GameLimit.bindGrid() 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 177
+
+
+2016/08/13 09:48:06; ::1:64380;166:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 GameLimit.grvLimitBase_RowDataBound(Object sender, GridViewRowEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 60
+   在 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   在 JXGridView.JXGrid.OnRowDataBound(GridViewRowEventArgs e)
+   在 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   在 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   在 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   在 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   在 System.Web.UI.WebControls.GridView.DataBind()
+   在 GameLimit.bindGrid() 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 177
+
+
+2016/08/13 10:02:51; ::1:64380;166:
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Convert.ToDecimal(String value)
+   在 GameLimit.grvLimitBase_RowUpdating(Object sender, GridViewUpdateEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 151
+
+
+2016/08/13 10:21:10; ::1:64380;166:
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Convert.ToDecimal(String value)
+   在 GameLimit.grvLimitBase_RowUpdating(Object sender, GridViewUpdateEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 154
+
+
+2016/08/13 10:22:15; ::1:64380;166:
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Convert.ToDecimal(String value)
+   在 GameLimit.grvLimitBase_RowUpdating(Object sender, GridViewUpdateEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 154
+
+
+2016/08/13 11:19:36; ::1:64380;166:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 GameLimit.grvLimitSingle_RowUpdating(Object sender, GridViewUpdateEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 219
+
+
+2016/08/13 11:26:44; ::1:64380;166:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 GameLimit.grvLimitSingle_RowUpdating(Object sender, GridViewUpdateEventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\GameLimit.aspx.cs:行号 220
+
+
+2016/08/13 15:46:28; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:46:30; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:46:31; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:46:32; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:46:35; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:47:06; ::1:64380;166:
+166 修改前分站FUNTEST 限红为100;30000;40000;60000;100000
+
+
+2016/08/13 15:47:25; ::1:64380;166:
+166 修改分站FUNTEST为FUNTEST 限红为100;30;40000;60000;100000
+
+
+2016/08/13 15:49:04; ::1:64380;166:
+166 新增分站FUN555 限红10000;20000;30000;60000;100000
+
+
+2016/08/13 15:50:01; ::1:64380;166:
+166 新增分站FUN99 限红10001;20001;30001;60001;100001
+
+
+2016/08/13 15:50:32; ::1:64380;166:
+166 修改前分站FUN99 限红为10001;20001;30001;60001;100001
+
+
+2016/08/13 15:50:41; ::1:64380;166:
+166 修改分站FUN99为FUN99 限红为10002;20001;30001;60001;100001
+
+
+2016/08/13 15:54:40; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:54:44; ::1:64380;166:
+166 修改前分站FUN88 限红为3000;21000;31000;61000;110000
+
+
+2016/08/13 15:54:48; ::1:64380;166:
+166 修改分站FUN88为FUN88 限红为30001;21000;31000;61000;110000
+
+
+2016/08/13 16:05:06; ::1:64380;166:
+166 新增分站FDFDF 限红10000;20000;30000;60000;100000
+
+

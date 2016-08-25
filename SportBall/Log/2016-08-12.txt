@@ -1,0 +1,66 @@
+2016/08/12 09:19:53; ::1:64380;:
+System.Exception: ORA-12170: TNS: 连接超时
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/08/12 10:01:18; ::1:64380;:
+System.Exception: ORA-12170: TNS: 连接超时
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/08/12 13:47:52; ::1:64380;:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/08/12 16:22:13; ::1:64380;:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/08/12 16:32:39; ::1:64380;166:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.Query(String SQLString) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 295
+   在 GameLimitDB.GetLimitBase() 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\GameLimitDB.cs:行号 20
+   在 GameLimit.bindGrid() 位置 d:\projectVS\SportBall\SportBall\Page\SystemSet\GameLimit.aspx.cs:行号 73
+
+
+2016/08/12 16:47:20; ::1:64380;166:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.Query(String SQLString) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 295
+   在 SystemSetDB.getData() 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\SystemSetDB.cs:行号 32
+   在 SystemSet.getData() 位置 d:\projectVS\SportBall\SportBall\Page\SystemSet\SystemSet.aspx.cs:行号 100
+
+
+2016/08/12 17:08:54; ::1:64380;:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+

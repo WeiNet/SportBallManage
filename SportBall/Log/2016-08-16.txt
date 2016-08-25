@@ -1,0 +1,33 @@
+2016/08/16 16:58:49; ::1:64380;166:
+System.Web.HttpException (0x80004005): 无法使用前导 .. 在顶级目录上退出。
+   在 System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   在 System.Web.Util.UrlPath.Reduce(String path)
+   在 System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   在 System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   在 System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   在 System.Web.HttpServerUtility.MapPath(String path)
+   在 IpManagement.btnAdd_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\IpManagement.aspx.cs:行号 46
+
+
+2016/08/16 16:58:54; ::1:64380;166:
+System.Web.HttpException (0x80004005): 无法使用前导 .. 在顶级目录上退出。
+   在 System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   在 System.Web.Util.UrlPath.Reduce(String path)
+   在 System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   在 System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   在 System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   在 System.Web.HttpServerUtility.MapPath(String path)
+   在 IpManagement.btnAdd_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\IpManagement.aspx.cs:行号 46
+
+
+2016/08/16 16:59:32; ::1:64380;166:
+System.Web.HttpException (0x80004005): 无法使用前导 .. 在顶级目录上退出。
+   在 System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   在 System.Web.Util.UrlPath.Reduce(String path)
+   在 System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   在 System.Web.VirtualPath.Combine(VirtualPath relativePath)
+   在 System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   在 System.Web.HttpServerUtility.MapPath(String path)
+   在 IpManagement.btnAdd_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\IpManagement.aspx.cs:行号 64
+
+

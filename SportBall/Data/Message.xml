@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageSettingConfig>
+  <MessageContent>
+    <MsgID>A00001</MsgID>
+    <zh-tw>新增成功</zh-tw>
+    <zh-cn>新增成功</zh-cn>
+    <en-us>Insert Completed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00002</MsgID>
+    <zh-tw>新增失敗</zh-tw>
+    <zh-cn>新增失败</zh-cn>
+    <en-us>Insert Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00003</MsgID>
+    <zh-tw>修改成功</zh-tw>
+    <zh-cn>修改成功</zh-cn>
+    <en-us>Update Completed </en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00004</MsgID>
+    <zh-tw>修改失敗</zh-tw>
+    <zh-cn>修改失败</zh-cn>
+    <en-us>Update Failed </en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00005</MsgID>
+    <zh-tw>刪除成功</zh-tw>
+    <zh-cn>删除成功</zh-cn>
+    <en-us>Delete Completed </en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00006</MsgID>
+    <zh-tw>刪除失敗</zh-tw>
+    <zh-cn>删除失败</zh-cn>
+    <en-us>Delete Failed </en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00007</MsgID>
+    <zh-tw>存檔作業完成</zh-tw>
+    <zh-cn>保存作业完成</zh-cn>
+    <en-us>Save Completed </en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A00008</MsgID>
+    <zh-tw>存檔作業失敗</zh-tw>
+    <zh-cn>保存作业失败</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+
+  <MessageContent>
+    <MsgID>A00009</MsgID>
+    <zh-tw>用戶名不能為空</zh-tw>
+    <zh-cn>用户名不能为空</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A000010</MsgID>
+    <zh-tw>密碼不能為空</zh-tw>
+    <zh-cn>密码不能为空</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A000010</MsgID>
+    <zh-tw>密碼不能為空</zh-tw>
+    <zh-cn>密码不能为空</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A000011</MsgID>
+    <zh-tw>只能输入数字</zh-tw>
+    <zh-cn>只能输入数字</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A000012</MsgID>
+    <zh-tw>日期格式不正确</zh-tw>
+    <zh-cn>日期格式不正确</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  <MessageContent>
+    <MsgID>A000013</MsgID>
+    <zh-tw>确定要删除吗</zh-tw>
+    <zh-cn>确定要删除吗</zh-cn>
+    <en-us>Save Failed</en-us>
+  </MessageContent>
+  
+</MessageSettingConfig>

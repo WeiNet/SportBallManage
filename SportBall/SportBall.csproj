@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D199534-336D-43D5-B47B-A31B1E4070D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SportBall</RootNamespace>
+    <AssemblyName>SportBall</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JXGridView, Version=1.0.2883.31769, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\JXGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\JXGridView.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\System.Data.OracleClient.dll" />
+    <Content Include="Data\IpList.xml" />
+    <Content Include="Data\Message.xml" />
+    <Content Include="Images\arrow_blue.gif" />
+    <Content Include="Images\arrow_r.gif" />
+    <Content Include="Images\blank.gif" />
+    <Content Include="Images\btn_disable_orange.gif" />
+    <Content Include="Images\btn_orange.gif" />
+    <Content Include="Images\calendar_bd.gif" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\detailbg.gif" />
+    <Content Include="Images\fileno.GIF" />
+    <Content Include="Images\home.gif" />
+    <Content Include="Images\icon-bottom.gif" />
+    <Content Include="Images\icon-Close.gif" />
+    <Content Include="Images\icon-dn.gif" />
+    <Content Include="Images\icon-Open.gif" />
+    <Content Include="Images\icon-ToL.gif" />
+    <Content Include="Images\icon-ToLA.gif" />
+    <Content Include="Images\icon-top.gif" />
+    <Content Include="Images\icon-ToR.gif" />
+    <Content Include="Images\icon-ToRA.gif" />
+    <Content Include="Images\icon-up.gif" />
+    <Content Include="Images\icon_Add.gif" />
+    <Content Include="Images\icon_cal.gif" />
+    <Content Include="Images\icon_calendar.gif" />
+    <Content Include="Images\icon_cancel.gif" />
+    <Content Include="Images\icon_del.gif" />
+    <Content Include="Images\icon_edit.gif" />
+    <Content Include="Images\icon_save.gif" />
+    <Content Include="Images\icon_save.png" />
+    <Content Include="Images\icon_th.gif" />
+    <Content Include="Images\iFirst.PNG" />
+    <Content Include="Images\iLast.PNG" />
+    <Content Include="Images\iNextPage.PNG" />
+    <Content Include="Images\iPrePage.PNG" />
+    <Content Include="Images\line_dot.gif" />
+    <Content Include="Images\list.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menu_expand.gif" />
+    <Content Include="Images\menu_shrink.gif" />
+    <Content Include="Images\rolebg_blue.gif" />
+    <Content Include="Images\SheetBk.gif" />
+    <Content Include="Images\SheetBkD.gif" />
+    <Content Include="Images\tab_search.png" />
+    <Content Include="Images\tb_titlebg.gif" />
+    <Content Include="Log\2016-08-05.txt" />
+    <Content Include="Log\2016-08-08.txt" />
+    <Content Include="Log\2016-08-09.txt" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\SportBall.csprojResolveAssemblyReference.cache" />
+    <Content Include="bin\SportBall.dll.config" />
+    <Content Include="NewMaster.Master" />
+    <Content Include="bin\JXGridView.dll.refresh" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\SportBall.dll" />
+    <Content Include="bin\SportBall.pdb" />
+    <Content Include="Images\171.png" />
+    <Content Include="Images\20150212154319.jpg" />
+    <Content Include="Images\glyphicons-halflings-white.png" />
+    <Content Include="Images\glyphicons-halflings.png" />
+    <Content Include="Images\input_icon_1.png" />
+    <Content Include="Images\input_icon_2.png" />
+    <Content Include="Images\left.png" />
+    <Content Include="Images\left2.png" />
+    <Content Include="Images\left_bg.png" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\select.png" />
+    <Content Include="Images\Switch.png" />
+    <Content Include="Images\Switch2.png" />
+    <Content Include="Images\tit.png" />
+    <Content Include="Images\top.png" />
+    <Content Include="obj\Debug\SportBall.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SportBall.dll" />
+    <Content Include="obj\Debug\SportBall.pdb" />
+    <Content Include="Page\GameLimit.aspx" />
+    <Content Include="Page\GameLimit.js" />
+    <Content Include="Page\Games\game.js" />
+    <Content Include="Page\Games\GameListBegin.aspx" />
+    <Content Include="Page\Games\jquery-1.8.3.min.js" />
+    <Content Include="Page\Games\jquery.json.js" />
+    <Content Include="Page\Games\jquery.tmpl.min.js" />
+    <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
+    <Content Include="Page\Games\WebForm1.aspx" />
+    <Content Include="Page\IpManagement.aspx" />
+    <Content Include="Page\Team.aspx" />
+    <Content Include="Page\Team.js" />
+    <Content Include="Page\IpManagement.js" />
+    <Content Include="Page\UserManagement.js" />
+    <Content Include="Page\Union.js" />
+    <Content Include="Page\Login.aspx" />
+    <Content Include="Page\Login.js" />
+    <Content Include="Page\SystemSet\DelayedManager.aspx" />
+    <Content Include="Page\SystemSet\SystemSet.aspx" />
+    <Content Include="Page\SystemSet\SystemSet.js" />
+    <Content Include="Page\Union.aspx" />
+    <Content Include="Page\UserManagement.aspx" />
+    <Content Include="Page\Welcome.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Common.js" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\game.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="Scripts\jquery.json.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\jquery1.9.0.min.js" />
+    <Content Include="Scripts\laydate\laydate.js" />
+    <Content Include="Scripts\laydate\need\laydate.css" />
+    <Content Include="Scripts\laydate\skins\dahong\icon.png" />
+    <Content Include="Scripts\laydate\skins\dahong\laydate.css" />
+    <Content Include="Scripts\laydate\skins\danlan\icon.png" />
+    <Content Include="Scripts\laydate\skins\danlan\laydate.css" />
+    <Content Include="Scripts\laydate\skins\default\icon.png" />
+    <Content Include="Scripts\laydate\skins\default\laydate.css" />
+    <Content Include="Scripts\laydate\skins\molv\icon.png" />
+    <Content Include="Scripts\laydate\skins\molv\laydate.css" />
+    <Content Include="Scripts\laydate\skins\qianhuang\icon.png" />
+    <Content Include="Scripts\laydate\skins\qianhuang\laydate.css" />
+    <Content Include="Scripts\laydate\skins\yahui\icon.png" />
+    <Content Include="Scripts\laydate\skins\yahui\laydate.css" />
+    <Content Include="Scripts\laydate\skins\yalan\icon.png" />
+    <Content Include="Scripts\laydate\skins\yalan\laydate.css" />
+    <Content Include="Scripts\Menus_bak.js" />
+    <Content Include="Scripts\MessageBox.js" />
+    <Content Include="Scripts\Public.js" />
+    <Content Include="Scripts\sdmenu.js" />
+    <Content Include="Scripts\unlimitdigital.webcontrols.pager.js" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\css.css" />
+    <Content Include="Styles\football.css" />
+    <Content Include="Styles\jquery-ui-1.8.20.custom.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\master.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Class1.cs" />
+    <Compile Include="App_Code\Comm.cs" />
+    <Compile Include="App_Code\CommLib.cs" />
+    <Compile Include="App_Code\DbHelperOra.cs" />
+    <Compile Include="App_Code\Games\GameSBall.cs" />
+    <Compile Include="App_Code\Games\GamesDB.cs" />
+    <Compile Include="App_Code\Model\KFB_BALL.cs" />
+    <Compile Include="App_Code\Model\KFB_DLIP.cs" />
+    <Compile Include="App_Code\Model\KFB_DLTKPSD.cs" />
+    <Compile Include="App_Code\Model\KFB_DWGL.cs" />
+    <Compile Include="App_Code\Model\KFB_LHCKPSD.cs" />
+    <Compile Include="App_Code\Model\KFB_LMGL.cs" />
+    <Compile Include="App_Code\Model\KFB_XSHY.cs" />
+    <Compile Include="App_Code\Model\KFB_XTSZ.cs" />
+    <Compile Include="App_Code\Model\KFB_ZHGL.cs" />
+    <Compile Include="App_Code\SystemSet\DailyPostingDB.cs" />
+    <Compile Include="App_Code\SystemSet\DelayedManagerDB.cs" />
+    <Compile Include="App_Code\SystemSet\GameLimitDB.cs" />
+    <Compile Include="App_Code\SystemSet\LoginDB.cs" />
+    <Compile Include="App_Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\SystemSet\SystemSetDB.cs" />
+    <Compile Include="App_Code\SystemSet\TeamDB.cs" />
+    <Compile Include="App_Code\SystemSet\UnionDB.cs" />
+    <Compile Include="App_Code\UserManage\UserManagementDB..cs" />
+    <Compile Include="NewMaster.Master.cs">
+      <DependentUpon>NewMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewMaster.Master.designer.cs">
+      <DependentUpon>NewMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Page\GameLimit.aspx.cs">
+      <DependentUpon>GameLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GameLimit.aspx.designer.cs">
+      <DependentUpon>GameLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\Gamelist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\IpManagement.aspx.cs">
+      <DependentUpon>IpManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\IpManagement.aspx.designer.cs">
+      <DependentUpon>IpManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SystemSet\DelayedManager.aspx.cs">
+      <DependentUpon>DelayedManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SystemSet\DelayedManager.aspx.designer.cs">
+      <DependentUpon>DelayedManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SystemSet\SystemSet.aspx.cs">
+      <DependentUpon>SystemSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SystemSet\SystemSet.aspx.designer.cs">
+      <DependentUpon>SystemSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Team.aspx.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Team.aspx.designer.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Union.aspx.cs">
+      <DependentUpon>Union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Union.aspx.designer.cs">
+      <DependentUpon>Union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53727</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

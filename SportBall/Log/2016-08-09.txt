@@ -1,0 +1,20 @@
+2016/08/09 09:00:12; ::1:64380;:
+System.Exception: ORA-01400: 无法将 NULL 插入 ("KFB"."KFB_DLIP"."N_HYZH")
+
+   在 KingOfBall.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 326
+   在 LoginDB.addDLIP(KFB_DLIP model) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 173
+   在 Login.Setdl(String strlv, String strid, String strty) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 161
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 113
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/08/09 13:31:26; ::1:64380;:
+System.Exception: ORA-12170: TNS: 连接超时
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 508
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
