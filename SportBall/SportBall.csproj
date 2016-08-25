@@ -163,10 +163,6 @@
     <Content Include="Page\GameLimit.js" />
     <Content Include="Page\Games\game.js" />
     <Content Include="Page\Games\GameListBegin.aspx" />
-    <Content Include="Page\Games\jquery-1.8.3.min.js" />
-    <Content Include="Page\Games\jquery.json.js" />
-    <Content Include="Page\Games\jquery.tmpl.min.js" />
-    <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
     <Content Include="Page\Games\WebForm1.aspx" />
     <Content Include="Page\IpManagement.aspx" />
     <Content Include="Page\Team.aspx" />
@@ -184,8 +180,8 @@
     <Content Include="Page\Welcome.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Common.js" />
-    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\game.js" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
