@@ -12,7 +12,8 @@ namespace SportBall.Styles
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserID"] != null) {
-                this.username.Text = Session["UserID"].ToString();
+              
+  this.username.Text = Session["UserID"].ToString();
             }
       
         }
