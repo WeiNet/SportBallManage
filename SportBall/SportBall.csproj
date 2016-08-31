@@ -162,8 +162,14 @@
     <Content Include="Page\GameLimit.aspx" />
     <Content Include="Page\GameLimit.js" />
     <Content Include="Page\Games\game.js" />
+    <Content Include="Page\Games\GameAjax.aspx" />
+    <Content Include="Page\Games\GameCalculation.aspx" />
+    <Content Include="Page\Games\GameCalculation.js" />
     <Content Include="Page\Games\GameListBegin.aspx" />
-    <Content Include="Page\Games\WebForm1.aspx" />
+    <Content Include="Page\Games\jquery-1.8.3.min.js" />
+    <Content Include="Page\Games\jquery.json.js" />
+    <Content Include="Page\Games\jquery.tmpl.min.js" />
+    <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
     <Content Include="Page\IpManagement.aspx" />
     <Content Include="Page\Team.aspx" />
     <Content Include="Page\Team.js" />
@@ -221,18 +227,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Class1.cs" />
     <Compile Include="App_Code\Comm.cs" />
     <Compile Include="App_Code\CommLib.cs" />
     <Compile Include="App_Code\DbHelperOra.cs" />
+    <Compile Include="App_Code\Games\BaseBallDB.cs" />
+    <Compile Include="App_Code\Games\GameCalculationBLL.cs" />
+    <Compile Include="App_Code\Games\GameCalculationDB.cs" />
     <Compile Include="App_Code\Games\GameSBall.cs" />
     <Compile Include="App_Code\Games\GamesDB.cs" />
     <Compile Include="App_Code\Model\KFB_BALL.cs" />
+    <Compile Include="App_Code\Model\KFB_BASEBALL.cs" />
     <Compile Include="App_Code\Model\KFB_DLIP.cs" />
     <Compile Include="App_Code\Model\KFB_DLTKPSD.cs" />
     <Compile Include="App_Code\Model\KFB_DWGL.cs" />
     <Compile Include="App_Code\Model\KFB_LHCKPSD.cs" />
     <Compile Include="App_Code\Model\KFB_LMGL.cs" />
+    <Compile Include="App_Code\Model\KFB_PTZD.cs" />
     <Compile Include="App_Code\Model\KFB_XSHY.cs" />
     <Compile Include="App_Code\Model\KFB_XTSZ.cs" />
     <Compile Include="App_Code\Model\KFB_ZHGL.cs" />
@@ -263,6 +273,20 @@
     </Compile>
     <Compile Include="Page\GameLimit.aspx.designer.cs">
       <DependentUpon>GameLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameAjax.aspx.cs">
+      <DependentUpon>GameAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameAjax.aspx.designer.cs">
+      <DependentUpon>GameAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameCalculation.aspx.cs">
+      <DependentUpon>GameCalculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameCalculation.aspx.designer.cs">
+      <DependentUpon>GameCalculation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\Gamelist.cs">
       <SubType>ASPXCodeBehind</SubType>

@@ -874,8 +874,8 @@ function GetSetting(items) {
 }
 //计算
 function setCalcu(ballType, id, playType) {
-    var strPara = "height=300px, width=600px, top=300px, left=200px, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no";
-    var StrRtn = window.open("game_calcu.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id + "&pt=" + playType, playType, strPara);
+    var strPara = "height=300px, width=600px, top=300px, left=300px, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no";
+    var StrRtn = window.open("GameCalculation.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id + "&pt=" + playType, playType, strPara);
 }
 //返回到单式或滚球
 function backSingleOrRun(id) {

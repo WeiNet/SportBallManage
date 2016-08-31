@@ -675,16 +675,14 @@ function fnClosed(strReturnValue) {
     window.close();
 }
 
-//控制只能輸入數字 Add by Nina 20120928
-//function funIntNum(obj) {
-//    var text1Value = document.getElementById(obj);
-//    for (var i = 0; i < text1Value.value.length; i++) {
-//        var text1Value1 = text1Value.value.charCodeAt(i);
-//        if (text1Value1 >= 48 && text1Value1 <= 57) {
-//        } else {
-//            Show("A00098"); //請輸入數字！
-//            document.getElementById(obj).value = "";
-//            return false;
-//        }
-//    }
-//}
+function inputNubmer() {
+
+    var key = window.event.keyCode;
+    if (key >= 48 && key <= 57) {
+        return true;
+    }
+    else {
+        window.event.keyCode = 0;
+        return true;
+    }
+}

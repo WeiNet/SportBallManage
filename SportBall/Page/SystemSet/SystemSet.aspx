@@ -4,8 +4,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder11" runat="server">
-
+    <script src="../Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
     <script src="SystemSet.js" type="text/javascript"></script>
+
     <ul class="breadcrumb" style="margin-top: 5px">
         当前位置： <a href="#">系统设置</a>  <span
             class="divider">/</span> 系统设置
