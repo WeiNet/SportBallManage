@@ -175,4 +175,17 @@ public class BasePage : System.Web.UI.Page
         return false;
     }
     #endregion
+    public string GetIp()
+    {
+        string strreturn = "";
+        if (this.Request.Headers["X-Client-Address"] != null)
+        {
+            strreturn = this.Request.Headers["X-Client-Address"];
+        }
+        else
+        {
+            strreturn = this.Request.UserHostAddress;
+        }
+        return strreturn;
+    }
 }

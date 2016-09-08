@@ -20,6 +20,7 @@ using System.Web.UI.WebControls;
     {
         #region 全局变量
         private string pageName = "";
+   
 
         #endregion
         #region Page_Load

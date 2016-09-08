@@ -836,8 +836,9 @@ function openFastSet(objValue, objPK) {
     var StrRtn = window.open("game_fastset.aspx?random=" + Math.random() + "&N_ID=" + objValue + "&PK=" + objPK, objPK, strPara);
 }
 function openBillDetail(id, teamId, playType, playId) {
-    var strPara = "dialogHeight:700px;dialogWidth:1000px;status:no;scroll:yes;help:no";
-    var strRtn = window.showModalDialog("game_detail.aspx?random=" + Math.random() + "&id=" + id + "&ti=" + teamId + "&pt=" + playType + "&pi=" + playId + "&bt=" + getUrlParam("bt"), "openBillDetail", strPara);
+   
+    var strPara = "height=700px, width=800px, top=200px, left=450px, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no";
+    var strRtn = window.open("GameDetail.aspx?random=" + Math.random() + "&id=" + id + "&ti=" + teamId + "&pt=" + playType + "&pi=" + playId + "&bt=" + getUrlParam("bt"), "openBillDetail", strPara);
     return false;
 }
 var HTML_SET1 = '<p class="setbtn"><a href="javascript:void(0);" onclick="{4}" status="{8}">{0}</a><a href="javascript:void(0);" onclick="{5}">{1}</a></p>\

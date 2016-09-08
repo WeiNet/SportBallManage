@@ -80,6 +80,7 @@
     <Content Include="bin\System.Data.OracleClient.dll" />
     <Content Include="Data\IpList.xml" />
     <Content Include="Data\Message.xml" />
+    <Content Include="Images\11.png" />
     <Content Include="Images\arrow_blue.gif" />
     <Content Include="Images\arrow_r.gif" />
     <Content Include="Images\blank.gif" />
@@ -163,9 +164,13 @@
     <Content Include="Page\GameLimit.js" />
     <Content Include="Page\Games\game.js" />
     <Content Include="Page\Games\GameAjax.aspx" />
+    <Content Include="Page\Games\GamesSet.js" />
+    <Content Include="Page\Games\GameDetail.js" />
     <Content Include="Page\Games\GameCalculation.aspx" />
     <Content Include="Page\Games\GameCalculation.js" />
+    <Content Include="Page\Games\GameDetail.aspx" />
     <Content Include="Page\Games\GameListBegin.aspx" />
+    <Content Include="Page\Games\GamesSet.aspx" />
     <Content Include="Page\Games\jquery-1.8.3.min.js" />
     <Content Include="Page\Games\jquery.json.js" />
     <Content Include="Page\Games\jquery.tmpl.min.js" />
@@ -288,8 +293,22 @@
     <Compile Include="Page\Games\GameCalculation.aspx.designer.cs">
       <DependentUpon>GameCalculation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Games\GameDetail.aspx.cs">
+      <DependentUpon>GameDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameDetail.aspx.designer.cs">
+      <DependentUpon>GameDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Games\Gamelist.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GamesSet.aspx.cs">
+      <DependentUpon>GamesSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GamesSet.aspx.designer.cs">
+      <DependentUpon>GamesSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\IpManagement.aspx.cs">
       <DependentUpon>IpManagement.aspx</DependentUpon>

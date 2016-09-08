@@ -52,5 +52,6 @@
             <HeaderStyle CssClass="FixedTitleRow" />
             <RowStyle Wrap="false" />
         </cc1:JXGrid>
+        　
     </div>
 </asp:Content>

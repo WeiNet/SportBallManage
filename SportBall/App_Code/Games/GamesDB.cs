@@ -1843,7 +1843,7 @@ public class GamesDB : CommLib.DbCommon
                             model.N_VISIT_NAME = teamDic[model.N_VISIT.Value].N_DWMC;
                             model.N_HOME_NAME = teamDic[model.N_HOME.Value].N_DWMC;
                             model.N_CBXH = Convert.ToInt32(dr["N_CBXH"]);
-                            model.N_SAMEGAME = Convert.ToInt32(dr["N_SAMEGAME"]);
+                            //model.N_SAMEGAME = Convert.ToInt32(dr["N_SAMEGAME"] );
                             model.N_SAMETEAM = Convert.ToString(dr["N_SAMETEAM"]);
                             model.N_LET = Convert.ToInt32(dr["N_LET"]);
                             model.N_SFXZ = Convert.ToInt32(dr["N_SFXZ"]);
