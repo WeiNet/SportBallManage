@@ -833,7 +833,7 @@ function GetXMLHTTP() {
 }
 function openFastSet(objValue, objPK) {
     var strPara = "height=200px, width=600px, top=300px, left=200px, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no";
-    var StrRtn = window.open("game_fastset.aspx?random=" + Math.random() + "&N_ID=" + objValue + "&PK=" + objPK, objPK, strPara);
+    var StrRtn = window.open("GameFastSet.aspx?random=" + Math.random() + "&N_ID=" + objValue + "&PK=" + objPK, objPK, strPara);
 }
 function openBillDetail(id, teamId, playType, playId) {
    
@@ -885,10 +885,10 @@ function backSingleOrRun(id) {
 }
 //进入设置
 function setSetting(ballType, id) {
-    var strPara = "height=800px, width=800px, top=300px, left=200px, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no";
+    var strPara = "height=800px, width=1000px, top=150px, left=200px, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no";
     var StrRtn = "";
     if (ballType == "b_zq")
-        StrRtn = window.open("game_edit.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
+        StrRtn = window.open("GamesSet.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
     else
         StrRtn = window.open("game_otheredit.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
 }

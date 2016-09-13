@@ -162,8 +162,10 @@
     <Content Include="obj\Debug\SportBall.pdb" />
     <Content Include="Page\GameLimit.aspx" />
     <Content Include="Page\GameLimit.js" />
+    <Content Include="Page\Games\baseball.js" />
     <Content Include="Page\Games\game.js" />
     <Content Include="Page\Games\GameAjax.aspx" />
+    <Content Include="Page\Games\GameFastSet.aspx" />
     <Content Include="Page\Games\GamesSet.js" />
     <Content Include="Page\Games\GameDetail.js" />
     <Content Include="Page\Games\GameCalculation.aspx" />
@@ -242,6 +244,7 @@
     <Compile Include="App_Code\Games\GamesDB.cs" />
     <Compile Include="App_Code\Model\KFB_BALL.cs" />
     <Compile Include="App_Code\Model\KFB_BASEBALL.cs" />
+    <Compile Include="App_Code\Model\KFB_BSYS.cs" />
     <Compile Include="App_Code\Model\KFB_DLIP.cs" />
     <Compile Include="App_Code\Model\KFB_DLTKPSD.cs" />
     <Compile Include="App_Code\Model\KFB_DWGL.cs" />
@@ -299,6 +302,13 @@
     </Compile>
     <Compile Include="Page\Games\GameDetail.aspx.designer.cs">
       <DependentUpon>GameDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameFastSet.aspx.cs">
+      <DependentUpon>GameFastSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameFastSet.aspx.designer.cs">
+      <DependentUpon>GameFastSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\Gamelist.cs">
       <SubType>ASPXCodeBehind</SubType>
