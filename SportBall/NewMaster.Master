@@ -76,12 +76,13 @@
                     </div>
                     <div class="collapsed">
                         <span>足球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">早餐</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">入球数</a>
-                        <a href="#">半全场</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_zq">单式</a>
+                        <a href="/Page/Games/GameListBreakfast.aspx?bt=b_zq">早餐</a>
+                        <a href="/Page/Games/GameListGoto.aspx?bt=b_zq">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_zq">过关</a>
+                        <a href="/Page/Games/GameListWave.aspx?bt=b_zq">波胆</a>
+                        <a href="/Page/Games/GameListGoal.aspx?bt=b_zq">入球数</a>
+                        <a href="/Page/Games/GameListHalfFull.aspx?bt=b_zq">半全场</a>
                         <a href="/Page/Games/GameListBegin.aspx?bt=b_zq">已开赛</a>
                         <a href="#">历史比赛</a>
                         <a href="#">比赛控管</a>
