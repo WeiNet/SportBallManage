@@ -686,3 +686,14 @@ function inputNubmer() {
         return true;
     }
 }
+function _onlyNum(obj) {
+    obj.value = obj.value.trim().replace(/[^0-9.-]/g, '');
+    if (obj.value == "") {
+        obj.value = "0";
+    }
+    else if (isNaN(obj.value.trim())) {
+        alert("请输入数字");
+        obj.value = "0";
+        obj.select();
+    }
+}

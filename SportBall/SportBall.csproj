@@ -170,6 +170,9 @@
     <Content Include="Page\Games\GameDetail.aspx" />
     <Content Include="Page\Games\GameDetail.js" />
     <Content Include="Page\Games\GameFastSet.aspx" />
+    <Content Include="Page\Games\GamelistControl.aspx" />
+    <Content Include="Page\Games\GameListDefault.aspx" />
+    <Content Include="Page\Games\GameListHistory.aspx" />
     <Content Include="Page\Games\GameListHalfFull.aspx" />
     <Content Include="Page\Games\GameListGoal.aspx" />
     <Content Include="Page\Games\GameListWave.aspx" />
@@ -247,10 +250,14 @@
     <Compile Include="App_Code\Games\BaseBallDB.cs" />
     <Compile Include="App_Code\Games\GameCalculationBLL.cs" />
     <Compile Include="App_Code\Games\GameCalculationDB.cs" />
+    <Compile Include="App_Code\Games\GameDefaultDB.cs" />
+    <Compile Include="App_Code\Games\GameListControlDB.cs" />
     <Compile Include="App_Code\Games\GameSBall.cs" />
     <Compile Include="App_Code\Games\GamesDB.cs" />
     <Compile Include="App_Code\Model\KFB_BALL.cs" />
     <Compile Include="App_Code\Model\KFB_BASEBALL.cs" />
+    <Compile Include="App_Code\Model\KFB_BBKG.cs" />
+    <Compile Include="App_Code\Model\KFB_BBKGJZ.cs" />
     <Compile Include="App_Code\Model\KFB_BSYS.cs" />
     <Compile Include="App_Code\Model\KFB_DLIP.cs" />
     <Compile Include="App_Code\Model\KFB_DLTKPSD.cs" />
@@ -319,6 +326,20 @@
     </Compile>
     <Compile Include="Page\Games\Gamelist.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GamelistControl.aspx.cs">
+      <DependentUpon>GamelistControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GamelistControl.aspx.designer.cs">
+      <DependentUpon>GamelistControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameListDefault.aspx.cs">
+      <DependentUpon>GameListDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameListDefault.aspx.designer.cs">
+      <DependentUpon>GameListDefault.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\GamesSet.aspx.cs">
       <DependentUpon>GamesSet.aspx</DependentUpon>

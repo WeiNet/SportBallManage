@@ -63,7 +63,7 @@
 
 
     <ul class="breadcrumb" style="margin-top: 5px">
-        当前位置： <a href="#">足球操盘</a>  <span id="lblball"></span>单式
+        当前位置： <a href="#">足球操盘</a>  <span id="lblball"></span>已开赛
     </ul>
     <div class="title_right">
         <strong>已开赛</strong>

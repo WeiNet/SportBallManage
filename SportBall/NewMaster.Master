@@ -84,9 +84,9 @@
                         <a href="/Page/Games/GameListGoal.aspx?bt=b_zq">入球数</a>
                         <a href="/Page/Games/GameListHalfFull.aspx?bt=b_zq">半全场</a>
                         <a href="/Page/Games/GameListBegin.aspx?bt=b_zq">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_zq">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_zq">比赛控管</a>
+                        <a href="/Page/Games/GameListDefault.aspx?bt=b_zq">新比赛预设</a>
                         <a href="#">新比赛建立</a>
                         <a href="#">历史查询</a>
                         <a href="#">计算过关</a>

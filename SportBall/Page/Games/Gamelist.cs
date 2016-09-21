@@ -90,7 +90,7 @@ using System.Web.Script.Serialization;
                     output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.GetZWRQ()) + "]";
                     break;
                 case 9://历史比赛
-                    output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.GetZWRQ()) + "]";
+                    output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.getZWDate()) + "]";
                     break;
                 case 10://垃圾桶
                     output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(zwrqlist) + "]";

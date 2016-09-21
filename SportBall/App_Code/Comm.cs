@@ -352,6 +352,21 @@ public class Comm
         }
         return dt;
     }
+
+
+
+    public static List<DateTime> getZWDate()
+    {
+        DateTime dt = Comm.GetZWRQ();
+        List<DateTime> zwrqlist = new List<DateTime>();
+        for (int i = 0; i < 10; i++)
+        {
+            zwrqlist.Add(dt);
+            dt = dt.AddDays(-1);
+        }
+        return zwrqlist;
+    }
+
     /// <summary>
     /// 加密
     /// </summary>
