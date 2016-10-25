@@ -9,7 +9,7 @@
 
 
 
-public partial class GameListDefault {
+public partial class GameListEdit {
     
     /// <summary>
     /// lblball 控件。
@@ -21,6 +21,33 @@ public partial class GameListDefault {
     protected global::System.Web.UI.WebControls.Label lblball;
     
     /// <summary>
+    /// hidMode 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidMode;
+    
+    /// <summary>
+    /// hidN_ID 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidN_ID;
+    
+    /// <summary>
+    /// hidTeam 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidTeam;
+    
+    /// <summary>
     /// btnSave 控件。
     /// </summary>
     /// <remarks>
@@ -28,6 +55,123 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.WebControls.Button btnSave;
+    
+    /// <summary>
+    /// btnBack 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnBack;
+    
+    /// <summary>
+    /// btnCopy 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnCopy;
+    
+    /// <summary>
+    /// btnDelete 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnDelete;
+    
+    /// <summary>
+    /// drpZWYear 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpZWYear;
+    
+    /// <summary>
+    /// drpZWMonth 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpZWMonth;
+    
+    /// <summary>
+    /// drpZWDay 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpZWDay;
+    
+    /// <summary>
+    /// drpBSYear 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpBSYear;
+    
+    /// <summary>
+    /// drpBSMonth 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpBSMonth;
+    
+    /// <summary>
+    /// drpBSDay 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpBSDay;
+    
+    /// <summary>
+    /// drpBSHour 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpBSHour;
+    
+    /// <summary>
+    /// drpBSMinute 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpBSMinute;
+    
+    /// <summary>
+    /// hidLM 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidLM;
+    
+    /// <summary>
+    /// drpLM 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.DropDownList drpLM;
     
     /// <summary>
     /// chkCB 控件。
@@ -39,13 +183,175 @@ public partial class GameListDefault {
     protected global::System.Web.UI.WebControls.CheckBoxList chkCB;
     
     /// <summary>
+    /// rdoCB 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButtonList rdoCB;
+    
+    /// <summary>
+    /// rdoVisit 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButton rdoVisit;
+    
+    /// <summary>
+    /// drpVisit 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.DropDownList drpVisit;
+    
+    /// <summary>
+    /// hidVisit 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidVisit;
+    
+    /// <summary>
+    /// rdoHome 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButton rdoHome;
+    
+    /// <summary>
+    /// drpHome 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.DropDownList drpHome;
+    
+    /// <summary>
+    /// hidHome 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidHome;
+    
+    /// <summary>
+    /// rdoHj 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButton rdoHj;
+    
+    /// <summary>
+    /// rdoZD 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButtonList rdoZD;
+    
+    /// <summary>
+    /// trJZF 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlTableRow trJZF;
+    
+    /// <summary>
+    /// txtVisitJZF 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtVisitJZF;
+    
+    /// <summary>
+    /// txtHomeJZF 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtHomeJZF;
+    
+    /// <summary>
+    /// rdoOpenJZF 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButtonList rdoOpenJZF;
+    
+    /// <summary>
+    /// txtVisitNo 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtVisitNo;
+    
+    /// <summary>
+    /// txtHomeNo 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtHomeNo;
+    
+    /// <summary>
+    /// drpZBName 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.DropDownList drpZBName;
+    
+    /// <summary>
+    /// txtVisitTSNo 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtVisitTSNo;
+    
+    /// <summary>
+    /// txtHomeTSNo 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtHomeTSNo;
+    
+    /// <summary>
     /// txtDZSX 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText txtDZSX;
+    protected global::System.Web.UI.WebControls.TextBox txtDZSX;
     
     /// <summary>
     /// txtDCSX 控件。
@@ -54,7 +360,7 @@ public partial class GameListDefault {
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText txtDCSX;
+    protected global::System.Web.UI.WebControls.TextBox txtDCSX;
     
     /// <summary>
     /// drpRFFS 控件。
@@ -82,6 +388,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlInputText txtRFBL;
+    
+    /// <summary>
+    /// chkLet 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox chkLet;
     
     /// <summary>
     /// txtLRFPL 控件。
@@ -127,6 +442,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpRRFCJ;
+    
+    /// <summary>
+    /// chkRFGGClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkRFGGClose;
     
     /// <summary>
     /// txtLRFSX 控件。
@@ -181,6 +505,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpRFCJPL1;
+    
+    /// <summary>
+    /// chkRFClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkRFClose;
     
     /// <summary>
     /// drpDXFS 控件。
@@ -255,6 +588,15 @@ public partial class GameListDefault {
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpDXXCJ;
     
     /// <summary>
+    /// chkDXGGClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkDXGGClose;
+    
+    /// <summary>
     /// txtLDXSX 控件。
     /// </summary>
     /// <remarks>
@@ -289,6 +631,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpDXCJPL;
+    
+    /// <summary>
+    /// chkDXClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkDXClose;
     
     /// <summary>
     /// txtLDYPL 控件。
@@ -345,13 +696,22 @@ public partial class GameListDefault {
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpRDYCJ;
     
     /// <summary>
-    /// txtN_HJGGCJ 控件。
+    /// chkDYGGClose 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText txtN_HJGGCJ;
+    protected global::System.Web.UI.WebControls.CheckBox chkDYGGClose;
+    
+    /// <summary>
+    /// drpN_HJGGCJ 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlSelect drpN_HJGGCJ;
     
     /// <summary>
     /// txtLDYSX 控件。
@@ -399,6 +759,15 @@ public partial class GameListDefault {
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpDYCJPL;
     
     /// <summary>
+    /// chkDYClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkDYClose;
+    
+    /// <summary>
     /// txtDSDPL 控件。
     /// </summary>
     /// <remarks>
@@ -444,6 +813,15 @@ public partial class GameListDefault {
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpDSSCJ;
     
     /// <summary>
+    /// chkDSGGClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkDSGGClose;
+    
+    /// <summary>
     /// txtLDSSX 控件。
     /// </summary>
     /// <remarks>
@@ -478,6 +856,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpDSCJPL;
+    
+    /// <summary>
+    /// chkDSClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkDSClose;
     
     /// <summary>
     /// txtrqs01 控件。
@@ -523,6 +910,15 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtrqssx;
+    
+    /// <summary>
+    /// chkRQClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkRQClose;
     
     /// <summary>
     /// txtzc10 控件。
@@ -777,6 +1173,15 @@ public partial class GameListDefault {
     protected global::System.Web.UI.WebControls.TextBox txtbdsx;
     
     /// <summary>
+    /// chkBDClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkBDClose;
+    
+    /// <summary>
     /// txtbqczz 控件。
     /// </summary>
     /// <remarks>
@@ -865,4 +1270,13 @@ public partial class GameListDefault {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtbqcsx;
+    
+    /// <summary>
+    /// chkBQCClose 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkBQCClose;
 }

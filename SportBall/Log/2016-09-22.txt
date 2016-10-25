@@ -1,0 +1,34 @@
+2016/09/22 10:05:08; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/22 10:53:42; ::1:64380;:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 510
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/09/22 13:34:44; ::1:64380;:
+System.Exception: ORA-12543: TNS: 无法连接目标主机
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 510
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/09/22 14:09:13; ::1:64380;:
+System.Exception: ORA-12170: TNS: 连接超时
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 510
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+

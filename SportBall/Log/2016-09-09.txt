@@ -1,0 +1,30 @@
+2016/09/09 16:08:56; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/09 16:14:30; ::1:64380;166:
+用户名=166System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 GamesDB.AddZQ(KFB_BASEBALL model, Hashtable o_aHt) 位置 d:\projectVS\SportBall\SportBall\App_Code\Games\GamesDB.cs:行号 4526
+   在 GamesSet.btnCopy_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GamesSet.aspx.cs:行号 182
+
+
+2016/09/09 16:14:59; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/09 16:15:13; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/09 16:18:00; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/09 16:30:52; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+
+2016/09/09 16:41:26; ::1:64380;166:
+用户名=166；操作=修改足球比赛
+
+

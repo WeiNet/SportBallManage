@@ -1,0 +1,40 @@
+2016/10/12 09:19:53; ::1:64380;:
+System.Exception: ORA-12560: TNS: 协议适配器错误
+
+   在 KingOfBall.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 510
+   在 KingOfBall.DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 48
+   在 LoginDB.IsLogin(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\App_Code\SystemSet\LoginDB.cs:行号 35
+   在 Login.LoginCo(String strUserName, String strPw) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 83
+   在 Login.btnLogin_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Login.aspx.cs:行号 60
+
+
+2016/10/12 09:54:27; ::1:64380;166:
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 GameListOtherEdit.GetKFB_BASEBALL(String s_aCBXH) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GameListOtherEdit.aspx.cs:行号 513
+   在 GameListOtherEdit.btnSave_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GameListOtherEdit.aspx.cs:行号 139
+
+
+2016/10/12 09:58:07; ::1:64380;166:
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 GameListOtherEdit.GetKFB_BASEBALL(String s_aCBXH) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GameListOtherEdit.aspx.cs:行号 513
+   在 GameListOtherEdit.btnSave_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GameListOtherEdit.aspx.cs:行号 139
+
+
+2016/10/12 11:19:52; ::1:64380;166:
+System.Data.OracleClient.OracleException (0x80131938): ORA-02291: 违反完整约束条件 (KFB.FK_BASEBALL_LMGL) - 未找到父项关键字
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteNonQueryInternal(Boolean needRowid, OciRowidDescriptor& rowidDescriptor)
+   在 System.Data.OracleClient.OracleCommand.ExecuteNonQuery()
+   在 KingOfBall.DbHelperOra.ExecuteSqlTran(Hashtable SQLStringList) 位置 d:\projectVS\SportBall\SportBall\App_Code\DbHelperOra.cs:行号 367
+   在 GamesDB.SetTran(Hashtable o_aHt) 位置 d:\projectVS\SportBall\SportBall\App_Code\Games\GamesDB.cs:行号 4362
+   在 GameListOtherEdit.btnSave_Click(Object sender, EventArgs e) 位置 d:\projectVS\SportBall\SportBall\Page\Games\GameListOtherEdit.aspx.cs:行号 142
+
+
