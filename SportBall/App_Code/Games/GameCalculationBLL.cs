@@ -61,7 +61,7 @@ public class GameCalculationBLL
 
             //BY KEWEN
             //KingOfBall.BLL.KFB_MRZJ_BLL O_MRZJ = new KingOfBall.BLL.KFB_MRZJ_BLL();
-            //KingOfBall.Model.KFB_MRZJ M_MRZJ = new KingOfBall.Model.KFB_MRZJ();
+            //KFB_MRZJ M_MRZJ = new KFB_MRZJ();
             //M_MRZJ = O_MRZJ.GetModel();
 
             //获取赛事下所有注单列表

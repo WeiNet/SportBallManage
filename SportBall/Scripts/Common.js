@@ -1,5 +1,8 @@
 ﻿
-var xmlHttp=getXmlHttpRequest();
+var xmlHttp = getXmlHttpRequest();
+var highlightcolor = '#eafcd5';
+//此处clickcolor只能用win系统颜色代码才能成功,如果用#xxxxxx的代码就不行,还没搞清楚为什么:(
+var clickcolor = '#51b2f6';
 //取得當前瀏覽器支持的XMLHTTP對象   
 function getXmlHttpRequest() 
 {  
@@ -696,4 +699,63 @@ function _onlyNum(obj) {
         obj.value = "0";
         obj.select();
     }
+}
+//限制只能輸入數字
+function onlyInt(obj) {
+    obj.value = obj.value.replace(/[^0-9]/g, '');
+    if (obj.value.trim() == "") {
+        obj.value = "0";
+    }
+    else if (isNaN(obj.value.trim())) {
+        alert("请输入数字");
+        obj.value = "0";
+        obj.select();
+    }
+}
+
+//限制只能輸入數字和小數點
+function _onlyNum4(obj) {
+    obj.value = obj.value.trim().replace(/[^0-9.-]/g, '');
+    if (obj.value == "") {
+        obj.value = "0";
+    }
+    else if (isNaN(obj.value.trim())) {
+        alert("请输入数字");
+        obj.value = "0";
+        obj.select();
+    }
+}
+function inputNubmerFloat() {
+    var key = window.event.keyCode;
+    if ((key >= 48 && key <= 57) || key == 46) {
+        return true;
+    }
+    else {
+        window.event.keyCode = 0;
+        return true;
+    }
+}
+function changeback() {
+    if (event.fromElement.contains(event.toElement) || source.contains(event.toElement) || source.id == "nc")
+        return
+    if (event.toElement != source && cs[1].style.backgroundColor != clickcolor)
+        //source.style.backgroundColor=originalcolor
+        for (i = 0; i < cs.length; i++) {
+            cs[i].style.backgroundColor = "";
+        }
+}
+
+function changeto() {
+    source = event.srcElement;
+    if (source.tagName == "TR" || source.tagName == "TABLE")
+        return;
+    while (source.tagName != "TD")
+        source = source.parentElement;
+    source = source.parentElement;
+    cs = source.children;
+    //alert(cs.length);
+    if (cs[1].style.backgroundColor != highlightcolor && source.id != "nc" && cs[1].style.backgroundColor != clickcolor)
+        for (i = 0; i < cs.length; i++) {
+            cs[i].style.backgroundColor = highlightcolor;
+        }
 }

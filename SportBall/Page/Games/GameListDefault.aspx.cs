@@ -15,7 +15,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 #endregion
 
-    public partial class GameListDefault : BasePage
+public partial class GameListDefault : BasePage
     {
         #region 全局变量
         private string ms_TYPE = "";
@@ -157,7 +157,7 @@ using System.Web.UI.WebControls;
                     this.txtN_HJSX.Value = o_KFB_BSYS.N_HJSX.ToString();
                 }
             }
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Keys", "changefenshu(document.getElementById('drpRFCJFS'));", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Keys", "changefenshu(document.getElementById('ContentPlaceHolder11_drpRFCJFS'));", true);
         }
         #endregion
 
@@ -319,13 +319,13 @@ using System.Web.UI.WebControls;
         }
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate1", "CountTotal('txtLRFPL','txtRRFPL','txtRFPLJZ');", true);
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate2", "CountTotal('txtDXDPL','txtDXXPL','txtDXPLJZ');", true);
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate3", "CountTotal('txtLDYPL','txtRDYPL','txtDYPLJZ');", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate1", "CountTotal('ContentPlaceHolder11_txtLRFPL','ContentPlaceHolder11_txtRRFPL','ContentPlaceHolder11_txtRFPLJZ');", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate2", "CountTotal('ContentPlaceHolder11_txtDXDPL','ContentPlaceHolder11_txtDXXPL','ContentPlaceHolder11_txtDXPLJZ');", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate3", "CountTotal('ContentPlaceHolder11_txtLDYPL','ContentPlaceHolder11_txtRDYPL','ContentPlaceHolder11_txtDYPLJZ');", true);
             //this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate4", "CountTotal('txtLSYPL','txtRSYPL','txtSYPLJZ');", true);
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate5", "CountTotal('txtDSDPL','txtDSSPL','txtDSPLJZ');", true);
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ConRate1", "ConRate(document.getElementById('drpRFLX'),document.getElementById('txtRFBL'));", true);
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ConRate2", "ConRate(document.getElementById('drpDXLX'),document.getElementById('txtDXBL'));", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate5", "CountTotal('ContentPlaceHolder11_txtDSDPL','ContentPlaceHolder11_txtDSSPL','ContentPlaceHolder11_txtDSPLJZ');", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ConRate1", "ConRate(document.getElementById('ContentPlaceHolder11_drpRFLX'),document.getElementById('ContentPlaceHolder11_txtRFBL'));", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ConRate2", "ConRate(document.getElementById('ContentPlaceHolder11_drpDXLX'),document.getElementById('ContentPlaceHolder11_txtDXBL'));", true);
         }
         #endregion
 

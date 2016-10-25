@@ -63,7 +63,7 @@ public class BaseBallDB
             };
         parameters[0].Value = strid;
 
-        //KingOfBall.Model.KFB_ZHGL model = new KingOfBall.Model.KFB_ZHGL();
+        //KFB_ZHGL model = new KFB_ZHGL();
         DataSet ds = DbHelperOra.Query(strSqlup.ToString(), parameters);
         if (ds.Tables[0].Rows.Count > 0)
         {

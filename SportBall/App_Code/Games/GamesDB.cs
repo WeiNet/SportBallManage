@@ -1320,43 +1320,43 @@ public class GamesDB : CommLib.DbCommon
         int result = 0;
         System.Collections.CaseInsensitiveComparer compare = new System.Collections.CaseInsensitiveComparer();
         gameList.Sort(delegate(KFB_BALL model1, KFB_BALL model2)
-       {
-           object obj1 = null;
-           object obj2 = null;
-           if ((result = model1.N_CBXH.Value.CompareTo(model2.N_CBXH.Value)) != 0)
-           {
-               return result;
-           }
-           else if (!OrderName.Equals("EMPTY"))
-           {
-               obj1 = model1.GetType().InvokeMember(OrderName, System.Reflection.BindingFlags.GetProperty, null, model1, null);
-               obj2 = model2.GetType().InvokeMember(OrderName, System.Reflection.BindingFlags.GetProperty, null, model2, null);
-           }
-           if ((result = compare.Compare(obj1, obj2)) != 0)
-           {
-               return result;
-           }
-           else if ((result = model1.N_GAMEDATE.Value.CompareTo(model2.N_GAMEDATE.Value)) != 0)
-           {
-               return result;
-           }
-           else if ((result = model1.N_LMNO.Value.CompareTo(model2.N_LMNO.Value)) != 0)
-           {
-               return result;
-           }
-           else if ((result = model1.N_CBXH.Value.CompareTo(model2.N_CBXH.Value)) != 0)
-           {
-               return result;
-           }
-           else if ((result = model1.N_ID.CompareTo(model2.N_ID)) != 0)
-           {
-               return result;
-           }
-           else
-           {
-               return 0;
-           }
-       });
+        {
+            object obj1 = null;
+            object obj2 = null;
+            if ((result = model1.N_CBXH.Value.CompareTo(model2.N_CBXH.Value)) != 0)
+            {
+                return result;
+            }
+            else if (!OrderName.Equals("EMPTY"))
+            {
+                obj1 = model1.GetType().InvokeMember(OrderName, System.Reflection.BindingFlags.GetProperty, null, model1, null);
+                obj2 = model2.GetType().InvokeMember(OrderName, System.Reflection.BindingFlags.GetProperty, null, model2, null);
+            }
+            if ((result = compare.Compare(obj1, obj2)) != 0)
+            {
+                return result;
+            }
+            else if ((result = model1.N_GAMEDATE.Value.CompareTo(model2.N_GAMEDATE.Value)) != 0)
+            {
+                return result;
+            }
+            else if ((result = model1.N_LMNO.Value.CompareTo(model2.N_LMNO.Value)) != 0)
+            {
+                return result;
+            }
+            else if ((result = model1.N_CBXH.Value.CompareTo(model2.N_CBXH.Value)) != 0)
+            {
+                return result;
+            }
+            else if ((result = model1.N_ID.CompareTo(model2.N_ID)) != 0)
+            {
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
+        });
     }
     /// <summary>
     /// 查询数据
@@ -1397,17 +1397,17 @@ public class GamesDB : CommLib.DbCommon
                 {
                     gameList = GetClientSpecialGameList(ballType, courtType, playType, teamDic,
                         selectedAllianceList.ConvertAll<string>(delegate(int index)
-                    {
-                        return index.ToString();
-                    }).ToArray());//波胆，入球数，半全场特殊玩法
+                        {
+                            return index.ToString();
+                        }).ToArray());//波胆，入球数，半全场特殊玩法
                 }
                 else
                 {
                     gameList = GetClientAllGameList(ballType, courtType, playType, teamDic,
                         selectedAllianceList.ConvertAll<string>(delegate(int index)
-                    {
-                        return index.ToString();
-                    }).ToArray());
+                        {
+                            return index.ToString();
+                        }).ToArray());
                 }
                 #endregion
             }
@@ -1452,9 +1452,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetClientSpecialGameList(ballType, courtType, playType, teamDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);//波胆，入球数，半全场特殊玩法
@@ -1464,9 +1464,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetClientAllGameList(ballType, courtType, playType, teamDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);
@@ -1843,8 +1843,9 @@ public class GamesDB : CommLib.DbCommon
                             model.N_VISIT_NAME = teamDic[model.N_VISIT.Value].N_DWMC;
                             model.N_HOME_NAME = teamDic[model.N_HOME.Value].N_DWMC;
                             model.N_CBXH = Convert.ToInt32(dr["N_CBXH"]);
-                            //model.N_SAMEGAME = Convert.ToInt32(dr["N_SAMEGAME"] );
-                            model.N_SAMETEAM = Convert.ToString(dr["N_SAMETEAM"]);
+                            model.N_SAMEGAME = Convert.IsDBNull(dr["N_SAMEGAME"]) == true ? 0 : Convert.ToInt32(dr["N_SAMEGAME"]);
+
+                            //model.N_SAMETEAM = Convert.ToString(dr["N_SAMETEAM"]);
                             model.N_LET = Convert.ToInt32(dr["N_LET"]);
                             model.N_SFXZ = Convert.ToInt32(dr["N_SFXZ"]);
                             model.N_LOCK = Convert.ToInt32(dr["N_LOCK"]);
@@ -1859,9 +1860,9 @@ public class GamesDB : CommLib.DbCommon
                             model.N_ZDUPTIME = Convert.ToDateTime(dr["N_ZDUPTIME"]);
                             model.N_SFZD = Convert.ToInt32(dr["N_SFZD"]);
                             model.N_REMARK = Convert.ToString(dr["N_REMARK"]);
-                            model.N_HJPL = Convert.ToDecimal(dr["N_HJPL"]);
-                            model.N_HJGGCJ = Convert.ToDecimal(dr["N_HJGGCJ"]);
 
+                            model.N_HJPL = Convert.IsDBNull(dr["N_HJPL"]) == true ? 0 : Convert.ToDecimal(dr["N_HJPL"]);
+                            model.N_HJGGCJ = Convert.IsDBNull(dr["N_HJGGCJ"]) == true ? 0 : Convert.ToDecimal(dr["N_HJGGCJ"]);
                             model.N_RFLX = Convert.ToInt32(dr["N_RFLX"]);
                             model.N_RFFS = Convert.ToDecimal(dr["N_RFFS"]);
                             model.N_RFBL = Convert.ToInt32(dr["N_RFBL"]);
@@ -2022,17 +2023,17 @@ public class GamesDB : CommLib.DbCommon
                 {
                     gameList = GetCompanySpecialGameList(ballType, courtType, playType, isBet, zwDate, teamDic, ref billDic,
                         selectedAllianceList.ConvertAll<string>(delegate(int index)
-                    {
-                        return index.ToString();
-                    }).ToArray());//波胆，入球数，半全场特殊玩法
+                        {
+                            return index.ToString();
+                        }).ToArray());//波胆，入球数，半全场特殊玩法
                 }
                 else
                 {
                     gameList = GetCompanyAllGameList(ballType, courtType, playType, isBet, zwDate, teamDic, ref billDic,
                         selectedAllianceList.ConvertAll<string>(delegate(int index)
-                    {
-                        return index.ToString();
-                    }).ToArray());
+                        {
+                            return index.ToString();
+                        }).ToArray());
                 }
                 #endregion
             }
@@ -2078,9 +2079,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetCompanySpecialGameList(ballType, courtType, playType, isBet, zwDate, teamDic, ref temptBillDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);//波胆，入球数，半全场特殊玩法
@@ -2090,9 +2091,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetCompanyAllGameList(ballType, courtType, playType, isBet, zwDate, teamDic, ref temptBillDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);
@@ -2863,9 +2864,9 @@ public class GamesDB : CommLib.DbCommon
                 //{
                 gameList = sjbAllGameList(ballType, courtType, playType, teamDic,
                         selectedAllianceList.ConvertAll<string>(delegate(int index)
-                    {
-                        return index.ToString();
-                    }).ToArray());
+                        {
+                            return index.ToString();
+                        }).ToArray());
                 //}
                 #endregion
             }
@@ -2910,9 +2911,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetClientSpecialGameList(ballType, courtType, playType, teamDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);//波胆，入球数，半全场特殊玩法
@@ -2922,9 +2923,9 @@ public class GamesDB : CommLib.DbCommon
                             {
                                 ballList = GetClientAllGameList(ballType, courtType, playType, teamDic,
                                     allianceGroup[k].ConvertAll<string>(delegate(int index)
-                                {
-                                    return index.ToString();
-                                }).ToArray());
+                                    {
+                                        return index.ToString();
+                                    }).ToArray());
                                 lock (gameList)
                                 {
                                     gameList.AddRange(ballList);
@@ -4706,5 +4707,532 @@ public class GamesDB : CommLib.DbCommon
 
         DbHelperOra.ExecuteSql(strSql.ToString(), parameters);
     }
+    /// <summary>
+    /// 更新一条数据
+    /// </summary>
+    public void Update(KFB_BASEBALL model, Hashtable o_aHt)
+    {
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("update KFB_BASEBALL set ");
+        strSql.Append("N_LX=:N_LX,");
+        strSql.Append("N_ZWDATE=:N_ZWDATE,");
+        strSql.Append("N_GAMEDATE=:N_GAMEDATE,");
+        strSql.Append("N_LMNO=:N_LMNO,");
+        strSql.Append("N_VISIT=:N_VISIT,");
+        strSql.Append("N_HOME=:N_HOME,");
+        strSql.Append("N_VISIT_RESULT=:N_VISIT_RESULT,");
+        strSql.Append("N_HOME_RESULT=:N_HOME_RESULT,");
+        strSql.Append("N_TSA=:N_TSA,");
+        strSql.Append("N_TSB=:N_TSB,");
+        strSql.Append("N_VISIT_NO=:N_VISIT_NO,");
+        strSql.Append("N_HOME_NO=:N_HOME_NO,");
+        strSql.Append("N_SFZD=:N_SFZD,");
+        strSql.Append("N_SFXZ=:N_SFXZ,");
+        strSql.Append("N_XZZT=:N_XZZT,");
+        strSql.Append("N_LET=:N_LET,");
+        strSql.Append("N_LOCK=:N_LOCK,");
+        strSql.Append("N_VH=:N_VH,");
+        strSql.Append("N_SF9J=:N_SF9J,");
+        strSql.Append("N_SFDS=:N_SFDS,");
+        strSql.Append("N_SFGP=:N_SFGP,");
+        strSql.Append("N_HYDZSX=:N_HYDZSX,");
+        strSql.Append("N_HYDCSX=:N_HYDCSX,");
+        strSql.Append("N_SFJZF=:N_SFJZF,");
+        strSql.Append("N_ZBXH=:N_ZBXH,");
+        strSql.Append("N_CBXH=:N_CBXH,");
+        strSql.Append("N_RFFS=:N_RFFS,");
+        strSql.Append("N_RFLX=:N_RFLX,");
+        strSql.Append("N_RFBL=:N_RFBL,");
+        strSql.Append("N_LRFPL=:N_LRFPL,");
+        strSql.Append("N_RRFPL=:N_RRFPL,");
+        strSql.Append("N_LRFCJ=:N_LRFCJ,");
+        strSql.Append("N_RRFCJ=:N_RRFCJ,");
+        strSql.Append("N_LRFSX=:N_LRFSX,");
+        strSql.Append("N_RRFSX=:N_RRFSX,");
+        strSql.Append("N_RFCJJE=:N_RFCJJE,");
+        strSql.Append("N_RFCJFS=:N_RFCJFS,");
+        strSql.Append("N_RFCJPL=:N_RFCJPL,");
+        strSql.Append("N_DXFS=:N_DXFS,");
+        strSql.Append("N_DXLX=:N_DXLX,");
+        strSql.Append("N_DXBL=:N_DXBL,");
+        strSql.Append("N_DXDPL=:N_DXDPL,");
+        strSql.Append("N_DXXPL=:N_DXXPL,");
+        strSql.Append("N_DXDCJ=:N_DXDCJ,");
+        strSql.Append("N_DXXCJ=:N_DXXCJ,");
+        strSql.Append("N_DXDCSX=:N_DXDCSX,");
+        strSql.Append("N_DXCJ=:N_DXCJ,");
+        strSql.Append("N_DXCJPL=:N_DXCJPL,");
+        strSql.Append("N_LDYPL=:N_LDYPL,");
+        strSql.Append("N_RDYPL=:N_RDYPL,");
+        strSql.Append("N_LDYCJ=:N_LDYCJ,");
+        strSql.Append("N_RDYCJ=:N_RDYCJ,");
+        strSql.Append("N_LDYSX=:N_LDYSX,");
+        strSql.Append("N_RDYSX=:N_RDYSX,");
+        strSql.Append("N_DYCJ=:N_DYCJ,");
+        strSql.Append("N_DYCJPL=:N_DYCJPL,");
+        strSql.Append("N_LSYPL=:N_LSYPL,");
+        strSql.Append("N_RSYPL=:N_RSYPL,");
+        strSql.Append("N_LSYCJ=:N_LSYCJ,");
+        strSql.Append("N_RSYCJ=:N_RSYCJ,");
+        strSql.Append("N_LSYSX=:N_LSYSX,");
+        strSql.Append("N_RSYSX=:N_RSYSX,");
+        strSql.Append("N_SYCJ=:N_SYCJ,");
+        strSql.Append("N_SYCJPL=:N_SYCJPL,");
+        strSql.Append("N_DSDPL=:N_DSDPL,");
+        strSql.Append("N_DSSPL=:N_DSSPL,");
+        strSql.Append("N_DSDCJ=:N_DSDCJ,");
+        strSql.Append("N_DSSCJ=:N_DSSCJ,");
+        strSql.Append("N_DSDCSX=:N_DSDCSX,");
+        strSql.Append("N_DSCJ=:N_DSCJ,");
+        strSql.Append("N_DSCJPL=:N_DSCJPL,");
+        strSql.Append("N_UP_VISIT_RESULT=:N_UP_VISIT_RESULT,");
+        strSql.Append("N_UP_HOME_RESULT=:N_UP_HOME_RESULT,");
+        strSql.Append("N_VISIT_JZF=:N_VISIT_JZF,");
+        strSql.Append("N_HOME_JZF=:N_HOME_JZF,");
+        strSql.Append("N_RF_OPEN=:N_RF_OPEN,");
+        strSql.Append("N_DX_OPEN=:N_DX_OPEN,");
+        strSql.Append("N_DY_OPEN=:N_DY_OPEN,");
+        strSql.Append("N_SY_OPEN=:N_SY_OPEN,");
+        strSql.Append("N_DS_OPEN=:N_DS_OPEN,");
+        strSql.Append("N_RF_GG=:N_RF_GG,");
+        strSql.Append("N_DX_GG=:N_DX_GG,");
+        strSql.Append("N_DY_GG=:N_DY_GG,");
+        strSql.Append("N_SY_GG=:N_SY_GG,");
+        strSql.Append("N_DS_GG=:N_DS_GG,");
+        strSql.Append("N_RF_LOCK_V=:N_RF_LOCK_V,");
+        strSql.Append("N_RF_LOCK_H=:N_RF_LOCK_H,");
+        strSql.Append("N_DX_LOCK_V=:N_DX_LOCK_V,");
+        strSql.Append("N_DX_LOCK_H=:N_DX_LOCK_H,");
+        strSql.Append("N_DY_LOCK_V=:N_DY_LOCK_V,");
+        strSql.Append("N_DY_LOCK_H=:N_DY_LOCK_H,");
+        strSql.Append("N_SY_LOCK_V=:N_SY_LOCK_V,");
+        strSql.Append("N_SY_LOCK_H=:N_SY_LOCK_H,");
+        strSql.Append("N_DS_LOCK_V=:N_DS_LOCK_V,");
+        strSql.Append("N_DS_LOCK_H=:N_DS_LOCK_H,");
+        strSql.Append("N_REMARK=:N_REMARK,");
+        strSql.Append("N_LDXSX=:N_LDXSX,");
+        strSql.Append("N_RDXSX=:N_RDXSX,");
+        strSql.Append("N_LDSSX=:N_LDSSX,");
+        strSql.Append("N_RDSSX=:N_RDSSX");
+        strSql.Append(" where N_ID=:N_ID ");
+        OracleParameter[] parameters = {
+					new OracleParameter(":N_ID", OracleType.Number,4),
+					new OracleParameter(":N_LX", OracleType.VarChar,50),
+					new OracleParameter(":N_ZWDATE", OracleType.DateTime),
+					new OracleParameter(":N_GAMEDATE", OracleType.DateTime),
+					new OracleParameter(":N_LMNO", OracleType.Number,4),
+					new OracleParameter(":N_VISIT", OracleType.Number,4),
+					new OracleParameter(":N_HOME", OracleType.Number,4),
+					new OracleParameter(":N_VISIT_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_HOME_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_TSA", OracleType.NVarChar),
+					new OracleParameter(":N_TSB", OracleType.NVarChar),
+					new OracleParameter(":N_VISIT_NO", OracleType.Number,4),
+					new OracleParameter(":N_HOME_NO", OracleType.Number,4),
+					new OracleParameter(":N_SFZD", OracleType.Number,4),
+					new OracleParameter(":N_SFXZ", OracleType.Number,4),
+					new OracleParameter(":N_XZZT", OracleType.Number,4),
+					new OracleParameter(":N_LET", OracleType.Number,4),
+					new OracleParameter(":N_LOCK", OracleType.Number,4),
+					new OracleParameter(":N_VH", OracleType.Number,4),
+					new OracleParameter(":N_SF9J", OracleType.Number,4),
+					new OracleParameter(":N_SFDS", OracleType.Number,4),
+					new OracleParameter(":N_SFGP", OracleType.Number,4),
+					new OracleParameter(":N_HYDZSX", OracleType.Float,22),
+					new OracleParameter(":N_HYDCSX", OracleType.Float,22),
+					new OracleParameter(":N_SFJZF", OracleType.Number,4),
+					new OracleParameter(":N_ZBXH", OracleType.Number,4),
+					new OracleParameter(":N_CBXH", OracleType.Number,4),
+					new OracleParameter(":N_RFFS", OracleType.Float,22),
+					new OracleParameter(":N_RFLX", OracleType.Number,4),
+					new OracleParameter(":N_RFBL", OracleType.Number,4),
+					new OracleParameter(":N_LRFPL", OracleType.Float,22),
+					new OracleParameter(":N_RRFPL", OracleType.Float,22),
+					new OracleParameter(":N_LRFCJ", OracleType.Float,22),
+					new OracleParameter(":N_RRFCJ", OracleType.Float,22),
+					new OracleParameter(":N_LRFSX", OracleType.Float,22),
+					new OracleParameter(":N_RRFSX", OracleType.Float,22),
+					new OracleParameter(":N_RFCJJE", OracleType.Float,22),
+					new OracleParameter(":N_RFCJFS", OracleType.Number,4),
+					new OracleParameter(":N_RFCJPL", OracleType.Float,22),
+					new OracleParameter(":N_DXFS", OracleType.Float,22),
+					new OracleParameter(":N_DXLX", OracleType.Number,4),
+					new OracleParameter(":N_DXBL", OracleType.Number,4),
+					new OracleParameter(":N_DXDPL", OracleType.Float,22),
+					new OracleParameter(":N_DXXPL", OracleType.Float,22),
+					new OracleParameter(":N_DXDCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXXCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXDCSX", OracleType.Float,22),
+					new OracleParameter(":N_DXCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXCJPL", OracleType.Float,22),
+					new OracleParameter(":N_LDYPL", OracleType.Float,22),
+					new OracleParameter(":N_RDYPL", OracleType.Float,22),
+					new OracleParameter(":N_LDYCJ", OracleType.Float,22),
+					new OracleParameter(":N_RDYCJ", OracleType.Float,22),
+					new OracleParameter(":N_LDYSX", OracleType.Float,22),
+					new OracleParameter(":N_RDYSX", OracleType.Float,22),
+					new OracleParameter(":N_DYCJ", OracleType.Float,22),
+					new OracleParameter(":N_DYCJPL", OracleType.Float,22),
+					new OracleParameter(":N_LSYPL", OracleType.Float,22),
+					new OracleParameter(":N_RSYPL", OracleType.Float,22),
+					new OracleParameter(":N_LSYCJ", OracleType.Float,22),
+					new OracleParameter(":N_RSYCJ", OracleType.Float,22),
+					new OracleParameter(":N_LSYSX", OracleType.Float,22),
+					new OracleParameter(":N_RSYSX", OracleType.Float,22),
+					new OracleParameter(":N_SYCJ", OracleType.Float,22),
+					new OracleParameter(":N_SYCJPL", OracleType.Float,22),
+					new OracleParameter(":N_DSDPL", OracleType.Float,22),
+					new OracleParameter(":N_DSSPL", OracleType.Float,22),
+					new OracleParameter(":N_DSDCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSSCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSDCSX", OracleType.Float,22),
+					new OracleParameter(":N_DSCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSCJPL", OracleType.Float,22),
+					new OracleParameter(":N_UP_VISIT_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_UP_HOME_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_VISIT_JZF", OracleType.Float,22),
+					new OracleParameter(":N_HOME_JZF", OracleType.Float,22),
+					new OracleParameter(":N_RF_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DX_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DY_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_SY_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DS_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_RF_GG", OracleType.Number,4),
+					new OracleParameter(":N_DX_GG", OracleType.Number,4),
+					new OracleParameter(":N_DY_GG", OracleType.Number,4),
+					new OracleParameter(":N_SY_GG", OracleType.Number,4),
+					new OracleParameter(":N_DS_GG", OracleType.Number,4),
+					new OracleParameter(":N_RF_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_RF_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DX_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DX_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DY_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DY_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_SY_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_SY_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DS_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DS_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_REMARK", OracleType.NVarChar),
+					new OracleParameter(":N_LDXSX", OracleType.Number,4),
+					new OracleParameter(":N_RDXSX", OracleType.Number,4),
+					new OracleParameter(":N_LDSSX", OracleType.Number,4),
+					new OracleParameter(":N_RDSSX", OracleType.Number,4)
+            };
+        parameters[0].Value = model.N_ID;
+        parameters[1].Value = model.N_LX;
+        parameters[2].Value = model.N_ZWDATE;
+        parameters[3].Value = model.N_GAMEDATE;
+        parameters[4].Value = model.N_LMNO;
+        parameters[5].Value = model.N_VISIT;
+        parameters[6].Value = model.N_HOME;
+        parameters[7].Value = model.N_VISIT_RESULT;
+        parameters[8].Value = model.N_HOME_RESULT;
+        parameters[9].Value = model.N_TSA;
+        parameters[10].Value = model.N_TSB;
+        parameters[11].Value = model.N_VISIT_NO;
+        parameters[12].Value = model.N_HOME_NO;
+        parameters[13].Value = model.N_SFZD;
+        parameters[14].Value = model.N_SFXZ;
+        parameters[15].Value = model.N_XZZT;
+        parameters[16].Value = model.N_LET;
+        parameters[17].Value = model.N_LOCK;
+        parameters[18].Value = model.N_VH;
+        parameters[19].Value = model.N_SF9J;
+        parameters[20].Value = model.N_SFDS;
+        parameters[21].Value = model.N_SFGP;
+        parameters[22].Value = model.N_HYDZSX;
+        parameters[23].Value = model.N_HYDCSX;
+        parameters[24].Value = model.N_SFJZF;
+        parameters[25].Value = model.N_ZBXH;
+        parameters[26].Value = model.N_CBXH;
+        parameters[27].Value = model.N_RFFS;
+        parameters[28].Value = model.N_RFLX;
+        parameters[29].Value = model.N_RFBL;
+        parameters[30].Value = model.N_LRFPL;
+        parameters[31].Value = model.N_RRFPL;
+        parameters[32].Value = model.N_LRFCJ;
+        parameters[33].Value = model.N_RRFCJ;
+        parameters[34].Value = model.N_LRFSX;
+        parameters[35].Value = model.N_RRFSX;
+        parameters[36].Value = model.N_RFCJJE;
+        parameters[37].Value = model.N_RFCJFS;
+        parameters[38].Value = model.N_RFCJPL;
+        parameters[39].Value = model.N_DXFS;
+        parameters[40].Value = model.N_DXLX;
+        parameters[41].Value = model.N_DXBL;
+        parameters[42].Value = model.N_DXDPL;
+        parameters[43].Value = model.N_DXXPL;
+        parameters[44].Value = model.N_DXDCJ;
+        parameters[45].Value = model.N_DXXCJ;
+        parameters[46].Value = model.N_DXDCSX;
+        parameters[47].Value = model.N_DXCJ;
+        parameters[48].Value = model.N_DXCJPL;
+        parameters[49].Value = model.N_LDYPL;
+        parameters[50].Value = model.N_RDYPL;
+        parameters[51].Value = model.N_LDYCJ;
+        parameters[52].Value = model.N_RDYCJ;
+        parameters[53].Value = model.N_LDYSX;
+        parameters[54].Value = model.N_RDYSX;
+        parameters[55].Value = model.N_DYCJ;
+        parameters[56].Value = model.N_DYCJPL;
+        parameters[57].Value = model.N_LSYPL;
+        parameters[58].Value = model.N_RSYPL;
+        parameters[59].Value = model.N_LSYCJ;
+        parameters[60].Value = model.N_RSYCJ;
+        parameters[61].Value = model.N_LSYSX;
+        parameters[62].Value = model.N_RSYSX;
+        parameters[63].Value = model.N_SYCJ;
+        parameters[64].Value = model.N_SYCJPL;
+        parameters[65].Value = model.N_DSDPL;
+        parameters[66].Value = model.N_DSSPL;
+        parameters[67].Value = model.N_DSDCJ;
+        parameters[68].Value = model.N_DSSCJ;
+        parameters[69].Value = model.N_DSDCSX;
+        parameters[70].Value = model.N_DSCJ;
+        parameters[71].Value = model.N_DSCJPL;
+        parameters[72].Value = model.N_UP_VISIT_RESULT;
+        parameters[73].Value = model.N_UP_HOME_RESULT;
+        parameters[74].Value = model.N_VISIT_JZF;
+        parameters[75].Value = model.N_HOME_JZF;
+        parameters[76].Value = model.N_RF_OPEN;
+        parameters[77].Value = model.N_DX_OPEN;
+        parameters[78].Value = model.N_DY_OPEN;
+        parameters[79].Value = model.N_SY_OPEN;
+        parameters[80].Value = model.N_DS_OPEN;
+        parameters[81].Value = model.N_RF_GG;
+        parameters[82].Value = model.N_DX_GG;
+        parameters[83].Value = model.N_DY_GG;
+        parameters[84].Value = model.N_SY_GG;
+        parameters[85].Value = model.N_DS_GG;
+        parameters[86].Value = model.N_RF_LOCK_V;
+        parameters[87].Value = model.N_RF_LOCK_H;
+        parameters[88].Value = model.N_DX_LOCK_V;
+        parameters[89].Value = model.N_DX_LOCK_H;
+        parameters[90].Value = model.N_DY_LOCK_V;
+        parameters[91].Value = model.N_DY_LOCK_H;
+        parameters[92].Value = model.N_SY_LOCK_V;
+        parameters[93].Value = model.N_SY_LOCK_H;
+        parameters[94].Value = model.N_DS_LOCK_V;
+        parameters[95].Value = model.N_DS_LOCK_H;
+        parameters[96].Value = model.N_REMARK;
+        parameters[97].Value = model.N_LDXSX;
+        parameters[98].Value = model.N_RDXSX;
+        parameters[99].Value = model.N_LDSSX;
+        parameters[100].Value = model.N_RDSSX;
 
+        o_aHt.Add(strSql, parameters);
+    }
+    /// <summary>
+    /// 增加一条数据
+    /// </summary>
+    public void Add(KFB_BASEBALL model, Hashtable o_aHt)
+    {
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("insert into KFB_BASEBALL(");
+        strSql.Append("N_ID,N_LX,N_ZWDATE,N_GAMEDATE,N_LMNO,N_VISIT,N_HOME,N_VISIT_RESULT,N_HOME_RESULT,N_TSA,N_TSB,N_VISIT_NO,N_HOME_NO,N_SFZD,N_SFXZ,N_XZZT,N_LET,N_LOCK,N_VH,N_SF9J,N_SFDS,N_SFGP,N_HYDZSX,N_HYDCSX,N_SFJZF,N_ZBXH,N_CBXH,N_RFFS,N_RFLX,N_RFBL,N_LRFPL,N_RRFPL,N_LRFCJ,N_RRFCJ,N_LRFSX,N_RRFSX,N_RFCJJE,N_RFCJFS,N_RFCJPL,N_DXFS,N_DXLX,N_DXBL,N_DXDPL,N_DXXPL,N_DXDCJ,N_DXXCJ,N_DXDCSX,N_DXCJ,N_DXCJPL,N_LDYPL,N_RDYPL,N_LDYCJ,N_RDYCJ,N_LDYSX,N_RDYSX,N_DYCJ,N_DYCJPL,N_LSYPL,N_RSYPL,N_LSYCJ,N_RSYCJ,N_LSYSX,N_RSYSX,N_SYCJ,N_SYCJPL,N_DSDPL,N_DSSPL,N_DSDCJ,N_DSSCJ,N_DSDCSX,N_DSCJ,N_DSCJPL,N_UP_VISIT_RESULT,N_UP_HOME_RESULT,N_VISIT_JZF,N_HOME_JZF,N_RF_OPEN,N_DX_OPEN,N_DY_OPEN,N_SY_OPEN,N_DS_OPEN,N_RF_GG,N_DX_GG,N_DY_GG,N_SY_GG,N_DS_GG,N_RF_LOCK_V,N_RF_LOCK_H,N_DX_LOCK_V,N_DX_LOCK_H,N_DY_LOCK_V,N_DY_LOCK_H,N_SY_LOCK_V,N_SY_LOCK_H,N_DS_LOCK_V,N_DS_LOCK_H,N_SAMETEAM,N_LDXSX,N_RDXSX,N_LDSSX,N_RDSSX)");
+        strSql.Append(" values (");
+        strSql.Append("EXAMPLE_SEQ.nextval,:N_LX,:N_ZWDATE,:N_GAMEDATE,:N_LMNO,:N_VISIT,:N_HOME,:N_VISIT_RESULT,:N_HOME_RESULT,:N_TSA,:N_TSB,:N_VISIT_NO,:N_HOME_NO,:N_SFZD,:N_SFXZ,:N_XZZT,:N_LET,:N_LOCK,:N_VH,:N_SF9J,:N_SFDS,:N_SFGP,:N_HYDZSX,:N_HYDCSX,:N_SFJZF,:N_ZBXH,:N_CBXH,:N_RFFS,:N_RFLX,:N_RFBL,:N_LRFPL,:N_RRFPL,:N_LRFCJ,:N_RRFCJ,:N_LRFSX,:N_RRFSX,:N_RFCJJE,:N_RFCJFS,:N_RFCJPL,:N_DXFS,:N_DXLX,:N_DXBL,:N_DXDPL,:N_DXXPL,:N_DXDCJ,:N_DXXCJ,:N_DXDCSX,:N_DXCJ,:N_DXCJPL,:N_LDYPL,:N_RDYPL,:N_LDYCJ,:N_RDYCJ,:N_LDYSX,:N_RDYSX,:N_DYCJ,:N_DYCJPL,:N_LSYPL,:N_RSYPL,:N_LSYCJ,:N_RSYCJ,:N_LSYSX,:N_RSYSX,:N_SYCJ,:N_SYCJPL,:N_DSDPL,:N_DSSPL,:N_DSDCJ,:N_DSSCJ,:N_DSDCSX,:N_DSCJ,:N_DSCJPL,:N_UP_VISIT_RESULT,:N_UP_HOME_RESULT,:N_VISIT_JZF,:N_HOME_JZF,:N_RF_OPEN,:N_DX_OPEN,:N_DY_OPEN,:N_SY_OPEN,:N_DS_OPEN,:N_RF_GG,:N_DX_GG,:N_DY_GG,:N_SY_GG,:N_DS_GG,:N_RF_LOCK_V,:N_RF_LOCK_H,:N_DX_LOCK_V,:N_DX_LOCK_H,:N_DY_LOCK_V,:N_DY_LOCK_H,:N_SY_LOCK_V,:N_SY_LOCK_H,:N_DS_LOCK_V,:N_DS_LOCK_H,:N_SAMETEAM,:N_LDXSX,:N_RDXSX,:N_LDSSX,:N_RDSSX)");
+        OracleParameter[] parameters = {
+					new OracleParameter(":N_LX", OracleType.VarChar,50),
+					new OracleParameter(":N_ZWDATE", OracleType.DateTime),
+					new OracleParameter(":N_GAMEDATE", OracleType.DateTime),
+					new OracleParameter(":N_LMNO", OracleType.Number,4),
+					new OracleParameter(":N_VISIT", OracleType.Number,4),
+					new OracleParameter(":N_HOME", OracleType.Number,4),
+					new OracleParameter(":N_VISIT_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_HOME_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_TSA", OracleType.NVarChar),
+					new OracleParameter(":N_TSB", OracleType.NVarChar),
+					new OracleParameter(":N_VISIT_NO", OracleType.Number,4),
+					new OracleParameter(":N_HOME_NO", OracleType.Number,4),
+					new OracleParameter(":N_SFZD", OracleType.Number,4),
+					new OracleParameter(":N_SFXZ", OracleType.Number,4),
+					new OracleParameter(":N_XZZT", OracleType.Number,4),
+					new OracleParameter(":N_LET", OracleType.Number,4),
+					new OracleParameter(":N_LOCK", OracleType.Number,4),
+					new OracleParameter(":N_VH", OracleType.Number,4),
+					new OracleParameter(":N_SF9J", OracleType.Number,4),
+					new OracleParameter(":N_SFDS", OracleType.Number,4),
+					new OracleParameter(":N_SFGP", OracleType.Number,4),
+					new OracleParameter(":N_HYDZSX", OracleType.Float,22),
+					new OracleParameter(":N_HYDCSX", OracleType.Float,22),
+					new OracleParameter(":N_SFJZF", OracleType.Number,4),
+					new OracleParameter(":N_ZBXH", OracleType.Number,4),
+					new OracleParameter(":N_CBXH", OracleType.Number,4),
+					new OracleParameter(":N_RFFS", OracleType.Float,22),
+					new OracleParameter(":N_RFLX", OracleType.Number,4),
+					new OracleParameter(":N_RFBL", OracleType.Number,4),
+					new OracleParameter(":N_LRFPL", OracleType.Float,22),
+					new OracleParameter(":N_RRFPL", OracleType.Float,22),
+					new OracleParameter(":N_LRFCJ", OracleType.Float,22),
+					new OracleParameter(":N_RRFCJ", OracleType.Float,22),
+					new OracleParameter(":N_LRFSX", OracleType.Float,22),
+					new OracleParameter(":N_RRFSX", OracleType.Float,22),
+					new OracleParameter(":N_RFCJJE", OracleType.Float,22),
+					new OracleParameter(":N_RFCJFS", OracleType.Number,4),
+					new OracleParameter(":N_RFCJPL", OracleType.Float,22),
+					new OracleParameter(":N_DXFS", OracleType.Float,22),
+					new OracleParameter(":N_DXLX", OracleType.Number,4),
+					new OracleParameter(":N_DXBL", OracleType.Number,4),
+					new OracleParameter(":N_DXDPL", OracleType.Float,22),
+					new OracleParameter(":N_DXXPL", OracleType.Float,22),
+					new OracleParameter(":N_DXDCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXXCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXDCSX", OracleType.Float,22),
+					new OracleParameter(":N_DXCJ", OracleType.Float,22),
+					new OracleParameter(":N_DXCJPL", OracleType.Float,22),
+					new OracleParameter(":N_LDYPL", OracleType.Float,22),
+					new OracleParameter(":N_RDYPL", OracleType.Float,22),
+					new OracleParameter(":N_LDYCJ", OracleType.Float,22),
+					new OracleParameter(":N_RDYCJ", OracleType.Float,22),
+					new OracleParameter(":N_LDYSX", OracleType.Float,22),
+					new OracleParameter(":N_RDYSX", OracleType.Float,22),
+					new OracleParameter(":N_DYCJ", OracleType.Float,22),
+					new OracleParameter(":N_DYCJPL", OracleType.Float,22),
+					new OracleParameter(":N_LSYPL", OracleType.Float,22),
+					new OracleParameter(":N_RSYPL", OracleType.Float,22),
+					new OracleParameter(":N_LSYCJ", OracleType.Float,22),
+					new OracleParameter(":N_RSYCJ", OracleType.Float,22),
+					new OracleParameter(":N_LSYSX", OracleType.Float,22),
+					new OracleParameter(":N_RSYSX", OracleType.Float,22),
+					new OracleParameter(":N_SYCJ", OracleType.Float,22),
+					new OracleParameter(":N_SYCJPL", OracleType.Float,22),
+					new OracleParameter(":N_DSDPL", OracleType.Float,22),
+					new OracleParameter(":N_DSSPL", OracleType.Float,22),
+					new OracleParameter(":N_DSDCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSSCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSDCSX", OracleType.Float,22),
+					new OracleParameter(":N_DSCJ", OracleType.Float,22),
+					new OracleParameter(":N_DSCJPL", OracleType.Float,22),
+					new OracleParameter(":N_UP_VISIT_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_UP_HOME_RESULT", OracleType.Float,22),
+					new OracleParameter(":N_VISIT_JZF", OracleType.Float,22),
+					new OracleParameter(":N_HOME_JZF", OracleType.Float,22),
+					new OracleParameter(":N_RF_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DX_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DY_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_SY_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_DS_OPEN", OracleType.Number,4),
+					new OracleParameter(":N_RF_GG", OracleType.Number,4),
+					new OracleParameter(":N_DX_GG", OracleType.Number,4),
+					new OracleParameter(":N_DY_GG", OracleType.Number,4),
+					new OracleParameter(":N_SY_GG", OracleType.Number,4),
+					new OracleParameter(":N_DS_GG", OracleType.Number,4),
+					new OracleParameter(":N_RF_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_RF_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DX_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DX_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DY_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DY_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_SY_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_SY_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_DS_LOCK_V", OracleType.Number,4),
+					new OracleParameter(":N_DS_LOCK_H", OracleType.Number,4),
+					new OracleParameter(":N_SAMETEAM", OracleType.VarChar,20),
+					new OracleParameter(":N_LDXSX", OracleType.Number,4),
+					new OracleParameter(":N_RDXSX", OracleType.Number,4),
+					new OracleParameter(":N_LDSSX", OracleType.Number,4),
+					new OracleParameter(":N_RDSSX", OracleType.Number,4)};
+        parameters[0].Value = model.N_LX;
+        parameters[1].Value = model.N_ZWDATE;
+        parameters[2].Value = model.N_GAMEDATE;
+        parameters[3].Value = model.N_LMNO;
+        parameters[4].Value = model.N_VISIT;
+        parameters[5].Value = model.N_HOME;
+        parameters[6].Value = model.N_VISIT_RESULT;
+        parameters[7].Value = model.N_HOME_RESULT;
+        parameters[8].Value = model.N_TSA;
+        parameters[9].Value = model.N_TSB;
+        parameters[10].Value = model.N_VISIT_NO;
+        parameters[11].Value = model.N_HOME_NO;
+        parameters[12].Value = model.N_SFZD;
+        parameters[13].Value = model.N_SFXZ;
+        parameters[14].Value = model.N_XZZT;
+        parameters[15].Value = model.N_LET;
+        parameters[16].Value = model.N_LOCK;
+        parameters[17].Value = model.N_VH;
+        parameters[18].Value = model.N_SF9J;
+        parameters[19].Value = model.N_SFDS;
+        parameters[20].Value = model.N_SFGP;
+        parameters[21].Value = model.N_HYDZSX;
+        parameters[22].Value = model.N_HYDCSX;
+        parameters[23].Value = model.N_SFJZF;
+        parameters[24].Value = model.N_ZBXH;
+        parameters[25].Value = model.N_CBXH;
+        parameters[26].Value = model.N_RFFS;
+        parameters[27].Value = model.N_RFLX;
+        parameters[28].Value = model.N_RFBL;
+        parameters[29].Value = model.N_LRFPL;
+        parameters[30].Value = model.N_RRFPL;
+        parameters[31].Value = model.N_LRFCJ;
+        parameters[32].Value = model.N_RRFCJ;
+        parameters[33].Value = model.N_LRFSX;
+        parameters[34].Value = model.N_RRFSX;
+        parameters[35].Value = model.N_RFCJJE;
+        parameters[36].Value = model.N_RFCJFS;
+        parameters[37].Value = model.N_RFCJPL;
+        parameters[38].Value = model.N_DXFS;
+        parameters[39].Value = model.N_DXLX;
+        parameters[40].Value = model.N_DXBL;
+        parameters[41].Value = model.N_DXDPL;
+        parameters[42].Value = model.N_DXXPL;
+        parameters[43].Value = model.N_DXDCJ;
+        parameters[44].Value = model.N_DXXCJ;
+        parameters[45].Value = model.N_DXDCSX;
+        parameters[46].Value = model.N_DXCJ;
+        parameters[47].Value = model.N_DXCJPL;
+        parameters[48].Value = model.N_LDYPL;
+        parameters[49].Value = model.N_RDYPL;
+        parameters[50].Value = model.N_LDYCJ;
+        parameters[51].Value = model.N_RDYCJ;
+        parameters[52].Value = model.N_LDYSX;
+        parameters[53].Value = model.N_RDYSX;
+        parameters[54].Value = model.N_DYCJ;
+        parameters[55].Value = model.N_DYCJPL;
+        parameters[56].Value = model.N_LSYPL;
+        parameters[57].Value = model.N_RSYPL;
+        parameters[58].Value = model.N_LSYCJ;
+        parameters[59].Value = model.N_RSYCJ;
+        parameters[60].Value = model.N_LSYSX;
+        parameters[61].Value = model.N_RSYSX;
+        parameters[62].Value = model.N_SYCJ;
+        parameters[63].Value = model.N_SYCJPL;
+        parameters[64].Value = model.N_DSDPL;
+        parameters[65].Value = model.N_DSSPL;
+        parameters[66].Value = model.N_DSDCJ;
+        parameters[67].Value = model.N_DSSCJ;
+        parameters[68].Value = model.N_DSDCSX;
+        parameters[69].Value = model.N_DSCJ;
+        parameters[70].Value = model.N_DSCJPL;
+        parameters[71].Value = model.N_UP_VISIT_RESULT;
+        parameters[72].Value = model.N_UP_HOME_RESULT;
+        parameters[73].Value = model.N_VISIT_JZF;
+        parameters[74].Value = model.N_HOME_JZF;
+        parameters[75].Value = model.N_RF_OPEN;
+        parameters[76].Value = model.N_DX_OPEN;
+        parameters[77].Value = model.N_DY_OPEN;
+        parameters[78].Value = model.N_SY_OPEN;
+        parameters[79].Value = model.N_DS_OPEN;
+        parameters[80].Value = model.N_RF_GG;
+        parameters[81].Value = model.N_DX_GG;
+        parameters[82].Value = model.N_DY_GG;
+        parameters[83].Value = model.N_SY_GG;
+        parameters[84].Value = model.N_DS_GG;
+        parameters[85].Value = model.N_RF_LOCK_V;
+        parameters[86].Value = model.N_RF_LOCK_H;
+        parameters[87].Value = model.N_DX_LOCK_V;
+        parameters[88].Value = model.N_DX_LOCK_H;
+        parameters[89].Value = model.N_DY_LOCK_V;
+        parameters[90].Value = model.N_DY_LOCK_H;
+        parameters[91].Value = model.N_SY_LOCK_V;
+        parameters[92].Value = model.N_SY_LOCK_H;
+        parameters[93].Value = model.N_DS_LOCK_V;
+        parameters[94].Value = model.N_DS_LOCK_H;
+        parameters[95].Value = model.N_SAMETEAM;
+        parameters[96].Value = model.N_LDXSX;
+        parameters[97].Value = model.N_RDXSX;
+        parameters[98].Value = model.N_LDSSX;
+        parameters[99].Value = model.N_RDSSX;
+        o_aHt.Add(strSql, parameters);
+    }
 }

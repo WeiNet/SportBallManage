@@ -162,6 +162,7 @@
     <Content Include="obj\Debug\SportBall.pdb" />
     <Content Include="Page\GameLimit.aspx" />
     <Content Include="Page\GameLimit.js" />
+    <Content Include="Page\GameListPassCalcu.aspx" />
     <Content Include="Page\Games\baseball.js" />
     <Content Include="Page\Games\game.js" />
     <Content Include="Page\Games\GameAjax.aspx" />
@@ -170,11 +171,18 @@
     <Content Include="Page\Games\GameDetail.aspx" />
     <Content Include="Page\Games\GameDetail.js" />
     <Content Include="Page\Games\GameFastSet.aspx" />
+    <Content Include="Page\Games\GameListCalculated.aspx" />
     <Content Include="Page\Games\GamelistControl.aspx" />
+    <Content Include="Page\Games\GameListOtherDefault.aspx" />
     <Content Include="Page\Games\GameListDefault.aspx" />
+    <Content Include="Page\Games\GameListDefault.js" />
+    <Content Include="Page\Games\GameListEdit.aspx" />
     <Content Include="Page\Games\GameListHistory.aspx" />
     <Content Include="Page\Games\GameListHalfFull.aspx" />
     <Content Include="Page\Games\GameListGoal.aspx" />
+    <Content Include="Page\Games\GameListOtherEdit.aspx" />
+    <Content Include="Page\Games\GameListOtherGoto.aspx" />
+    <Content Include="Page\Games\GameListRecycle.aspx" />
     <Content Include="Page\Games\GameListWave.aspx" />
     <Content Include="Page\Games\GameListBegin.aspx" />
     <Content Include="Page\Games\GameListBreakfast.aspx" />
@@ -188,6 +196,12 @@
     <Content Include="Page\Games\jquery.tmpl.min.js" />
     <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
     <Content Include="Page\IpManagement.aspx" />
+    <Content Include="Page\Manage\AgentManage.aspx" />
+    <Content Include="Page\Manage\AgentManageUpd.aspx" />
+    <Content Include="Page\Manage\AgentManageAdd.aspx" />
+    <Content Include="Page\Manage\AgentManageAdd.js" />
+    <Content Include="Page\Manage\hygl.aspx" />
+    <Content Include="Page\Manage\dlgl.aspx" />
     <Content Include="Page\Team.aspx" />
     <Content Include="Page\Team.js" />
     <Content Include="Page\IpManagement.js" />
@@ -241,9 +255,14 @@
     <Content Include="Styles\jquery-ui.css" />
     <Content Include="Styles\master.css" />
     <Content Include="Styles\style.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\AgentMange\AgentManageAddDB.cs" />
+    <Compile Include="App_Code\AgentMange\AgentManageDB.cs" />
+    <Compile Include="App_Code\AgentMange\HYGLDB.cs" />
     <Compile Include="App_Code\Comm.cs" />
     <Compile Include="App_Code\CommLib.cs" />
     <Compile Include="App_Code\DbHelperOra.cs" />
@@ -252,6 +271,9 @@
     <Compile Include="App_Code\Games\GameCalculationDB.cs" />
     <Compile Include="App_Code\Games\GameDefaultDB.cs" />
     <Compile Include="App_Code\Games\GameListControlDB.cs" />
+    <Compile Include="App_Code\Games\GameListOtherEditDB.cs" />
+    <Compile Include="App_Code\Games\GameListPassCalcuDB.cs" />
+    <Compile Include="App_Code\Games\GameOtherDefaultDB.cs" />
     <Compile Include="App_Code\Games\GameSBall.cs" />
     <Compile Include="App_Code\Games\GamesDB.cs" />
     <Compile Include="App_Code\Model\KFB_BALL.cs" />
@@ -262,9 +284,26 @@
     <Compile Include="App_Code\Model\KFB_DLIP.cs" />
     <Compile Include="App_Code\Model\KFB_DLTKPSD.cs" />
     <Compile Include="App_Code\Model\KFB_DWGL.cs" />
+    <Compile Include="App_Code\Model\KFB_HYGL.cs" />
     <Compile Include="App_Code\Model\KFB_LHCKPSD.cs" />
     <Compile Include="App_Code\Model\KFB_LMGL.cs" />
+    <Compile Include="App_Code\Model\KFB_MRZJ.cs" />
     <Compile Include="App_Code\Model\KFB_PTZD.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPBQ.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPCP.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPCQ.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPDLT.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPJC539.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPLHC.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPLQ.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPMB.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPMQ.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPRB.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPSM.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPSS.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPTB.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPZQ.cs" />
+    <Compile Include="App_Code\Model\KFB_SETUPZS.cs" />
     <Compile Include="App_Code\Model\KFB_XSHY.cs" />
     <Compile Include="App_Code\Model\KFB_XTSZ.cs" />
     <Compile Include="App_Code\Model\KFB_ZHGL.cs" />
@@ -295,6 +334,13 @@
     </Compile>
     <Compile Include="Page\GameLimit.aspx.designer.cs">
       <DependentUpon>GameLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GameListPassCalcu.aspx.cs">
+      <DependentUpon>GameListPassCalcu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GameListPassCalcu.aspx.designer.cs">
+      <DependentUpon>GameListPassCalcu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\GameAjax.aspx.cs">
       <DependentUpon>GameAjax.aspx</DependentUpon>
@@ -334,12 +380,33 @@
     <Compile Include="Page\Games\GamelistControl.aspx.designer.cs">
       <DependentUpon>GamelistControl.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Games\GameListOtherDefault.aspx.cs">
+      <DependentUpon>GameListOtherDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameListOtherDefault.aspx.designer.cs">
+      <DependentUpon>GameListOtherDefault.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Games\GameListDefault.aspx.cs">
       <DependentUpon>GameListDefault.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page\Games\GameListDefault.aspx.designer.cs">
       <DependentUpon>GameListDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameListEdit.aspx.cs">
+      <DependentUpon>GameListEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameListEdit.aspx.designer.cs">
+      <DependentUpon>GameListEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GameListOtherEdit.aspx.cs">
+      <DependentUpon>GameListOtherEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GameListOtherEdit.aspx.designer.cs">
+      <DependentUpon>GameListOtherEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\GamesSet.aspx.cs">
       <DependentUpon>GamesSet.aspx</DependentUpon>
@@ -361,6 +428,41 @@
     </Compile>
     <Compile Include="Page\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManage.aspx.cs">
+      <DependentUpon>AgentManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManage.aspx.designer.cs">
+      <DependentUpon>AgentManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManageUpd.aspx.cs">
+      <DependentUpon>AgentManageUpd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManageUpd.aspx.designer.cs">
+      <DependentUpon>AgentManageUpd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManageAdd.aspx.cs">
+      <DependentUpon>AgentManageAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\AgentManageAdd.aspx.designer.cs">
+      <DependentUpon>AgentManageAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\hygl.aspx.cs">
+      <DependentUpon>hygl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\hygl.aspx.designer.cs">
+      <DependentUpon>hygl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\dlgl.aspx.cs">
+      <DependentUpon>dlgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\dlgl.aspx.designer.cs">
+      <DependentUpon>dlgl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\SystemSet\DelayedManager.aspx.cs">
       <DependentUpon>DelayedManager.aspx</DependentUpon>

@@ -300,6 +300,7 @@ public partial class Welcome : BasePage
 
                     gridrow.Cells[4].RowSpan = 3;
                     Button btgz = new Button();
+                    btgz.Attributes.Add("class","button");
                     btgz.Text = "執行過賬";
                     btgz.Click += new EventHandler(btgz_Click);
                     //if (strcount.Equals("0"))
@@ -309,7 +310,7 @@ public partial class Welcome : BasePage
                     //else
                     //{
                     //    btgz.Enabled = false;
-                    //}
+                    //}  
                     gridrow.Cells[4].Controls.Add(btgz);
                 }
                 else if (strtype.Equals("1"))

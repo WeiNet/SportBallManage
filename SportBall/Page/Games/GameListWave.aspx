@@ -183,19 +183,18 @@
                     </div>
                     <!--footballs end-->
                     <!--选择联盟-->
-                    <div class="allianceFlow" style="display: none" id="divLeague">
-                        <input type="button" onclick="selectLeague()" value="確定" id="btnConfirm" />
-                        <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel1" />
-                        <p class="topbox">
-                            <input type="checkbox" onclick="checkAllLeague(this)" id="chkAll" value="" />所有聯盟
-                        </p>
-                        <ul id="leagueContainerId">
-                        </ul>
-                        <div class="bottonbtn">
-                            <input type="button" onclick="selectLeague()" value="確定" id="btnSure" />
-                            <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel" />
-                        </div>
+                      <div class="allianceFlow" style="display: none" id="divLeague">
+                         <input type="button" onclick="selectLeague()" value="確定" id="btnConfirm" class="button" />
+                        <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel1" class="button" />
+                    <p class="topbox">
+                        <input type="checkbox" onclick="checkAllLeague(this)" id="chkAll" value="" />所有聯盟</p>
+                    <ul id="leagueContainerId">
+                    </ul>
+                    <div class="bottonbtn">
+                        <input type="button" onclick="selectLeague()" value="確定" id="btnSure" class="button" />
+                        <input type="button" onclick="cancelLeague()" value="取消" id="btnCancel" class="button" />
                     </div>
+                </div>
                     <!--选择联盟 end-->
                 </td>
             <td class="ct-rg">

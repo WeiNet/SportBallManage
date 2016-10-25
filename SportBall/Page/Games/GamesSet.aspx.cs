@@ -68,7 +68,7 @@ public partial class GamesSet : BasePage
                 InitInsertPage();
             }
         }
-        this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Keys", "changefenshu(document.getElementById('drpRFCJFS'));", true);
+        this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Keys", "changefenshu1(document.getElementById('drpRFCJFS'));", true);
 
     }
     #endregion
@@ -122,6 +122,7 @@ public partial class GamesSet : BasePage
     {
         if (this.hidMode.Value.Equals("Add"))
         {
+           
             Comm.ClearControlsContent(this.Page, "form1");
             InitInsertPage();
             this.rdoZD.SelectedValue = "1";
@@ -138,7 +139,7 @@ public partial class GamesSet : BasePage
         }
         else
         {
-            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "LM", "$('#drpLM').val($('#hidLM').val());getTeamList($('#drpLM').get(0),true);$('#drpLM').attr('disabled',true);", true);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), "LM", "$('#drpLM').val($('#hidLM').val());getTeamList1($('#drpLM').get(0),true);$('#drpLM').attr('disabled',true);", true);
             //this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Modify", "document.getElementById('drpLM').disabled = true;document.getElementById('drpVisit').disabled = true;document.getElementById('drpHome').disabled = true;", true);
         }
         this.Page.ClientScript.RegisterStartupScript(this.GetType(), "Rate1", "CountTotal('txtLRFPL','txtRRFPL','txtRFPLJZ');", true);

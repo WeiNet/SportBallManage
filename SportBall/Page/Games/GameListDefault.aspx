@@ -18,18 +18,18 @@
     </div>
     <div style="width: 90%; margin: auto">
         <table class="table" style="width: 100%">
-                
-                <tr>
-                    <td class="title" colspan="2">
-                       <asp:Button ID="btnSave" runat="server" Text="儲存比賽修改" OnClick="btnSave_Click" CssClass="button" />
-                    </td>
-                </tr>
-            </table>
-        <table width="100%" border="0" cellpadding="4" cellspacing="1" class="table">
-            <tr  >
-                <td  style="width:30%" class="trr">修改時間 ：
+
+            <tr>
+                <td class="title" colspan="2">
+                    <asp:Button ID="btnSave" runat="server" Text="儲存比賽修改" OnClick="btnSave_Click" CssClass="button" />
                 </td>
-                <td  colspan="7" class="trl">
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="4" cellspacing="1" class="table">
+            <tr>
+                <td style="width: 30%" class="trr">修改時間 ：
+                </td>
+                <td colspan="7" class="trl">
                     <span>
                         <asp:CheckBoxList ID="chkCB" runat="server" RepeatDirection="Horizontal">
                             <asp:ListItem Value="1">全場</asp:ListItem>
@@ -37,15 +37,15 @@
                             <asp:ListItem Value="4">下半場</asp:ListItem>
                         </asp:CheckBoxList></span></td>
             </tr>
-            <tr   style="display: none">
+            <tr style="display: none">
                 <td class="trr">
                     <span>會員單注上限 ：</span></td>
-                <td  colspan="7" class="trl">
+                <td colspan="7" class="trl">
                     <input name="txtDZSX" type="text" onblur="_onlyNum(this)" value="0"
                         size="10" maxlength="10" id="txtDZSX" runat="server" />
                     (萬)</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>會員單場上限 ：</span></td>
                 <td colspan="7" class="trl">
@@ -53,11 +53,11 @@
                         size="10" maxlength="10" id="txtDCSX" runat="server" />
                     (萬)</td>
             </tr>
-            <tr  >
+            <tr>
                 <td align="center" colspan="8">
                     <span>讓分預設值</span></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>讓分：</span></td>
                 <td colspan="7" class="trl">
@@ -75,7 +75,7 @@
                         <option>10</option>
                     </select>
                     分
-                                <select name="drpRFLX" id="drpRFLX" runat="server" onchange="ConRate(this,txtRFBL)">
+                                <select name="drpRFLX" id="drpRFLX" runat="server" onchange="ConRate(this,ContentPlaceHolder11_txtRFBL)">
                                     <option value="1">+</option>
                                     <option value="0" selected="selected">平</option>
                                     <option value="-1">-</option>
@@ -85,36 +85,36 @@
                         onblur="_onlyNum(this)" id="txtRFBL" runat="server" />
                     ％</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊賠率：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span class="eng_bk_r"><span>
-                        <input name="txtLRFPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtLRFPL,txtRRFPL,txtRFPLJZ,1);"
+                        <input name="txtLRFPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtLRFPL,ContentPlaceHolder11_txtRRFPL,ContentPlaceHolder11_txtRFPLJZ,1);"
                             size="10" maxlength="10" id="txtLRFPL" runat="server" />
                     </span></span>
                 </td>
                 <td class="trr">
                     <span>右隊賠率：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
-                        <input name="txtRRFPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtLRFPL,txtRRFPL,txtRFPLJZ,2);"
+                        <input name="txtRRFPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtLRFPL,ContentPlaceHolder11_txtRRFPL,ContentPlaceHolder11_txtRFPLJZ,2);"
                             size="10" maxlength="10" id="txtRRFPL" runat="server" />
                     </span>
                 </td>
                 <td class="trr">
                     <span>讓分賠率加總：</span></td>
-                <td  colspan="3" class="trl">
+                <td colspan="3" class="trl">
                     <span>
-                        <input name="txtRFPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(txtLRFPL,txtRRFPL,txtRFPLJZ,3);"
+                        <input name="txtRFPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtLRFPL,ContentPlaceHolder11_txtRRFPL,ContentPlaceHolder11_txtRFPLJZ,3);"
                             size="10" maxlength="10" id="txtRFPLJZ" runat="server" />
                     </span>
                 </td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊過關差距：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
                         <select name="drpLRFCJ" id="drpLRFCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -134,7 +134,7 @@
                 </td>
                 <td class="trr">
                     <span>右隊過關差距</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpRRFCJ" id="drpRRFCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -155,17 +155,17 @@
                 <td class="trr">&nbsp;</td>
                 <td align="center" colspan="3">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span><span>左隊上限：</span></span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <input name="txtLRFSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtLRFSX" runat="server" />
                         (萬)</span></td>
                 <td class="trr">
                     <span>右隊上限：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <input name="txtRRFSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtRRFSX" runat="server" />
@@ -173,10 +173,10 @@
                 <td class="trr">&nbsp;</td>
                 <td align="center" colspan="3">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span><span>自動設置：</span></span></td>
-                <td  class="trl" colspan="7" >兩隊金額差距：<span>
+                <td class="trl" colspan="7">兩隊金額差距：<span>
                     <input name="txtRFCJJE" type="text" value="0" onblur="_onlyNum(this)"
                         size="10" maxlength="10" id="txtRFCJJE" runat="server" />
                     (萬)<select name="drpRFCJFS" id="drpRFCJFS" runat="server" onchange="changefenshu(this)">
@@ -222,14 +222,14 @@
                 </span>
                 </td>
             </tr>
-            <tr align="center" >
+            <tr align="center">
                 <td colspan="8">
                     <span>大小預設值</span></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>大小：</span></td>
-                <td colspan="7" class="trl" >
+                <td colspan="7" class="trl">
                     <select name="drpDXFS" id="drpDXFS" runat="server">
                         <option selected="selected">0</option>
                         <option>1</option>
@@ -247,7 +247,7 @@
                                 <input name="txtDXFS" type="text"  value="0" onblur="_onlyNum(this)"
                                     size="10" maxlength="10" id="txtDXFS" runat="server" />--%>
                                 分
-                                <select name="drpDXLX" id="drpDXLX" runat="server" onchange="ConRate(this,txtDXBL)">
+                                <select name="drpDXLX" id="drpDXLX" runat="server" onchange="ConRate(this,ContentPlaceHolder11_txtDXBL)">
                                     <option value="1">+</option>
                                     <option value="0" selected="selected">平</option>
                                     <option value="-1">-</option>
@@ -257,36 +257,36 @@
                         onblur="_onlyNum(this)" id="txtDXBL" runat="server" />
                     ％</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>大賠率：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
-                        <input name="txtDXDPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDXDPL,txtDXXPL,txtDXPLJZ,1);"
+                        <input name="txtDXDPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDXDPL,ContentPlaceHolder11_txtDXXPL,ContentPlaceHolder11_txtDXPLJZ,1);"
                             size="10" maxlength="10" id="txtDXDPL" runat="server" xml:lang="0" />
                     </span>
                 </td>
                 <td class="trr">
                     <span>小賠率：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
-                        <input name="txtDXXPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDXDPL,txtDXXPL,txtDXPLJZ,2);"
+                        <input name="txtDXXPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDXDPL,ContentPlaceHolder11_txtDXXPL,ContentPlaceHolder11_txtDXPLJZ,2);"
                             size="10" maxlength="10" id="txtDXXPL" runat="server" xml:lang="0" />
                     </span>
                 </td>
                 <td class="trr">
                     <span>大小賠率加總：</span></td>
-                <td  colspan="3" class="trl">
+                <td colspan="3" class="trl">
                     <span>
-                        <input name="txtDXPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDXDPL,txtDXXPL,txtDXPLJZ,3);"
+                        <input name="txtDXPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDXDPL,ContentPlaceHolder11_txtDXXPL,ContentPlaceHolder11_txtDXPLJZ,3);"
                             size="10" maxlength="10" id="txtDXPLJZ" runat="server" />
                     </span>
                 </td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>大過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpDXDCJ" id="drpDXDCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -306,7 +306,7 @@
                 </td>
                 <td class="trr">
                     <span>小過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpDXXCJ" id="drpDXXCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -327,17 +327,17 @@
                 <td class="trr">&nbsp;</td>
                 <td align="center" colspan="3">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊上限：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <input name="txtLDXSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtLDXSX" runat="server" />
                         (萬)</span></td>
                 <td class="trr">
                     <span>右隊上限：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <input name="txtRDXSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtRDXSX" runat="server" />
@@ -345,10 +345,10 @@
                 <td class="trr">&nbsp;</td>
                 <td colspan="3" align="center">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span><span>自動設置：</span></span></td>
-                <td class="trl" colspan="7" >兩隊金額差距：<span>
+                <td class="trl" colspan="7">兩隊金額差距：<span>
                     <input name="txtDXCJ" type="text" value="0" onblur="_onlyNum(this)"
                         size="10" maxlength="10" id="txtDXCJ" runat="server" />
                     (萬)調賠率：
@@ -368,14 +368,14 @@
                 </span>
                 </td>
             </tr>
-            <tr align="center" >
+            <tr align="center">
                 <td colspan="8">
                     <span>獨贏預設值</span></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr" style="width: 15%">
                     <span>左隊賠率：</span></td>
-                <td  style="width: 15%" class="trl">
+                <td style="width: 15%" class="trl">
                     <span>
                         <input name="txtLDYPL" type="text" value="0" onblur="_onlyNum(this);//CountRate(txtLDYPL,txtRDYPL,txtDYPLJZ,1);"
                             size="10" maxlength="10" id="txtLDYPL" runat="server" />
@@ -383,7 +383,7 @@
                 </td>
                 <td class="trr" style="width: 15%">
                     <span>右隊賠率：</span></td>
-                <td  style="width: 15%" class="trl">
+                <td style="width: 15%" class="trl">
                     <span>
                         <input name="txtRDYPL" type="text" value="0" onblur="_onlyNum(this);//CountRate(txtLDYPL,txtRDYPL,txtDYPLJZ,2);"
                             size="10" maxlength="10" id="txtRDYPL" runat="server" />
@@ -391,21 +391,21 @@
                 </td>
                 <td class="trr" style="width: 10%; display: none">
                     <span>獨贏賠率加總：</span></td>
-                <td  style="width: 10%; display: none">
+                <td style="width: 10%; display: none">
                     <span>
                         <input name="txtDYPLJZ" type="text" value="0" onblur="_onlyNum(this);//CountRate(txtLDYPL,txtRDYPL,txtDYPLJZ,3);"
                             size="10" maxlength="10" id="txtDYPLJZ" runat="server" />
                     </span>
                 </td>
                 <td class="trr" style="width: 10%">和局賠率：</td>
-                <td  class="trl">
+                <td class="trl">
                     <input name="txtN_HJPL" type="text" value="0" onblur="_onlyNum(this);"
                         size="10" maxlength="10" id="txtN_HJPL" runat="server" /></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpLDYCJ" id="drpLDYCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -425,7 +425,7 @@
                 </td>
                 <td class="trr">
                     <span>右隊過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpRDYCJ" id="drpRDYCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -444,23 +444,23 @@
                     </span>
                 </td>
                 <td class="trr" style="display: none"></td>
-                <td  style="display: none"></td>
+                <td style="display: none"></td>
                 <td class="trr">和局過關差距：</td>
-                <td class="trl" >
+                <td class="trl">
                     <input name="txtN_HJGGCJ" type="text" value="0" onblur="_onlyNum(this);"
                         size="10" maxlength="10" id="txtN_HJGGCJ" runat="server" /></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊上限</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <input name="txtLDYSX" type="text" size="10" maxlength="10" id="txtLDYSX"
                             runat="server" value="0" onblur="_onlyNum(this)" />
                         (萬)</span></td>
                 <td class="trr">
                     <span>右隊上限：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
                         <input name="txtRDYSX" type="text" size="10" maxlength="10" id="txtRDYSX"
                             runat="server" value="0" onblur="_onlyNum(this)" />
@@ -468,11 +468,11 @@
                 <td class="trr" style="display: none"></td>
                 <td align="center" style="display: none"></td>
                 <td class="trr">和局上限：</td>
-                <td  class="trl">
+                <td class="trl">
                     <input name="txtN_HJSX" type="text" value="0" onblur="_onlyNum(this);"
                         size="10" maxlength="10" id="txtN_HJSX" runat="server" /></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>自動設置：</span></td>
                 <td colspan="7" class="trl">
@@ -496,40 +496,40 @@
                     </span>
                 </td>
             </tr>
-            <tr align="center" >
+            <tr align="center">
                 <td colspan="8">
                     <span>單雙預設值</span></td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>單賠率：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
-                        <input name="txtDSDPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDSDPL,txtDSSPL,txtDSPLJZ,1);"
+                        <input name="txtDSDPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDSDPL,ContentPlaceHolder11_txtDSSPL,ContentPlaceHolder11_txtDSPLJZ,1);"
                             size="10" maxlength="10" id="txtDSDPL" runat="server" />
                     </span>
                 </td>
                 <td class="trr">
                     <span>雙賠率：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
-                        <input name="txtDSSPL" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDSDPL,txtDSSPL,txtDSPLJZ,2);"
+                        <input name="txtDSSPL" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDSDPL,ContentPlaceHolder11_txtDSSPL,ContentPlaceHolder11_txtDSPLJZ,2);"
                             size="10" maxlength="10" id="txtDSSPL" runat="server" />
                     </span>
                 </td>
                 <td class="trr">
                     <span>單雙賠率加總：</span></td>
-                <td  colspan="3" class="trl">
+                <td colspan="3" class="trl">
                     <span>
-                        <input name="txtDSPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(txtDSDPL,txtDSSPL,txtDSPLJZ,3);"
+                        <input name="txtDSPLJZ" type="text" value="0" onblur="_onlyNum(this);CountRate(ContentPlaceHolder11_txtDSDPL,ContentPlaceHolder11_txtDSSPL,ContentPlaceHolder11_txtDSPLJZ,3);"
                             size="10" maxlength="10" id="txtDSPLJZ" runat="server" />
                     </span>
                 </td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>單過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpDSDCJ" id="drpDSDCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -549,7 +549,7 @@
                 </td>
                 <td class="trr">
                     <span>雙過關差距：</span></td>
-                <td  class="trl">
+                <td class="trl">
                     <span>
                         <select name="drpDSSCJ" id="drpDSSCJ" runat="server">
                             <%--<option value="-1">不開過關</option>--%>
@@ -567,20 +567,20 @@
                         </select>
                     </span>
                 </td>
-                <td >&nbsp;</td>
-                <td  colspan="3">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td colspan="3">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>左隊上限：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
                         <input name="txtLDSSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtLDSSX" runat="server" />
                         (萬)</span></td>
                 <td class="trr">
                     <span>右隊上限：</span></td>
-                <td class="trl" >
+                <td class="trl">
                     <span>
                         <input name="txtRDSSX" type="text" value="0" onblur="_onlyNum(this)"
                             size="10" maxlength="10" id="txtRDSSX" runat="server" />
@@ -588,10 +588,10 @@
                 <td class="trr">&nbsp;</td>
                 <td colspan="3" align="center">&nbsp;</td>
             </tr>
-            <tr  >
+            <tr>
                 <td class="trr">
                     <span>自動設置：</span></td>
-                <td colspan="7" class="trl" >
+                <td colspan="7" class="trl">
                     <span>兩隊金額差距：
                                     <input name="txtDSCJ" type="text" value="0" onblur="_onlyNum(this)"
                                         size="10" maxlength="10" id="txtDSCJ" runat="server" />
@@ -613,14 +613,14 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="8"  align="center">
+                <td colspan="8" align="center">
                     <span>入球數預設值</span></td>
             </tr>
-            <tr >
+            <tr>
                 <td class="trr">
                     <span>賠率：</span></td>
-                <td  colspan="12" style="width: 200px;" class="trl">
-                    <table  style="width:100%; height:100%;" cellpadding="1" class="table"
+                <td colspan="12" style="width: 200px;" class="trl">
+                    <table style="width: 100%; height: 100%;" cellpadding="1" class="table"
                         cellspacing="1">
                         <tr>
                             <td align="center">0-1
@@ -642,22 +642,22 @@
                     </table>
                 </td>
             </tr>
-            <tr  style="display: none">
+            <tr style="display: none">
                 <td class="trr">
                     <span><span class="FormLabel">每項上限</span>：</span></td>
-                <td  colspan="12" class="trl">
+                <td colspan="12" class="trl">
                     <span>
                         <asp:TextBox Style="width: 50px;" ID="txtrqssx" onblur="_onlyNum(this);" Text="0" runat="server"></asp:TextBox>万</span></td>
             </tr>
             <tr>
-                <td align="center"  class="tr_f1" colspan="8">
+                <td align="center" class="tr_f1" colspan="8">
                     <span>波膽預設值</span></td>
             </tr>
-            <tr >
+            <tr>
                 <td class="trr" style="height: 78px">
                     <span>賠率：</span></td>
-                <td  colspan="12" style="height: 78px" class="trl">
-                    <table style="width:100%" class="table"  cellpadding="1"
+                <td colspan="12" style="height: 78px" class="trl">
+                    <table style="width: 100%" class="table" cellpadding="1"
                         cellspacing="1">
                         <tr>
                             <td align="center" style="height: 21px; width: 40px;"></td>
@@ -743,21 +743,21 @@
                     </table>
                 </td>
             </tr>
-            <tr  style="display: none">
+            <tr style="display: none">
                 <td class="trr">
                     <span><span class="FormLabel">每項上限</span>：</span></td>
-                <td  colspan="12">
+                <td colspan="12">
                     <span>
                         <asp:TextBox Style="width: 50px;" ID="txtbdsx" Text="0" runat="server" onblur="_onlyNum(this);"></asp:TextBox>万</span></td>
             </tr>
             <tr>
-                <td align="center"  class="tr_f1" colspan="8">
+                <td align="center" class="tr_f1" colspan="8">
                     <span>半全場預設值</span></td>
             </tr>
-            <tr >
+            <tr>
                 <td class="trr">
                     <span>賠率：</span></td>
-                <td  colspan="12" style="width: 200px;">
+                <td colspan="12" style="width: 200px;">
                     <table style="width: 100%;" cellpadding="1" class="table"
                         cellspacing="1">
                         <tr>
@@ -797,14 +797,14 @@
                     </table>
                 </td>
             </tr>
-            <tr  style="display: none">
+            <tr style="display: none">
                 <td class="trr">
                     <span><span class="FormLabel">每項上限</span>：</span></td>
-                <td  colspan="12" class="trl">
+                <td colspan="12" class="trl">
                     <span>
                         <asp:TextBox Style="width: 50px;" ID="txtbqcsx" Text="0" runat="server" onblur="_onlyNum(this);"></asp:TextBox>万</span></td>
             </tr>
-            
+
         </table>
     </div>
 </asp:Content>

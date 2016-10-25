@@ -392,4 +392,281 @@ public class Comm
         stream.Close();
         return builder.ToString();
     }
+    public static string CaculateWeekDay(int y, int m, int d)
+    {
+        //if (m == 1) m = 13;
+        //if (m == 2) m = 14;
+        //int week = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7 + 1;
+        //string weekstr = "";
+        //switch (week)
+        //{
+        //    case 1: weekstr = "星期一"; break;
+        //    case 2: weekstr = "星期二"; break;
+        //    case 3: weekstr = "星期三"; break;
+        //    case 4: weekstr = "星期四"; break;
+        //    case 5: weekstr = "星期五"; break;
+        //    case 6: weekstr = "星期六"; break;
+        //    case 7: weekstr = "星期日"; break;
+        //}
+
+        //return weekstr;
+        if (m == 1)
+        {
+            m = 13;
+            y = y - 1;
+        }
+        if (m == 2)
+        {
+            m = 14;
+            y = y - 1;
+        }
+        int week = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
+        string weekstr = "";
+        switch (week)
+        {
+            case 7:
+            case 0: weekstr = "星期一"; break;
+            case 1: weekstr = "星期二"; break;
+            case 2: weekstr = "星期三"; break;
+            case 3: weekstr = "星期四"; break;
+            case 4: weekstr = "星期五"; break;
+            case 5: weekstr = "星期六"; break;
+            case 6: weekstr = "星期日"; break;
+        }
+        return weekstr;
+    }
+    #region"取得标示位"
+
+    public static string GetFlag(string s_aUserID)
+    {
+        AgentManageDB objAgentManageDB = new AgentManageDB();
+        KFB_ZHGL m_zhgl = objAgentManageDB.GetModel(s_aUserID);
+        return m_zhgl.N_ADDFLAG.ToString();
+    }
+    #endregion
+
+    /// <summary>
+    /// 取得會員對應的欄位
+    /// </summary>
+    /// <param name="o_aPK"></param>
+    /// <returns></returns>
+    public static string GetZHCol(string strdj)
+    {
+        string s_Result = "";
+        switch (strdj)
+        {
+            case "4": s_Result = "N_DZJDH"; break;
+            case "5": s_Result = "N_ZJDH"; break;
+            case "6": s_Result = "N_DGDDH"; break;
+            case "7": s_Result = "N_GDDH"; break;
+            case "8": s_Result = "N_ZDLDH"; break;
+            case "9": s_Result = "N_DLDH"; break;
+        }
+        return s_Result;
+    }
+    /// <summary>
+    /// 取得上級帳號
+    /// </summary>
+    /// <param name="o_aPK"></param>
+    /// <returns></returns>
+    public static string GetUPID(string strparid, string strlvl)
+    {
+        string strzh = "";
+        AgentManageDB objAgentManageDB = new AgentManageDB();
+        KFB_ZHGL mo_zhgl = objAgentManageDB.GetModel(strparid);
+        if (strlvl.Equals("5"))
+        {
+            strzh = mo_zhgl.N_DZJDH;
+        }
+        else if (strlvl.Equals("6"))
+        {
+            strzh = mo_zhgl.N_ZJDH;
+        }
+        else if (strlvl.Equals("7"))
+        {
+            strzh = mo_zhgl.N_DGDDH;
+        }
+        else if (strlvl.Equals("8"))
+        {
+            strzh = mo_zhgl.N_GDDH;
+        }
+        else if (strlvl.Equals("9"))
+        {
+            strzh = mo_zhgl.N_ZDLDH;
+        }
+        return strzh;
+    }
+
+    public static bool SJYXDL(string strZH)
+    {
+        AgentManageDB objAgentManage = new AgentManageDB();
+        int n_yxdl = 1;
+        int? zh_yxdl = objAgentManage.GetModel(strZH).N_YXDL;
+        if (zh_yxdl == null)
+            zh_yxdl = objAgentManage.GetModelHYGL(strZH).N_YXDL;
+
+        if (zh_yxdl != null && !zh_yxdl.ToString().Equals(""))
+        {
+            n_yxdl = int.Parse(zh_yxdl.ToString());
+        }
+        return n_yxdl.Equals(0) ? false : true;
+    }
+    public static bool SJYXXZ(string strZH)
+    {
+        AgentManageDB objAgentManage = new AgentManageDB();
+
+        int n_yxxz = 1;
+        int? zh_yxxz = objAgentManage.GetModel(strZH).N_YXXZ;
+        if (zh_yxxz == null)
+            zh_yxxz = objAgentManage.GetModel(strZH).N_YXXZ;
+
+        if (zh_yxxz != null && !zh_yxxz.ToString().Equals(""))
+        {
+            n_yxxz = int.Parse(zh_yxxz.ToString());
+        }
+        return n_yxxz.Equals(0) ? false : true;
+    }
+    /// <summary>
+    /// 取得沒有被使用的總監帳號
+    /// </summary>
+    public static string GetZH(string strlv, string strname)
+    {
+        AgentManageDB objAgentManage = new AgentManageDB();
+        string strReturn = "";
+        string[] strFlag = new string[26] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+        if (strlv.Equals("4"))
+        {
+            string strHYDH = objAgentManage.GetHY(strlv);
+            int intCount = 0;
+            for (int i = 0; i < strFlag.Length; i++)
+            {
+                if (strHYDH.IndexOf(strno + strFlag[i].ToString() + ",") == -1)
+                {
+                    strReturn = strReturn + strno + strFlag[i].ToString() + ",";
+                    intCount = intCount + 1;
+                }
+                if (intCount >= 10)
+                {
+                    break;
+                }
+            }
+            if (intCount < 10)
+            {
+                while (intCount < 10)
+                {
+                    for (int i = 0; i < strFlag.Length; i++)
+                    {
+                        for (int j = 0; j < strFlag.Length; j++)
+                        {
+                            if (strHYDH.IndexOf(strno + strFlag[i].ToString() + strFlag[j].ToString() + ",") == -1)
+                            {
+                                strReturn = strReturn + strno + strFlag[i].ToString() + strFlag[j].ToString() + ",";
+                                intCount = intCount + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            string strdh = "";
+            string strzjname = Regex.Replace(strname, "[0-9]*$", "");
+            //string strzjname = strname.Substring(0, 1);
+
+            if (strlv.Equals("5"))
+            {
+                strdh = strzjname + "1";
+            }
+            else if (strlv.Equals("6"))
+            {
+                strdh = strzjname + "2";
+            }
+            else if (strlv.Equals("7"))
+            {
+                strdh = strzjname + "3";
+            }
+            else if (strlv.Equals("8"))
+            {
+                strdh = strzjname + "5";
+            }
+            else if (strlv.Equals("9"))
+            {
+                strdh = strzjname + "6";
+            }
+            int intCount = 0;
+            string strolddh = "";
+            DataSet ds = objAgentManage.GetZJXCY(strlv, strzjname);
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                strolddh = strolddh + ds.Tables[0].Rows[i]["n_hyzh"].ToString() + ",";
+            }
+            for (int i = 1; i < 10000000; i++)
+            {
+                //去掉4
+                if (i.ToString().IndexOf("4") == -1)
+                {
+                    if (strolddh.IndexOf(strdh + i.ToString() + ",") == -1)
+                    {
+                        strReturn = strReturn + strdh + i.ToString() + ",";
+                        intCount = intCount + 1;
+                    }
+                    if (intCount >= 10)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        return strReturn;
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// 
+    public static string GetPage(string strlv, string strzh)
+    {
+        string strturn = "";
+        string strpara = "";
+        AgentManageDB objAgentManageDB = new AgentManageDB();
+        KFB_ZHGL m_zhgl = objAgentManageDB.GetModel(strzh);
+        if (m_zhgl != null)
+        {
+            if (strlv.Equals("9"))
+                strpara = "?n_dzjdh=" + m_zhgl.N_DZJDH + "&n_zjdh=" + m_zhgl.N_ZJDH + "&n_dgddh=" + m_zhgl.N_DGDDH + "&n_gddh=" + m_zhgl.N_GDDH + "&n_zdldh=" + m_zhgl.N_ZDLDH + "&n_dldh=" + m_zhgl.N_DLDH;
+            else if (strlv.Equals("5"))
+                strpara = "?id=" + m_zhgl.N_DZJDH;
+            else
+                strpara = "?dzjid=" + m_zhgl.N_DZJDH + "&zjid=" + m_zhgl.N_ZJDH + "&dgdid=" + m_zhgl.N_DGDDH + "&gdid=" + m_zhgl.N_GDDH + "&zdlid=" + m_zhgl.N_ZDLDH + "&dlid=" + m_zhgl.N_DLDH;
+
+        }
+        switch (strlv)
+        {
+            case "4": strturn = "dzjgl.aspx" + strpara; break;
+            case "5": strturn = "zjgl.aspx" + strpara; break;
+            case "6": strturn = "dgdgl.aspx" + strpara; break;
+            case "7": strturn = "gdgl.aspx" + strpara; break;
+            case "8": strturn = "AgentManage.aspx" + strpara; break;
+            case "9": strturn = "dlgl.aspx" + strpara; break;
+        }
+        return strturn;
+    }
+    /// <summary>
+    /// 取得类型
+    /// </summary>
+    /// <param name="o_aPK"></param>
+    /// <returns></returns>
+    public static string GetColum(string strtype)
+    {
+        string s_Result = "";
+        if (strtype.Equals("jc539"))
+        {
+            s_Result = "N_JCCZ";
+        }
+        else
+        {
+            s_Result = "N_" + strtype + "CZ";
+        }
+        return s_Result;
+    }
 }

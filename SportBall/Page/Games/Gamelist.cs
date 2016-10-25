@@ -87,7 +87,7 @@ using System.Web.Script.Serialization;
                     output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(zwrqlist) + "]";
                     break;
                 case 8://已计算
-                    output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.GetZWRQ()) + "]";
+                    output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.getZWDate()) + "]";
                     break;
                 case 9://历史比赛
                     output = "[" + ser.Serialize(gameList) + "," + ser.Serialize(allAllianceList) + "," + recordCount + ",\"" + accOutDate + "\"," + ser.Serialize(Comm.getZWDate()) + "]";

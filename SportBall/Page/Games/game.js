@@ -61,21 +61,27 @@ function GetBallType(strballtype) {
     switch (strballtype) {
         case "b_zq":
             $("#lblball").html("足球");
+            $("#lblballType").html("足球");
             break;
         case "b_bk":
             $("#lblball").html("篮球");
+            $("#lblballType").html("篮球"); 
             break;
         case "b_bj":
             $("#lblball").html("棒球");
+            $("#lblballType").html("棒球")
             break;
         case "b_by":
             $("#lblball").html("网球");
+            $("#lblballType").html("网球")
             break;
         case "b_bb":
             $("#lblball").html("排球");
+            $("#lblballType").html("排球")
             break;
         default:
             $("#lblball").html("其他");
+            $("#lblballType").html("其他")
             break;
     }
 }
@@ -890,7 +896,7 @@ function setSetting(ballType, id) {
     if (ballType == "b_zq")
         StrRtn = window.open("GamesSet.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
     else
-        StrRtn = window.open("game_otheredit.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
+        StrRtn = window.open("GameListOtherEdit.aspx?random=" + Math.random() + "&bt=" + ballType + "&id=" + id, id, strPara);
 }
 
 //开放或关闭
@@ -982,24 +988,25 @@ function getTeamList(obj, flag) {
             $(retrunJson).each(function () {
                 option += "<option value=\"" + this.N_ID + "\">" + this.N_DWMC + "</option>";
             });
-            $("#drpVisit").html(option);
-            $("#drpHome").html(option);
-            $("#drpVisit").val($("#hidVisit").val());
-            $("#drpHome").val($("#hidHome").val());
-            $("#drpVisit").attr("disabled", flag);
-            $("#drpHome").attr("disabled", flag);
+
+            $("#ContentPlaceHolder11_drpVisit").html(option);
+            $("#ContentPlaceHolder11_drpHome").html(option);
+            $("#ContentPlaceHolder11_drpVisit").val($("#ContentPlaceHolder11_hidVisit").val());
+            $("#ContentPlaceHolder11_drpHome").val($("#ContentPlaceHolder11_hidHome").val());
+            $("#ContentPlaceHolder11_drpVisit").attr("disabled", flag);
+            $("#ContentPlaceHolder11_drpHome").attr("disabled", flag);
         }
     });
 }
 
 function changefenshu(obj) {
     if (obj.value == 0) {
-        document.getElementById('drpRFCJPL').style.display = '';
-        document.getElementById('drpRFCJPL1').style.display = 'none';
+        document.getElementById('ContentPlaceHolder11_drpRFCJPL').style.display = '';
+        document.getElementById('ContentPlaceHolder11_drpRFCJPL1').style.display = 'none';
     }
     else {
-        document.getElementById('drpRFCJPL1').style.display = '';
-        document.getElementById('drpRFCJPL').style.display = 'none';
+        document.getElementById('ContentPlaceHolder11_drpRFCJPL1').style.display = '';
+        document.getElementById('ContentPlaceHolder11_drpRFCJPL').style.display = 'none';
     }
 }
 

@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/Styles/css.css" />
     <link href="/Styles/master.css" rel="stylesheet" />
     <link href="Styles/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
-    <script type="text/javascript" src="/Scripts/jquery1.9.0.min.js"></script> 
+    <script type="text/javascript" src="/Scripts/jquery1.9.0.min.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/Scripts/sdmenu.js"></script> 
+    <script type="text/javascript" src="/Scripts/sdmenu.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -24,7 +24,8 @@
                 <img src="/Images/logo.png" />
             </div>
             <div class="header-right">
-                <i class="icon-question-sign icon-white"></i><a href="#">帮助</a> <i class="icon-off icon-white"></i><a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">注销</a> <i class="icon-user icon-white"></i><a ><asp:Label runat="server" ID="username" Text="11"></asp:Label></a> <i class="icon-envelope icon-white"></i><a href="#">发送短信</a>
+                <i class="icon-question-sign icon-white"></i><a href="#">帮助</a> <i class="icon-off icon-white"></i><a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">注销</a> <i class="icon-user icon-white"></i><a>
+                    <asp:Label runat="server" ID="username" Text="11"></asp:Label></a> <i class="icon-envelope icon-white"></i><a href="#">发送短信</a>
                 <div id="modal-container-973558" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
                     aria-hidden="true" style="width: 300px; margin-left: -150px; top: 30%">
                     <div class="modal-header">
@@ -70,7 +71,7 @@
                         <a href="/Page/IpManagement.aspx">ip过滤</a>
                     </div>
                     <div class="collapsed">
-                        <span>会员管理</span> <a href="#">总代理管理</a> <a href="#">代理商管理</a> <a href="#">会员管理</a>
+                        <span>会员管理</span> <a href="/Page/Manage/AgentManage.aspx?dzjid=K1C&zjid=K1C11&dgdid=K1C21&gdid=K1C31">总代理管理</a> <a href="/Page/Manage/dlgl.aspx?gdid=K1C31">代理商管理</a> <a href="/Page/Manage/hygl.aspx?gdid=K1C31">会员管理</a>
                         <a href="#">搜索会员</a> <a href="#">搜索六级</a> <a href="#">子账号管理</a> <a href="#">会员额度记录</a>
 
                     </div>
@@ -84,107 +85,91 @@
                         <a href="/Page/Games/GameListGoal.aspx?bt=b_zq">入球数</a>
                         <a href="/Page/Games/GameListHalfFull.aspx?bt=b_zq">半全场</a>
                         <a href="/Page/Games/GameListBegin.aspx?bt=b_zq">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_zq">已计算</a>
                         <a href="/Page/Games/GameListHistory.aspx?bt=b_zq">历史比赛</a>
                         <a href="/Page/Games/GameListControl.aspx?ball=b_zq">比赛控管</a>
                         <a href="/Page/Games/GameListDefault.aspx?bt=b_zq">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">单式垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListEdit.aspx?bt=b_zq">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_zq">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_zq">垃圾桶</a>
+                        <%--<a href="#">早餐垃圾桶</a>--%>
                     </div>
                     <div class="collapsed">
                         <span>篮球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_bk">单式</a>
+                        <a href="/Page/Games/GameListOtherGoto.aspx?bt=b_bk">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_bk">过关</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_bk">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_bk">已计算</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_bk">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_zq">比赛控管</a>
+                        <a href="/Page/Games/GameListOtherDefault.aspx?bt=b_zq">新比赛预设</a>
+                        <a href="/Page/Games/GameListOtherEdit.aspx?bt=b_zq">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_bk">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_bk">垃圾桶</a>
                     </div>
+
                     <div class="collapsed">
                         <span>棒球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
-                    </div>
-                    <div class="collapsed">
-                        <span>棒球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_bj">单式</a>
+                        <a href="/Page/Games/GameListOtherGoto.aspx?bt=b_bj">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_bj">过关</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_bj">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_bj">已计算</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_bj">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_bj">比赛控管</a>
+                        <a href="/Page/Games/GameListOtherDefault.aspx?bt=b_bj">新比赛预设</a>
+                        <a href="/Page/Games/GameListOtherEdit.aspx?bt=b_bj">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_bj">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_bj">垃圾桶</a>
                     </div>
                     <div class="collapsed">
                         <span>网球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_by">单式</a>
+                        <a href="/Page/Games/GameListOtherGoto.aspx?bt=b_by">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_by">过关</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_by">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_by">已计算</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_by">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_by">比赛控管</a>
+                        <a href="/Page/Games/GameListOtherDefault.aspx?bt=b_by">新比赛预设</a>
+                        <a href="/Page/Games/GameListOtherEdit.aspx?bt=b_by">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_by">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_by">垃圾桶</a>
                     </div>
                     <div class="collapsed">
                         <span>排球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_bb">单式</a>
+                        <a href="/Page/Games/GameListOtherGoto.aspx?bt=b_bb">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_bb">过关</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_bb">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_bb">已计算</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_bb">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_bb">比赛控管</a>
+                        <a href="/Page/Games/GameListOtherDefault.aspx?bt=b_bb">新比赛预设</a>
+                        <a href="/Page/Games/GameListOtherEdit.aspx?bt=b_bb">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_bb">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_bb">垃圾桶</a>
                     </div>
                     <div class="collapsed">
                         <span>特殊投注</span>
@@ -206,21 +191,21 @@
                     </div>
                     <div class="collapsed">
                         <span>冰球操盘</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Games/GameListSingle.aspx?bt=b_bq">单式</a>
+                        <a href="/Page/Games/GameListOtherGoto.aspx?bt=b_bq">滚球</a>
+                        <a href="/Page/Games/GameListPass.aspx?bt=b_bq">过关</a>
+                        <a href="/Page/Games/GameListBegin.aspx?bt=b_bq">已开赛</a>
+                        <a href="/Page/Games/GameListCalculated.aspx?bt=b_bq">已计算</a>
+                        <a href="/Page/Games/GameListHistory.aspx?bt=b_bq">历史比赛</a>
+                        <a href="/Page/Games/GameListControl.aspx?ball=b_bq">比赛控管</a>
+                        <a href="/Page/Games/GameListOtherDefault.aspx?bt=b_bq">新比赛预设</a>
+                        <a href="/Page/Games/GameListOtherEdit.aspx?bt=b_bq">新比赛建立</a>
+                        <%-- <a href="#">历史查询</a>--%>
+                        <a href="/Page/GameListPassCalcu.aspx?bt=b_bb">计算过关</a>
+                        <a href="/Page/Union.aspx">联盟管理</a>
+                        <a href="/Page/Team.aspx">队伍管理</a>
+                        <%--<a href="#">历史过关</a>--%>
+                        <a href="/Page/Games/GameListRecycle.aspx?bt=b_bb">垃圾桶</a>
                     </div>
 
                     <div class="collapsed">
@@ -290,11 +275,11 @@
         </div>
         <!-- 底部 -->
         <div id="footer">
-            版权所有：威网科技 &copy; 2016&nbsp;&nbsp;&nbsp;&nbsp;
+            威网科技 &copy; 2016&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
 
 
     </form>
- 
+
 </body>
 </html>
