@@ -19,7 +19,7 @@ using System.Web.UI.WebControls;
 
 public partial class GameLimit : BasePage
 {
-    #region 全局变量
+    #region 全局变量ss
     GameLimitDB objGameLimitDB = new GameLimitDB();
     #endregion
 
