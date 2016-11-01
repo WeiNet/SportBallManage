@@ -21,6 +21,7 @@
 //Author      ：Ivy
 
 //Last Modify ：2010/12/21
+var __mLanguage = 'zh-cn';
 function Show(strCode) {
 
     var msg = ShowMessage(strCode, '');

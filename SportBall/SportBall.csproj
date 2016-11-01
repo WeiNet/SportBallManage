@@ -200,8 +200,25 @@
     <Content Include="Page\Manage\AgentManageUpd.aspx" />
     <Content Include="Page\Manage\AgentManageAdd.aspx" />
     <Content Include="Page\Manage\AgentManageAdd.js" />
+    <Content Include="Page\Manage\cxhy.aspx" />
+    <Content Include="Page\Manage\SS_set.aspx" />
+    <Content Include="Page\Manage\YC_set.aspx" />
+    <Content Include="Page\Manage\JC_set.aspx" />
+    <Content Include="Page\Manage\SM_set.aspx" />
+    <Content Include="Page\Manage\QZ_set.aspx" />
+    <Content Include="Page\Manage\CQ_set.aspx" />
     <Content Include="Page\Manage\hygl.aspx" />
     <Content Include="Page\Manage\dlgl.aspx" />
+    <Content Include="Page\Manage\BQ_set.aspx" />
+    <Content Include="Page\Manage\TB_set.aspx" />
+    <Content Include="Page\Manage\RB_set.aspx" />
+    <Content Include="Page\Manage\MB_set.aspx" />
+    <Content Include="Page\Manage\MZ_set.aspx" />
+    <Content Include="Page\Manage\xzhy.aspx" />
+    <Content Include="Page\Manage\xzhy.js" />
+    <Content Include="Page\Manage\LQ_set.aspx" />
+    <Content Include="Page\Manage\ZQ_set.aspx" />
+    <Content Include="Page\Manage\ZQ_set.js" />
     <Content Include="Page\Team.aspx" />
     <Content Include="Page\Team.js" />
     <Content Include="Page\IpManagement.js" />
@@ -263,6 +280,7 @@
     <Compile Include="App_Code\AgentMange\AgentManageAddDB.cs" />
     <Compile Include="App_Code\AgentMange\AgentManageDB.cs" />
     <Compile Include="App_Code\AgentMange\HYGLDB.cs" />
+    <Compile Include="App_Code\AgentMange\XZHYDB.cs" />
     <Compile Include="App_Code\Comm.cs" />
     <Compile Include="App_Code\CommLib.cs" />
     <Compile Include="App_Code\DbHelperOra.cs" />
@@ -450,6 +468,55 @@
     <Compile Include="Page\Manage\AgentManageAdd.aspx.designer.cs">
       <DependentUpon>AgentManageAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Manage\cxhy.aspx.cs">
+      <DependentUpon>cxhy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\cxhy.aspx.designer.cs">
+      <DependentUpon>cxhy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\SS_set.aspx.cs">
+      <DependentUpon>SS_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\SS_set.aspx.designer.cs">
+      <DependentUpon>SS_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\YC_set.aspx.cs">
+      <DependentUpon>YC_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\YC_set.aspx.designer.cs">
+      <DependentUpon>YC_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\JC_set.aspx.cs">
+      <DependentUpon>JC_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\JC_set.aspx.designer.cs">
+      <DependentUpon>JC_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\SM_set.aspx.cs">
+      <DependentUpon>SM_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\SM_set.aspx.designer.cs">
+      <DependentUpon>SM_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\QZ_set.aspx.cs">
+      <DependentUpon>QZ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\QZ_set.aspx.designer.cs">
+      <DependentUpon>QZ_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\CQ_set.aspx.cs">
+      <DependentUpon>CQ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\CQ_set.aspx.designer.cs">
+      <DependentUpon>CQ_set.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Manage\hygl.aspx.cs">
       <DependentUpon>hygl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -463,6 +530,62 @@
     </Compile>
     <Compile Include="Page\Manage\dlgl.aspx.designer.cs">
       <DependentUpon>dlgl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\BQ_set.aspx.cs">
+      <DependentUpon>BQ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\BQ_set.aspx.designer.cs">
+      <DependentUpon>BQ_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\TB_set.aspx.cs">
+      <DependentUpon>TB_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\TB_set.aspx.designer.cs">
+      <DependentUpon>TB_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\RB_set.aspx.cs">
+      <DependentUpon>RB_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\RB_set.aspx.designer.cs">
+      <DependentUpon>RB_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\MB_set.aspx.cs">
+      <DependentUpon>MB_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\MB_set.aspx.designer.cs">
+      <DependentUpon>MB_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\MZ_set.aspx.cs">
+      <DependentUpon>MZ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\MZ_set.aspx.designer.cs">
+      <DependentUpon>MZ_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\xzhy.aspx.cs">
+      <DependentUpon>xzhy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\xzhy.aspx.designer.cs">
+      <DependentUpon>xzhy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\LQ_set.aspx.cs">
+      <DependentUpon>LQ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\LQ_set.aspx.designer.cs">
+      <DependentUpon>LQ_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\ZQ_set.aspx.cs">
+      <DependentUpon>ZQ_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\ZQ_set.aspx.designer.cs">
+      <DependentUpon>ZQ_set.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\SystemSet\DelayedManager.aspx.cs">
       <DependentUpon>DelayedManager.aspx</DependentUpon>

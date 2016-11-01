@@ -307,7 +307,7 @@ using System.Web.UI.WebControls;
                 ((LinkButton)this.ZJGrid.Rows[i].FindControl("lbtnTZXZ")).Attributes.Add("onclick", "if(confirm('確定要對該帳號停押/解除停押?')){return true;} else{return false;}");
                 ((LinkButton)this.ZJGrid.Rows[i].FindControl("lbtnSC")).Attributes.Add("onclick", "if(confirm('確定要刪除" + this.ZJGrid.Rows[i].Cells[0].Text + "?')){return true;} else{return false;}");
                 ((LinkButton)this.ZJGrid.Rows[i].FindControl("lbtnQXXSD")).Attributes.Add("onclick", "window.open('ZQ_set.aspx?UserName=" + this.ZJGrid.Rows[i].Cells[0].Text + "')");
-                ((LinkButton)this.ZJGrid.Rows[i].FindControl("lbtnCXXSD")).Attributes.Add("onclick", "window.open('../htm/lottery_set_3d.htm','','width=650,height=710,scrollbars=1,toolbar=0,menubar=0,location=0,directories=0,statu=0');return false;");
+                //((LinkButton)this.ZJGrid.Rows[i].FindControl("lbtnCXXSD")).Attributes.Add("onclick", "window.open('../htm/lottery_set_3d.htm','','width=650,height=710,scrollbars=1,toolbar=0,menubar=0,location=0,directories=0,statu=0');return false;");
             }
             if (this.ZJGrid.Rows.Count > 0)
             {

@@ -5,7 +5,7 @@ using KingOfBall;
 ///程式說明：      
 ///xx.YYYY/MM/DD   VER     AUTHOR       COMMENTS(說明修改的內容)		
 ///01.2016/08/04          1.00      Abel  	       	CREATE
-using KingOfBall;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

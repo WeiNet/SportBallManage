@@ -8116,5 +8116,11 @@ public class AgentManageAddDB
             return null;
         }
     }
+    public string GetLeast(string s_Table, string s_LeastType, string s_Col, string s_Where)
+    {
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("select " + s_LeastType + "(" + s_Col + ") from " + s_Table + s_Where);
+        return Convert.ToString(KingOfBall.DbHelperOra.GetSingle(strSql.ToString()));
+    }
 
 }

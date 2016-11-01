@@ -127,12 +127,12 @@
                                 </itemtemplate>
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="押碼跳動"></asp:BoundField>
-                            <asp:TemplateField HeaderText="彩票功能">
+                           <%-- <asp:TemplateField HeaderText="彩票功能">
                                 <itemstyle wrap="False" horizontalalign="Center" />
                                 <itemtemplate>
                                 <asp:LinkButton runat="server" ID="lbtnCXXSD" Text="詳細設定"></asp:LinkButton>
                                 </itemtemplate>
-                            </asp:TemplateField>
+                            </asp:TemplateField>--%>
                         </Columns>
                         <RowStyle CssClass="GridCommonItem" HorizontalAlign="Center" />
                         <HeaderStyle CssClass="GridCommonHeadBK" />

@@ -224,3 +224,20 @@ function SetAble() {
     }
 
 }
+
+function getIndex(strID) {
+    var Index = -1;
+    if (strID.indexOf("ty") > -1) {
+        Index = strID.indexOf("ty");
+    }
+    else if (strID.indexOf("lqdd") > -1) {
+        Index = strID.indexOf("lqdd") + 2;
+    }
+    else if (strID.indexOf("dz") > -1) {
+        Index = strID.indexOf("dz");
+    }
+    else if (strID.indexOf("dc") > -1) {
+        Index = strID.indexOf("dc");
+    }
+    return Index;
+}

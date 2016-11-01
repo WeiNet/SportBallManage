@@ -63,6 +63,10 @@ public class BasePage : System.Web.UI.Page
             throw;
         }
     }
+    public void ShowAndBaseRedirect(string strCode, string StrPara, string url)
+    {
+        this.ClientScript.RegisterStartupScript(this.GetType(), "messageRedirect", "<script> ShowAndBaseRedirect('" + strCode + "','" + StrPara + "','" + url + "'); </script>");
+    }
     /// <summary>
     /// 在頁面上彈出信息提示
     /// </summary>

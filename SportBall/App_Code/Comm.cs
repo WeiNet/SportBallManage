@@ -669,4 +669,101 @@ public class Comm
         }
         return s_Result;
     }
+
+
+    public static DataTable GetGetNotUseHYZH(string s_aDLS)
+    {
+        //KingOfBall.BLL.KFB_HYGL_BLL o_KFB_HYGL_BLL = new KingOfBall.BLL.KFB_HYGL_BLL();
+        //DataSet ds = o_KFB_HYGL_BLL.GetKYHYZH(s_aDLS.Substring(0, 2));
+        //ArrayList al = new ArrayList();
+        //string strno = "9";
+        //string strzjname = Regex.Replace(s_aDLS, "[0-9]*$", "");
+        //foreach (DataRow dr in ds.Tables[0].Rows)
+        //{
+        //    al.Add(dr["N_HYZH"].ToString().Remove(0, strzjname.Length + 1));
+        //    //al.Add(dr["N_HYZH"].ToString());
+        //}
+        //DataTable dt = new DataTable();
+        //dt.Columns.Add("N_HYZH");
+        //int i_Count = 0;
+        //for (int i = 1; i < 10000000; i++)
+        //{
+        //    //去掉4
+        //    if (i.ToString().IndexOf("4") == -1)
+        //    {
+
+        //        if (!al.Contains(strno+i.ToString()))
+        //        {
+        //            DataRow dr = dt.NewRow();
+        //            dr[0] = strzjname + "7" + i.ToString();
+        //            dt.Rows.Add(dr);
+        //            i_Count++;
+        //        }
+        //        if (i_Count == 10)
+        //        {
+        //            break;
+        //        }
+        //    }
+        //}
+        //return dt;
+        KFB_HYGLDB objKFB_HYGLDB = new KFB_HYGLDB();
+        string strzjname = Regex.Replace(s_aDLS, "[0-9]*$", "");
+        DataSet ds = objKFB_HYGLDB.GetKYHYZH(strzjname + "6");
+        ArrayList al = new ArrayList();
+
+        foreach (DataRow dr in ds.Tables[0].Rows)
+        {
+            al.Add(dr["N_HYZH"].ToString());
+            //al.Add(dr["N_HYZH"].ToString());
+        }
+        DataTable dt = new DataTable();
+        dt.Columns.Add("N_HYZH");
+        int i_Count = 0;
+
+        for (int i = 1; i < 10000000; i++)
+        {
+            //去掉4
+            if (i.ToString().IndexOf("4") == -1)
+            {
+                if (!al.Contains(strzjname + "7" + i.ToString()))
+                {
+                    DataRow dr = dt.NewRow();
+                    dr[0] = strzjname + "7" + i.ToString();
+                    dt.Rows.Add(dr);
+                    i_Count++;
+                }
+                if (i_Count == 10)
+                {
+                    break;
+                }
+            }
+        }
+        return dt;
+    }
+
+    /// <summary>
+    /// 退傭設定
+    /// </summary>
+    /// <param name="space"></param>
+    /// <param name="max"></param>
+    /// <returns></returns>
+    public static void SetTS(double space, double max, DropDownList o_list)
+    {
+        DataSet ds = new DataSet();
+        double k = max % space;
+        double n = 0;
+        if (k == 0)
+            n = max / space;
+        else
+            n = max / space + 1;
+        //ds.Tables.Add("tb");
+        //ds.Tables["tb"].Columns.Add("TS", Type.GetType("System.Decimal"));
+        for (int i = 0; i <= n; i++)
+        {
+            o_list.Items.Add(new ListItem(Convert.ToString(i * space), Convert.ToString(i * space * 100)));
+        }
+
+        //o_list.DataSource = ds;
+        //o_list.DataBind();
+    }
 }

@@ -2827,23 +2827,24 @@ using System.Web;
         /// <param name="o_aHt"></param>
         public void Delete(string N_HYDH, Hashtable o_aHt)
         {
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
+            KFB_HYGLDB objKFB_HYGLDB = new KFB_HYGLDB();
+            objKFB_HYGLDB.DeleteHYGL(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteCP(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteDLT(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteJC539(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteLHC(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteLQ(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteMB(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteMQ(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteRB(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteSM(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteTB(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteZQ(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteZS(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteSS(N_HYDH, o_aHt);
 
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
-            mo_KFB_HYGL.Delete(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteBQ(N_HYDH, o_aHt);
+            objKFB_HYGLDB.DeleteCQ(N_HYDH, o_aHt);
         }
         /// <summary>
         /// 消耗會員所屬代理商的信用額度

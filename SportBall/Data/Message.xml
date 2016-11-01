@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageSettingConfig>
   <MessageContent>
+    <MsgID>00000</MsgID>
+    <zh-tw>{0}</zh-tw>
+    <zh-cn>{0}</zh-cn>
+    <en-us>{0}</en-us>
+  </MessageContent>
+  <MessageContent>
     <MsgID>A00001</MsgID>
     <zh-tw>新增成功</zh-tw>
     <zh-cn>新增成功</zh-cn>
