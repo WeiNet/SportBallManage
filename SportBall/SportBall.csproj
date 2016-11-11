@@ -197,9 +197,17 @@
     <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
     <Content Include="Page\IpManagement.aspx" />
     <Content Include="Page\Manage\AgentManage.aspx" />
+    <Content Include="Page\Manage\creditLog.js" />
     <Content Include="Page\Manage\AgentManageUpd.aspx" />
     <Content Include="Page\Manage\AgentManageAdd.aspx" />
     <Content Include="Page\Manage\AgentManageAdd.js" />
+    <Content Include="Page\Manage\creditLog.aspx" />
+    <Content Include="Page\Manage\gdgl.aspx" />
+    <Content Include="Page\Manage\dgdgl.aspx" />
+    <Content Include="Page\Manage\zjgl.aspx" />
+    <Content Include="Page\Manage\dzjgl.aspx" />
+    <Content Include="Page\Manage\zzhg.aspx" />
+    <Content Include="Page\Manage\cxzh.aspx" />
     <Content Include="Page\Manage\cxhy.aspx" />
     <Content Include="Page\Manage\SS_set.aspx" />
     <Content Include="Page\Manage\YC_set.aspx" />
@@ -219,6 +227,25 @@
     <Content Include="Page\Manage\LQ_set.aspx" />
     <Content Include="Page\Manage\ZQ_set.aspx" />
     <Content Include="Page\Manage\ZQ_set.js" />
+    <Content Include="Page\Manage\zzhg.js" />
+    <Content Include="Page\Report\report.js" />
+    <Content Include="Page\Report\re_mfyproblembet.aspx" />
+    <Content Include="Page\Report\CreateDelBet.aspx" />
+    <Content Include="Page\Report\re_UpdBet.aspx" />
+    <Content Include="Page\Report\re_Quick.aspx" />
+    <Content Include="Page\Report\re_zdqr.aspx" />
+    <Content Include="Page\Report\UserTop.aspx" />
+    <Content Include="Page\Report\re_wrongbets.aspx" />
+    <Content Include="Page\Report\re_RepeatCalculated.aspx" />
+    <Content Include="Page\Report\re_zdwqr.aspx" />
+    <Content Include="Page\Report\re_zdxg.aspx" />
+    <Content Include="Page\Report\re_zdcx.aspx" />
+    <Content Include="Page\Report\re_iplist.aspx" />
+    <Content Include="Page\Report\re_xshy.aspx" />
+    <Content Include="Page\Report\re_lsbb.aspx" />
+    <Content Include="Page\Report\re_drbb.aspx" />
+    <Content Include="Page\Notice.aspx" />
+    <Content Include="Page\Notice.js" />
     <Content Include="Page\Team.aspx" />
     <Content Include="Page\Team.js" />
     <Content Include="Page\IpManagement.js" />
@@ -281,6 +308,7 @@
     <Compile Include="App_Code\AgentMange\AgentManageDB.cs" />
     <Compile Include="App_Code\AgentMange\HYGLDB.cs" />
     <Compile Include="App_Code\AgentMange\XZHYDB.cs" />
+    <Compile Include="App_Code\AgentMange\ZZBGDB.cs" />
     <Compile Include="App_Code\Comm.cs" />
     <Compile Include="App_Code\CommLib.cs" />
     <Compile Include="App_Code\DbHelperOra.cs" />
@@ -324,7 +352,10 @@
     <Compile Include="App_Code\Model\KFB_SETUPZS.cs" />
     <Compile Include="App_Code\Model\KFB_XSHY.cs" />
     <Compile Include="App_Code\Model\KFB_XTSZ.cs" />
+    <Compile Include="App_Code\Model\KFB_XXGL.cs" />
     <Compile Include="App_Code\Model\KFB_ZHGL.cs" />
+    <Compile Include="App_Code\NoticeDB.cs" />
+    <Compile Include="App_Code\ReportDB.cs" />
     <Compile Include="App_Code\SystemSet\DailyPostingDB.cs" />
     <Compile Include="App_Code\SystemSet\DelayedManagerDB.cs" />
     <Compile Include="App_Code\SystemSet\GameLimitDB.cs" />
@@ -468,6 +499,55 @@
     <Compile Include="Page\Manage\AgentManageAdd.aspx.designer.cs">
       <DependentUpon>AgentManageAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Manage\creditLog.aspx.cs">
+      <DependentUpon>creditLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\creditLog.aspx.designer.cs">
+      <DependentUpon>creditLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\gdgl.aspx.cs">
+      <DependentUpon>gdgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\gdgl.aspx.designer.cs">
+      <DependentUpon>gdgl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\dgdgl.aspx.cs">
+      <DependentUpon>dgdgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\dgdgl.aspx.designer.cs">
+      <DependentUpon>dgdgl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\zjgl.aspx.cs">
+      <DependentUpon>zjgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\zjgl.aspx.designer.cs">
+      <DependentUpon>zjgl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\dzjgl.aspx.cs">
+      <DependentUpon>dzjgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\dzjgl.aspx.designer.cs">
+      <DependentUpon>dzjgl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\zzhg.aspx.cs">
+      <DependentUpon>zzhg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\zzhg.aspx.designer.cs">
+      <DependentUpon>zzhg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Manage\cxzh.aspx.cs">
+      <DependentUpon>cxzh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Manage\cxzh.aspx.designer.cs">
+      <DependentUpon>cxzh.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Manage\cxhy.aspx.cs">
       <DependentUpon>cxhy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -586,6 +666,118 @@
     </Compile>
     <Compile Include="Page\Manage\ZQ_set.aspx.designer.cs">
       <DependentUpon>ZQ_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_mfyproblembet.aspx.cs">
+      <DependentUpon>re_mfyproblembet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_mfyproblembet.aspx.designer.cs">
+      <DependentUpon>re_mfyproblembet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\CreateDelBet.aspx.cs">
+      <DependentUpon>CreateDelBet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\CreateDelBet.aspx.designer.cs">
+      <DependentUpon>CreateDelBet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_UpdBet.aspx.cs">
+      <DependentUpon>re_UpdBet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_UpdBet.aspx.designer.cs">
+      <DependentUpon>re_UpdBet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_Quick.aspx.cs">
+      <DependentUpon>re_Quick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_Quick.aspx.designer.cs">
+      <DependentUpon>re_Quick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_zdqr.aspx.cs">
+      <DependentUpon>re_zdqr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_zdqr.aspx.designer.cs">
+      <DependentUpon>re_zdqr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\UserTop.aspx.cs">
+      <DependentUpon>UserTop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\UserTop.aspx.designer.cs">
+      <DependentUpon>UserTop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_wrongbets.aspx.cs">
+      <DependentUpon>re_wrongbets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_wrongbets.aspx.designer.cs">
+      <DependentUpon>re_wrongbets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_RepeatCalculated.aspx.cs">
+      <DependentUpon>re_RepeatCalculated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_RepeatCalculated.aspx.designer.cs">
+      <DependentUpon>re_RepeatCalculated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_zdwqr.aspx.cs">
+      <DependentUpon>re_zdwqr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_zdwqr.aspx.designer.cs">
+      <DependentUpon>re_zdwqr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_zdxg.aspx.cs">
+      <DependentUpon>re_zdxg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_zdxg.aspx.designer.cs">
+      <DependentUpon>re_zdxg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_zdcx.aspx.cs">
+      <DependentUpon>re_zdcx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_zdcx.aspx.designer.cs">
+      <DependentUpon>re_zdcx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_iplist.aspx.cs">
+      <DependentUpon>re_iplist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_iplist.aspx.designer.cs">
+      <DependentUpon>re_iplist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_xshy.aspx.cs">
+      <DependentUpon>re_xshy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_xshy.aspx.designer.cs">
+      <DependentUpon>re_xshy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_lsbb.aspx.cs">
+      <DependentUpon>re_lsbb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_lsbb.aspx.designer.cs">
+      <DependentUpon>re_lsbb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report\re_drbb.aspx.cs">
+      <DependentUpon>re_drbb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Report\re_drbb.aspx.designer.cs">
+      <DependentUpon>re_drbb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\SystemSet\DelayedManager.aspx.cs">
       <DependentUpon>DelayedManager.aspx</DependentUpon>

@@ -72,7 +72,7 @@
                     </div>
                     <div class="collapsed">
                         <span>会员管理</span> <a href="/Page/Manage/AgentManage.aspx?dzjid=K1C&zjid=K1C11&dgdid=K1C21&gdid=K1C31">总代理管理</a> <a href="/Page/Manage/dlgl.aspx?gdid=K1C31">代理商管理</a> <a href="/Page/Manage/hygl.aspx?gdid=K1C31">会员管理</a>
-                        <a href="#">搜索会员</a> <a href="#">搜索六级</a> <a href="#">子账号管理</a> <a href="#">会员额度记录</a>
+                        <a href="/Page/Manage/cxhy.aspx">搜索会员</a> <a href="/Page/Manage/cxzh.aspx">搜索六级</a> <a href="/Page/Manage/zzhg.aspx">子账号管理</a> <a href="/Page/Manage/creditLog.aspx">会员额度记录</a>
 
                     </div>
                     <div class="collapsed">
@@ -171,7 +171,7 @@
                         <%--<a href="#">历史过关</a>--%>
                         <a href="/Page/Games/GameListRecycle.aspx?bt=b_bb">垃圾桶</a>
                     </div>
-                    <div class="collapsed">
+                   <%-- <div class="collapsed">
                         <span>特殊投注</span>
                         <a href="#">单式</a>
                         <a href="#">滚球</a>
@@ -188,7 +188,7 @@
                         <a href="#">历史过关</a>
                         <a href="#">垃圾桶</a>
                         <a href="#">早餐垃圾桶</a>
-                    </div>
+                    </div>--%>
                     <div class="collapsed">
                         <span>冰球操盘</span>
                         <a href="/Page/Games/GameListSingle.aspx?bt=b_bq">单式</a>
@@ -209,49 +209,32 @@
                     </div>
 
                     <div class="collapsed">
-                        <span>及时注单</span>
-                        <a href="#">单式</a>
+                        <span>即时注单</span>
+                       <a href="/Page/Report/re_Quick.aspx">即时注单</a>
 
                     </div>
                     <div class="collapsed">
                         <span>走地注单</span>
-                        <a href="#">单式</a>
+                        <a href="/Page/Report/re_zdqr.aspx">走地注单</a>
                     </div>
                     <div class="collapsed">
                         <span>报表查询</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Report/re_drbb.aspx">當日報表</a>
+                        <a href="/Page/Report/re_lsbb.aspx">歷史總帳</a>
+                        <a href="/Page/Report/re_xshy.aspx">線上會員</a>
+                        <a href="/Page/Report/re_iplist.aspx">登入IP統計</a>
+                        <a href="/Page/Report/re_zdcx.aspx">注單查詢</a>
+                        <a href="/Page/Report/re_zdxg.aspx">注單修改</a>
+                        <a href="/Page/Report/re_wrongbets.aspx">球头不一致注单查询</a>
+                        <a href="/Page/Report/re_zdwqr.aspx">未確認注單查詢</a>
+                        <a href="/Page/Report/re_RepeatCalculated.aspx">重复计算注单</a>
+                        <a href="/Page/Report/UserTop.aspx">会员输赢前十名</a>
+                        <a href="/Page/Report/re_UpdBet.aspx">异动注单</a>
+                        <a href="/Page/Report/CreateDelBet.aspx">创建删单</a> 
                     </div>
                     <div class="collapsed">
                         <span>网站公告</span>
-                        <a href="#">单式</a>
-                        <a href="#">滚球</a>
-                        <a href="#">过关</a>
-                        <a href="#">已开赛</a>
-                        <a href="#">历史比赛</a>
-                        <a href="#">比赛控管</a>
-                        <a href="#">新比赛预设</a>
-                        <a href="#">新比赛建立</a>
-                        <a href="#">历史查询</a>
-                        <a href="#">计算过关</a>
-                        <a href="#">联盟管理</a>
-                        <a href="#">队伍管理</a>
-                        <a href="#">历史过关</a>
-                        <a href="#">垃圾桶</a>
-                        <a href="#">早餐垃圾桶</a>
+                        <a href="/Page/Notice.aspx">公告管理</a> 
                     </div>
 
                 </div>

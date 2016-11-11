@@ -114,7 +114,7 @@ public partial class UserManagement : BasePage
 
     protected void grvUser_RowEditing(object sender, GridViewEditEventArgs e)
     {
-        this.grvUser.EditIndex = e.NewEditIndex;
+        this.grvUser.EditIndex = e.NewEditIndex; 
         this.Query();//查詢
     }
 

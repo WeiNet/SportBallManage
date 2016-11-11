@@ -73,8 +73,9 @@
                             </td>
                         </tr>
                     </table>
-                    <cc1:JXGrid ID="ZJGrid" Width="100%" runat="server" AutoGenerateColumns="False" OnDataBound="ZJGrid_DataBound"
-                        GridViewSortDirection="Ascending" GridViewSortExpression="" CssClass="grid" >
+                    
+                    <cc1:JXGrid ID="ZJGrid" CssClass="grid" Width="100%" runat="server" AutoGenerateColumns="False" OnDataBound="ZJGrid_DataBound"
+                        GridViewSortDirection="Ascending" GridViewSortExpression="" >
                         <Columns>
                             <asp:BoundField ApplyFormatInEditMode="True" DataField="n_hyzh" HeaderText="代理帳號">
                                 <ItemStyle HorizontalAlign="Center" />

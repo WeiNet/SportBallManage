@@ -700,6 +700,13 @@ function _onlyNum(obj) {
         obj.select();
     }
 }
+//限制只能輸入數字 Add by Kangco
+function _onlyNum2(obj) {
+    obj.value = obj.value.replace(/[^0-9]/g, '');
+    if (obj.value.trim() != "") {
+        obj.value = parseInt(obj.value, 10);
+    }
+}
 //限制只能輸入數字
 function onlyInt(obj) {
     obj.value = obj.value.replace(/[^0-9]/g, '');

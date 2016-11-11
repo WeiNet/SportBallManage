@@ -9,59 +9,50 @@
 
 
 
-public partial class cxhy {
+public partial class re_UpdBet {
     
     /// <summary>
-    /// trbj 控件。
+    /// delyy 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlGenericControl trbj;
+    protected global::System.Web.UI.WebControls.HiddenField delyy;
     
     /// <summary>
-    /// hidHYZH 控件。
+    /// txtkjsj 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidHYZH;
+    protected global::System.Web.UI.WebControls.TextBox txtkjsj;
     
     /// <summary>
-    /// lbzw 控件。
+    /// txtjssj 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label lbzw;
+    protected global::System.Web.UI.WebControls.TextBox txtjssj;
     
     /// <summary>
-    /// txtHYZH 控件。
+    /// btcx 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText txtHYZH;
+    protected global::System.Web.UI.WebControls.Button btcx;
     
     /// <summary>
-    /// btnQuery 控件。
+    /// JXGrid1 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnQuery;
-    
-    /// <summary>
-    /// grvQuery 控件。
-    /// </summary>
-    /// <remarks>
-    /// 自动生成的字段。
-    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    /// </remarks>
-    protected global::JXGridView.JXGrid grvQuery;
+    protected global::JXGridView.JXGrid JXGrid1;
 }

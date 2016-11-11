@@ -9,59 +9,86 @@
 
 
 
-public partial class cxhy {
+public partial class re_mfyproblembet {
     
     /// <summary>
-    /// trbj 控件。
+    /// form1 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlGenericControl trbj;
+    protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     
     /// <summary>
-    /// hidHYZH 控件。
+    /// lblType 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidHYZH;
+    protected global::System.Web.UI.WebControls.Label lblType;
     
     /// <summary>
-    /// lbzw 控件。
+    /// lblDH 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label lbzw;
+    protected global::System.Web.UI.WebControls.Label lblDH;
     
     /// <summary>
-    /// txtHYZH 控件。
+    /// txtNR 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText txtHYZH;
+    protected global::System.Web.UI.WebControls.TextBox txtNR;
     
     /// <summary>
-    /// btnQuery 控件。
+    /// txtFS 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnQuery;
+    protected global::System.Web.UI.WebControls.TextBox txtFS;
     
     /// <summary>
-    /// grvQuery 控件。
+    /// txtXT 控件。
     /// </summary>
     /// <remarks>
     /// 自动生成的字段。
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
-    protected global::JXGridView.JXGrid grvQuery;
+    protected global::System.Web.UI.WebControls.TextBox txtXT;
+    
+    /// <summary>
+    /// txtBL 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtBL;
+    
+    /// <summary>
+    /// btnSubmit 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnSubmit;
+    
+    /// <summary>
+    /// btnCancel 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnCancel;
 }

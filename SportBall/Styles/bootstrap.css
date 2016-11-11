@@ -1196,6 +1196,7 @@ input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;
+    height: 23px;
 }
 
 select,

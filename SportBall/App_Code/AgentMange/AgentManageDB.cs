@@ -188,7 +188,66 @@ using System.Web;
                 return null;
             }
         }
-
+        /// <summary>
+        /// 返回上級餘額
+        /// </summary>
+        /// <param name="N_HYZH"></param>
+        /// <param name="htab"></param>
+        public void FanHuiSJYE(KFB_ZHGL mo_zhgl, Hashtable htab)
+        {
+            if (mo_zhgl.N_HYDJ > 4)
+            {
+                string strn_hyzh = "";
+                switch (mo_zhgl.N_HYDJ.ToString())
+                {
+                    case "5": strn_hyzh = mo_zhgl.N_DZJDH; break;
+                    case "6": strn_hyzh = mo_zhgl.N_ZJDH; break;
+                    case "7": strn_hyzh = mo_zhgl.N_DGDDH; break;
+                    case "8": strn_hyzh = mo_zhgl.N_GDDH; break;
+                    case "9": strn_hyzh = mo_zhgl.N_ZDLDH; break;
+                }
+                StringBuilder strSqlup = new StringBuilder();
+                //strSqlup.Append(" update kfb_zhgl set n_syed=(n_syed+(select N_KYED from kfb_zhgl where n_hyzh='" + mo_zhgl.N_HYZH + "' ))  where n_hyzh=:n_hyzh ");
+                strSqlup.Append(" update kfb_zhgl set n_syed=(n_syed+:n_syed)  where n_hyzh=:n_hyzh ");
+                OracleParameter[] parametersup = {
+                        new OracleParameter(":n_hyzh", OracleType.VarChar,100),
+                        new OracleParameter(":n_syed", OracleType.Number,4)
+				    };
+                parametersup[0].Value = strn_hyzh;
+                parametersup[1].Value = decimal.Parse(mo_zhgl.N_KYED.ToString());
+                htab.Add(strSqlup, parametersup);
+            }
+        }
+        /// <summary>
+        /// 回收會員餘額
+        /// </summary>
+        /// <param name="N_HYZH"></param>
+        public void HuiShouHYYE(string N_HYZH, Hashtable htab)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(" update kfb_hygl set n_syed=0,n_kyed=0");
+            strSql.Append(" where n_dzjdh=:N_HYZH or n_zjdh=:N_HYZH or n_dgddh=:N_HYZH or n_gddh=:N_HYZH or n_zdldh=:N_HYZH or n_dldh=:N_HYZH");
+            OracleParameter[] parameters = {
+					new OracleParameter(":N_HYZH", OracleType.VarChar,100)
+            };
+            parameters[0].Value = N_HYZH;
+            htab.Add(strSql, parameters);
+        }
+        /// <summary>
+        /// 回收賬號餘額
+        /// </summary>
+        /// <param name="N_HYZH"></param>
+        public void HuiShouZHYE(string N_HYZH, Hashtable htab)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(" update kfb_zhgl set n_syed=0,n_kyed=0");
+            strSql.Append(" where n_dzjdh=:N_HYZH or n_zjdh=:N_HYZH or n_dgddh=:N_HYZH or n_gddh=:N_HYZH or n_zdldh=:N_HYZH or n_dldh=:N_HYZH");
+            OracleParameter[] parameters = {
+					new OracleParameter(":N_HYZH", OracleType.VarChar,100)
+            };
+            parameters[0].Value = N_HYZH;
+            htab.Add(strSql, parameters);
+        }
         /// <summary>
         /// 得到一个对象实体
         /// </summary>

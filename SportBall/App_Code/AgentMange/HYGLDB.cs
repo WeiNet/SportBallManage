@@ -1523,6 +1523,85 @@ public class KFB_HYGLDB
         }
         return DbHelperOra.Query(strSql.ToString());
     }
+    /// <summary>
+    /// 获得管理端列表
+    /// </summary>
+    public DataSet GetListZHGL(string strWhere)
+    {
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("select * ");
+        strSql.Append(" FROM KFB_ZHGL");
+        //strSql.Append(" where N_HYDJ in " + strWhere + "and substr(n_hyzh,1,1)<'9' and substr(n_hyzh,1,1)>'0'");
+        strSql.Append(" where N_HYDJ in " + strWhere);
+        strSql.Append(" ORDER BY N_ID");
+        return DbHelperOra.Query(strSql.ToString());
+    }
+    /// <summary>
+    /// 删除一条数据
+    /// </summary>
+    public void Delete(string N_HYZH)
+    {
+
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("delete KFB_ZHGL ");
+        strSql.Append(" where N_HYZH=:N_HYZH ");
+        OracleParameter[] parameters = {
+					new OracleParameter(":N_HYZH", OracleType.VarChar,50)};
+        parameters[0].Value = N_HYZH;
+
+        DbHelperOra.ExecuteSql(strSql.ToString(), parameters);
+    }
+    /// <summary>
+    /// 得到一个对象实体
+    /// </summary>
+    public KFB_ZHGL GetModelZHGL(string N_HYZH)
+    {
+
+        StringBuilder strSql = new StringBuilder();
+        strSql.Append("select N_ID,N_HYZH,N_HYMM,N_HYMC,N_HYDJ,N_XZSJ,N_HYJRSJ,N_HYXG,N_YXDL from KFB_ZHGL ");
+        strSql.Append(" where N_HYZH=:N_HYZH ");
+        OracleParameter[] parameters = {
+					new OracleParameter(":N_HYZH", OracleType.VarChar,50)};
+        parameters[0].Value = N_HYZH;
+
+        KFB_ZHGL model = new KFB_ZHGL();
+        DataSet ds = DbHelperOra.Query(strSql.ToString(), parameters);
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            if (ds.Tables[0].Rows[0]["N_ID"].ToString() != "")
+            {
+                model.N_ID = int.Parse(ds.Tables[0].Rows[0]["N_ID"].ToString());
+            }
+            model.N_HYZH = ds.Tables[0].Rows[0]["N_HYZH"].ToString();
+            model.N_HYMM = ds.Tables[0].Rows[0]["N_HYMM"].ToString();
+            model.N_HYMC = ds.Tables[0].Rows[0]["N_HYMC"].ToString();
+            if (ds.Tables[0].Rows[0]["N_HYDJ"].ToString() != "")
+            {
+                model.N_HYDJ = int.Parse(ds.Tables[0].Rows[0]["N_HYDJ"].ToString());
+            }
+            if (ds.Tables[0].Rows[0]["N_XZSJ"].ToString() != "")
+            {
+                model.N_XZSJ = DateTime.Parse(ds.Tables[0].Rows[0]["N_XZSJ"].ToString());
+            }
+            if (ds.Tables[0].Rows[0]["N_HYJRSJ"].ToString() != "")
+            {
+                model.N_HYJRSJ = DateTime.Parse(ds.Tables[0].Rows[0]["N_HYJRSJ"].ToString());
+            }
+            if (ds.Tables[0].Rows[0]["N_HYXG"].ToString() != "")
+            {
+                model.N_HYXG = DateTime.Parse(ds.Tables[0].Rows[0]["N_HYXG"].ToString());
+            }
+            if (ds.Tables[0].Rows[0]["N_YXDL"].ToString() != "")
+            {
+                model.N_YXDL = int.Parse(ds.Tables[0].Rows[0]["N_YXDL"].ToString());
+            }
+            return model;
+        }
+        else
+        {
+            return null;
+        }
+    }
     #endregion  成员方法
 }
 

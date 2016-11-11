@@ -766,4 +766,206 @@ public class Comm
         //o_list.DataSource = ds;
         //o_list.DataBind();
     }
+    /// <summary>
+    /// 二三四星判斷
+    /// </summary>
+    /// 
+    public static string Ch234Type(string strtype, string strqrps)
+    {
+        string strreturn = strtype;
+        if (strtype.Equals("二三四星"))
+        {
+            try
+            {
+                string[] temp = strqrps.Split('-');
+                switch (temp.Length)
+                {
+                    case 2:
+                        strreturn = "二三四星(二星)";
+                        break;
+                    case 3:
+                        strreturn = "二三四星(三星)";
+                        break;
+                    case 4:
+                        strreturn = "二三四星(四星)";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            { }
+        }
+        return strreturn;
+    }
+    /// <summary>
+    /// 0:超級用戶 1:系統管理者 2:帳號管理員 3:操盤手 4:總監 5:大股東 6:股東 7:總代理 8:代理 9:會員
+    /// </summary>
+    /// 
+    public static string HYDJ(string strtype)
+    {
+        string strreturn = "";
+        switch (strtype)
+        {
+            case "0": strreturn = "超級用戶"; break;
+            case "1": strreturn = "系統管理者"; break;
+            case "2": strreturn = "帳號管理員"; break;
+            case "3": strreturn = "操盤手"; break;
+            case "4": strreturn = "大總監"; break;
+            case "5": strreturn = "總監"; break;
+            case "6": strreturn = "大股東"; break;
+            case "7": strreturn = "股東"; break;
+            //玩法
+            case "8": strreturn = "總代理"; break;
+            case "9": strreturn = "代理"; break;
+            case "10": strreturn = "會員"; break;
+            case "24":
+            case "25":
+            case "26":
+            case "27":
+            case "28":
+            case "29":
+                strreturn = "報表查詢員"; break;
+
+            default: strreturn = strtype; break;
+        }
+        return strreturn;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="playType"></param>
+    /// <param name="isZC"></param>
+    /// <returns></returns>
+    public static string GetPlayName(string playType, string type)
+    {
+        string name = "";
+        switch (playType)
+        {
+            case "l_rf":
+                if (type.Equals("0"))
+                {
+                    name = "早餐让分";
+                }
+                else
+                {
+                    name = "单式让分";
+                }
+                break;
+            case "l_dx":
+                if (type.Equals("0"))
+                {
+                    name = "早餐大小";
+                }
+                else
+                {
+                    name = "单式大小";
+                }
+                break;
+            case "l_dy":
+                if (type.Equals("0"))
+                {
+                    name = "早餐独赢";
+                }
+                else
+                {
+                    name = "单式独赢";
+                }
+                break;
+            case "l_hj":
+                if (type.Equals("0"))
+                {
+                    name = "早餐和局";
+                }
+                else
+                {
+                    name = "单式和局";
+                }
+                break;
+            case "l_ys":
+                if (type.Equals("0"))
+                {
+                    name = "早餐一输二赢";
+                }
+                else
+                {
+                    name = "单式一输二赢";
+                }
+                break;
+            case "l_ds":
+                if (type.Equals("0"))
+                {
+                    name = "早餐单双";
+                }
+                else
+                {
+                    name = "单式单双";
+                }
+                break;
+            case "l_zdrf":
+                name = "滚球让分";
+                break;
+            case "l_zddx":
+                name = "滚球大小";
+                break;
+            case "l_zddy":
+                name = "滚球独赢";
+                break;
+            case "l_zdhj":
+                name = "滚球和局";
+                break;
+            case "l_gg":
+                name = "过关";
+                break;
+            default:
+                if (playType.StartsWith("l_bd"))
+                {
+                    name = "波胆";
+                }
+                else if (playType.StartsWith("l_bqc"))
+                {
+                    name = "半全场";
+                }
+                else if (playType.StartsWith("l_rqs"))
+                {
+                    name = "入球数";
+                }
+                break;
+        }
+        if (type == "3")
+        {
+            name = "过关";
+        }
+        return name;
+    }
+
+
+    public static void SaveMes(string strmes, string s_filename, string s_funtion)
+    {
+        try
+        {
+            lock (ms_LockType)
+            {
+
+                string s_Log = "C:/LOGYN";
+                DateTime dt = DateTime.Now;
+                string s_file = dt.ToString("yyyyMMdd") + "BallColog.txt";
+                if (!s_filename.Equals(""))
+                {
+                    s_file = s_filename;
+                }
+                StreamWriter sw = File.AppendText(s_Log + "/" + s_file);
+                sw.WriteLine(dt.ToLongTimeString() + ";" + strmes);
+
+                sw.Flush();
+                sw.Close();
+
+            }
+        }
+        catch (Exception exp)
+        {
+
+        }
+    }
 }

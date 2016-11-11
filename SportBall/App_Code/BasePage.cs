@@ -14,6 +14,9 @@ public class BasePage : System.Web.UI.Page
     public string mUserID;//登入者用戶ID
     public string mUserName;//使用者姓名
     public string mPageSize = ConfigurationManager.AppSettings["PageSize"].ToString();//Grid分頁之每一頁資料筆數
+    /// 登入者最高
+    /// </summary>
+    protected string ms_GROUP_LEVEL;
     /// <summary>
     /// 頁面
     /// </summary>
@@ -101,7 +104,7 @@ public class BasePage : System.Web.UI.Page
     private void SetSession()
     {
         this.mUserID = Session["UserID"].ToString();
-   
+       this.ms_GROUP_LEVEL= Session["LEVEL"].ToString();
         Session.Remove("Timeout");
        
       

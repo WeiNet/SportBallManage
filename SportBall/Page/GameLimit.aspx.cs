@@ -157,6 +157,7 @@ public partial class GameLimit : BasePage
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
+            
             string strPlayValue = Server.HtmlEncode(DataBinder.Eval(e.Row.DataItem, "N_PLAYVALUE").ToString());
             string courtType = Server.HtmlEncode(DataBinder.Eval(e.Row.DataItem, "n_courttype").ToString());
             string playName = Server.HtmlEncode(DataBinder.Eval(e.Row.DataItem, "n_playtype").ToString());
