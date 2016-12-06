@@ -189,6 +189,8 @@
     <Content Include="Page\Games\GameListPass.aspx" />
     <Content Include="Page\Games\GameListGoto.aspx" />
     <Content Include="Page\Games\GameListSingle.aspx" />
+    <Content Include="Page\Games\GamesOtherSet.aspx" />
+    <Content Include="Page\Games\GamesOtherSet.js" />
     <Content Include="Page\Games\GamesSet.aspx" />
     <Content Include="Page\Games\GamesSet.js" />
     <Content Include="Page\Games\jquery-1.8.3.min.js" />
@@ -456,6 +458,13 @@
     </Compile>
     <Compile Include="Page\Games\GameListOtherEdit.aspx.designer.cs">
       <DependentUpon>GameListOtherEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Games\GamesOtherSet.aspx.cs">
+      <DependentUpon>GamesOtherSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Games\GamesOtherSet.aspx.designer.cs">
+      <DependentUpon>GamesOtherSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Games\GamesSet.aspx.cs">
       <DependentUpon>GamesSet.aspx</DependentUpon>

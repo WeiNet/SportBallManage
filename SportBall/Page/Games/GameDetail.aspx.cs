@@ -174,15 +174,8 @@ public partial class GameDetail : BasePage
                 delyy = "";
             }
             int i = this.objBaseBallDB.DeleteBill(((Label)this.grvDetail.Rows[e.RowIndex].FindControl("lbln_xzdh")).Text, iDel, delyy, xgjl);
-            int j = this.objBaseBallDB.DeleteBillHis(((Label)this.grvDetail.Rows[e.RowIndex].FindControl("lbln_xzdh")).Text, iDel, delyy, xgjl);
-            if (i > 0 && j > 0)
-            {
-                Query("Detail");
-            }
-            else
-            {
-                this.ShowMsg("删除失败");
-            }
+            int j = this.objBaseBallDB.DeleteBillHis(((Label)this.grvDetail.Rows[e.RowIndex].FindControl("lbln_xzdh")).Text, iDel, delyy, xgjl); 
+                Query("Detail"); 
 
         }
         catch (Exception ex)

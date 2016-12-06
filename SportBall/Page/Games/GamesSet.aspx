@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GamesSet.aspx.cs" Inherits="GamesSet"  %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GamesSet.aspx.cs" Inherits="GamesSet" %>
 
 <!DOCTYPE html>
 
@@ -220,12 +220,12 @@
                     <td class="trr">場別：
                     </td>
                     <td colspan="4" class="trl">
-                        <asp:CheckBoxList Css ID="chkCB" runat="server" RepeatDirection="Horizontal">
+                        <asp:CheckBoxList ID="chkCB" runat="server" RepeatDirection="Horizontal">
                             <asp:ListItem Value="1">全場</asp:ListItem>
                             <asp:ListItem Value="2">上半場</asp:ListItem>
                             <asp:ListItem Value="4">下半場</asp:ListItem>
                         </asp:CheckBoxList>
-                        <asp:RadioButtonList Css ID="rdoCB" runat="server" RepeatDirection="Horizontal"
+                        <asp:RadioButtonList  ID="rdoCB" runat="server" RepeatDirection="Horizontal"
                             Visible="False">
                             <asp:ListItem Value="1">全場</asp:ListItem>
                             <asp:ListItem Value="2">上半場</asp:ListItem>

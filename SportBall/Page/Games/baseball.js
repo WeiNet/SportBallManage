@@ -96,25 +96,25 @@ function checkSave()
     var drpHome = document.getElementById("drpHome");
     if(drpLM.value.trim()=="-1")
     {
-        Show("G0041","");
+        alert("請選擇聯盟");
         drpLM.focus();
         return false;
     }
     if(drpVisit!=null&&drpVisit.value.trim() =="-1")
     {
-        Show("G0042","");
+        alert("請選擇球隊");
         drpVisit.focus();
         return false;
     }
     if(drpHome!=null&&drpHome.value.trim() =="-1")
     {
-        Show("G0042","");
+        alert("請選擇球隊");
         drpHome.focus();
         return false;
     }
     if(drpHome!=null&&drpVisit!=null&&drpHome.value.trim() == drpVisit.value.trim())
     {
-        Show("G0043","");
+        alert("兩個球隊不能相同;"); 
         drpHome.focus();
         return false;
     }
@@ -122,12 +122,13 @@ function checkSave()
     var txtHomeNo = document.getElementById("txtHomeNo");
     if(txtVisitNo!=null&&txtVisitNo.value.trim()=="")
     {
-        Show("G0037","");
+        
+        alert("請輸入場次編號");
         return false;
     }    
     if(txtHomeNo!=null&&txtHomeNo.value.trim()=="")
     {
-        Show("G0037","");
+        alert("請輸入場次編號");
         return false;
     }
     return true;

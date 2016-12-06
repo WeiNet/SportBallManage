@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div >
               <asp:HiddenField ID="delyy" Value="" runat="server" />
             <table class="table">
                 <tr>
@@ -56,7 +56,7 @@
                 </tr>
             </table>
             <cc1:JXGrid ID="grvDetail" runat="server" AutoGenerateColumns="False" CssClass="grid"
-                ShowFooter="false" AllowPaging="false" Width="100%"
+                ShowFooter="false" AllowPaging="false" 
                 GridViewSortDirection="Ascending" OnRowDataBound="grvDetail_RowDataBound" OnRowDeleting="grvDetail_RowDeleting">
                 <Columns>
                     <asp:BoundField DataField="n_xzrq" HeaderText="下注時間" />
@@ -105,7 +105,7 @@
                 <RowStyle Wrap="false" />
             </cc1:JXGrid>
             <cc1:JXGrid ID="grvStat" runat="server" AutoGenerateColumns="False" CssClass="grid"
-                ShowFooter="false" AllowPaging="false" Width="100%"
+                ShowFooter="false" AllowPaging="false" 
                 GridViewSortDirection="Ascending" OnRowDataBound="grvStat_RowDataBound">
                 <Columns>
                     <asp:BoundField HeaderText="下注方式" />
@@ -126,7 +126,7 @@
                 <RowStyle Wrap="false" />
             </cc1:JXGrid>
             <cc1:JXGrid ID="grvCount" runat="server" AutoGenerateColumns="False" CssClass="grid"
-                ShowFooter="false" AllowPaging="false" Width="100%"
+                ShowFooter="false" AllowPaging="false" 
                 GridViewSortDirection="Ascending" OnRowDataBound="grvCount_RowDataBound">
                 <Columns>
                     <asp:BoundField HeaderText="下注方式" />

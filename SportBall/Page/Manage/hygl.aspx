@@ -11,10 +11,10 @@
     <ul class="breadcrumb" style="margin-top: 5px">
         当前位置： <a href="#">会员管理</a>  <span
             class="divider">/</span>
-    代理管理
+    会员管理
     </ul>
     <div class="title_right" runat="server" id="trbj">
-        <strong> 代理管理</strong>
+        <strong> 会员管理</strong>
     </div>
     <div style="width: 90%; margin: auto">
         <table  class="table" style=" width:100%">

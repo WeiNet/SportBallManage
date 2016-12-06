@@ -2,6 +2,22 @@
 
 <%@ Register Assembly="JXGridView" Namespace="JXGridView" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            text-align: right;
+            border: 1px solid #96d0e5;
+            background: #EEEEEE;
+            font-size: 13;
+            vertical-align: middle;
+            height: 29px;
+        }
+        .auto-style2 {
+            text-align: left;
+            border: 1px solid #96d0e5;
+            vertical-align: middle;
+            height: 29px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder11" runat="server">
     <script src="GameLimit.js" type="text/javascript"></script>
@@ -30,7 +46,7 @@
         </table>
         <table class="table">
             <tr>
-                <td class="trr">分站编号</td>
+                <td class="trr" style="width:15%;" >分站编号</td>
                 <td class="trl">
                     <asp:TextBox runat="server" ID="txtFZBH" onblur="this.value=this.value.toUpperCase();" Width="90%"></asp:TextBox>
                 </td>
@@ -65,9 +81,9 @@
                 </td>
             </tr>
             <tr>
-                <td class="trr">4
+                <td class="auto-style1">4
                 </td>
-                <td class="trl">
+                <td class="auto-style2">
                     <asp:TextBox runat="server" ID="txt4" onkeypress="return inputNubmer()" Width="90%"></asp:TextBox>
                 </td>
             </tr>

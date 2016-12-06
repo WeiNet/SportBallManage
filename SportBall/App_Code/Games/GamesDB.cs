@@ -2165,7 +2165,8 @@ public class GamesDB : CommLib.DbCommon
     {
         StringBuilder strSql = new StringBuilder();
         strSql.Append(" select to_char(p.n_xzrq,'yyyy/mm/dd hh24:mi:ss') as n_xzrq,p.n_xzdh,p.n_xznr,");
-        strSql.Append(" n_xzwf,p.n_xzdh||'<br/>'||p.n_hyip as xzdh,p.n_hydh,");
+        strSql.Append(" case p.n_xzwf when 'l_rf' then '讓分' when 'l_dx' then '大小' when 'l_dy' then '獨贏' when 'l_hj' then '和局' when 'l_sy' then '一輸二贏' when 'l_ds' then '單雙' when 'l_bd' then '波膽' when 'l_rqs' then '入球數' when 'l_bqc' then '半全场' when 'l_zdrf' then '滾球讓分' when 'l_zddx' then '滾球大小' when 'l_zddy' then '滾球独赢' when 'l_zdhj' then '滾球和局' else n_xzwf end as n_xzwf,");
+        strSql.Append(" p.n_xzdh||'<br/>'||p.n_hyip as xzdh,p.n_hydh,");
         strSql.Append(" p.n_xzje,p.n_xzje*(1-p.n_dzjcz/100) as gsje,");
         strSql.Append(" nvl(p.n_syjg,0) as n_syjg,");
         strSql.Append(" nvl(p.n_ty,0) as n_ty,");

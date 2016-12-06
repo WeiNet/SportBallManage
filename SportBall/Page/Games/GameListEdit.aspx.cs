@@ -23,7 +23,7 @@ public partial class GameListEdit : BasePage
 {
     #region 全局变量
     private Hashtable mo_Ht = new Hashtable();
-    private GamesDB objGame = new GamesDB();
+    private GamesDB objGame = new GamesDB(); 
     private string ms_TYPE = "b_bj";
     private int mi_TYPE = -1;
     #endregion

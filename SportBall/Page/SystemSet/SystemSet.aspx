@@ -17,6 +17,12 @@
     </div>
     <div style="width: 90%; margin: auto">
         <table class="table">
+             <tr>
+                <td class="trr" style="width: 20%"></td>
+                <td style="width: 80%" align="left">
+                    <asp:Button ID="btnSave" runat="server" Text="儲存" CssClass="button" OnClick="btnSave_Click" />
+                </td>
+            </tr>
             <tr>
                 <td class="trr" style="width: 20%">系統模式：
 
@@ -95,7 +101,7 @@
 
                 </td>
                 <td class="trl" style="width: 80%">
-                    <asp:Button ID="btnreset" Enabled="false" runat="server" Text="重設" OnClick="btnreset_Click" />
+                    <asp:Button ID="btnreset" Enabled="false" runat="server" Text="重設" OnClick="btnreset_Click"  CssClass="button"/>
                 </td>
             </tr>
             <tr>
@@ -304,14 +310,7 @@
                 <td class="trl" style="width: 80%">
                     <span><span class="text_12_bklue"><a href="#">查看備份網站</a></span></span>
                 </td>
-            </tr>
-            <tr>
-                <td class="trr" style="width: 20%"></td>
-                <td style="width: 80%" align="center">
-                    <asp:Button ID="btnSave" runat="server" Text="儲存" CssClass="button" OnClick="btnSave_Click" />
-                </td>
-            </tr>
-
+            </tr> 
         </table>
 
     </div>

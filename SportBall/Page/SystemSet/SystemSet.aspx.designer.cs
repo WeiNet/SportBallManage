@@ -12,6 +12,15 @@
 public partial class SystemSet {
     
     /// <summary>
+    /// btnSave 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnSave;
+    
+    /// <summary>
     /// dropMode 控件。
     /// </summary>
     /// <remarks>
@@ -262,13 +271,4 @@ public partial class SystemSet {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtIP;
-    
-    /// <summary>
-    /// btnSave 控件。
-    /// </summary>
-    /// <remarks>
-    /// 自动生成的字段。
-    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnSave;
 }
