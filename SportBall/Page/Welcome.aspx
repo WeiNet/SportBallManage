@@ -50,12 +50,13 @@
                 <td align="center">历史过账记录</td>
             </tr>
         </table>
+
         <cc1:JXGrid ID="gridHisData" runat="server" AutoGenerateColumns="False" CssClass="grid"
             ShowFooter="false" AllowPaging="true" Width="100%">
             <Columns>
-                <asp:BoundField HeaderText="账务日期" DataField="n_zwrq" />
-                <asp:BoundField HeaderText="过账时间" DataField="n_gzsj" />
-                <asp:BoundField HeaderText="过账人员" DataField="N_XGZH" />
+                <asp:BoundField HeaderText="账务日期" DataField="n_zwrq"/>
+                <asp:BoundField HeaderText="过账时间" DataField="n_gzsj"/>
+                <asp:BoundField HeaderText="过账人员" DataField="N_XGZH"/>
             </Columns>
             <PagerStyle CssClass="Row1" />
             <SelectedRowStyle CssClass="RowSel" />
