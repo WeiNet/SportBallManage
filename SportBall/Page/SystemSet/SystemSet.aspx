@@ -17,7 +17,7 @@
     </div>
     <div style="width: 90%; margin: auto">
         <table class="table">
-             <tr>
+            <tr>
                 <td class="trr" style="width: 20%"></td>
                 <td style="width: 80%" align="left">
                     <asp:Button ID="btnSave" runat="server" Text="儲存" CssClass="button" OnClick="btnSave_Click" />
@@ -101,7 +101,7 @@
 
                 </td>
                 <td class="trl" style="width: 80%">
-                    <asp:Button ID="btnreset" Enabled="false" runat="server" Text="重設" OnClick="btnreset_Click"  CssClass="button"/>
+                    <asp:Button ID="btnreset" Enabled="false" runat="server" Text="重設" OnClick="btnreset_Click" CssClass="button" />
                 </td>
             </tr>
             <tr>
@@ -147,11 +147,21 @@
                 </td>
             </tr>
             <tr>
-                <td class="trr" style="width: 20%">滾球延遲：
+                <td class="trr" style="width: 20%">足球滾球延遲：
 
                 </td>
                 <td class="trl" style="width: 80%">
                     <input name="txtn_zdyc" runat="server" onblur="onlyInt(this);" value="0" id="txtn_zdyc"
+                        maxlength="7" type="text" size="14">
+                    （秒）
+                </td>
+            </tr>
+              <tr>
+                <td class="trr" style="width: 20%">篮球滾球延遲：
+
+                </td>
+                <td class="trl" style="width: 80%">
+                    <input name="txtn_lqzdyc" runat="server" onblur="onlyInt(this);" value="0" id="txtn_lqzdyc"
                         maxlength="7" type="text" size="14">
                     （秒）
                 </td>
@@ -229,16 +239,6 @@
                 </td>
             </tr>
             <tr>
-                <td class="trr" style="width: 20%">滾球延遲：
-
-                </td>
-                <td class="trl" style="width: 80%">
-                    <input name="txtn_zdyc" runat="server" onblur="onlyInt(this);" value="0" id="Text7"
-                        maxlength="7" type="text" size="14">
-                    （秒）
-                </td>
-            </tr>
-            <tr>
                 <td class="trr" style="width: 20%">是否启用押跳
 
                 </td>
@@ -310,7 +310,7 @@
                 <td class="trl" style="width: 80%">
                     <span><span class="text_12_bklue"><a href="#">查看備份網站</a></span></span>
                 </td>
-            </tr> 
+            </tr>
         </table>
 
     </div>

@@ -2,10 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-    .auto-style1 {
-        width: 149px;
-    }
-</style>
+        .auto-style1 {
+            width: 149px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder11" runat="server">
     <ul class="breadcrumb" style="margin-top: 5px">
@@ -21,35 +21,35 @@
             <tr>
                 <td style="width: 5%" class="title">
                     <asp:Label ID="lblball1" runat="server" Text=""></asp:Label></td>
-                <td class="title"  align="center">讓分
+                <td class="title" align="center">讓分
                 </td>
-                <td class="title"  align="center">大小
+                <td class="title" align="center">大小
                 </td>
-                <td class="title"  align="center">獨贏
+                <td class="title" align="center">獨贏
                 </td>
-                <td class="title"  align="center">單雙
+                <td class="title" align="center">單雙
                 </td>
-                <td class="title"  align="center">滾球讓分
+                <td class="title" align="center">滾球讓分
                 </td>
-                <td class="title"  align="center">滾球大小
+                <td class="title" align="center">滾球大小
                 </td>
-                <td class="title"  align="center">半場讓分
+                <td class="title" align="center">半場讓分
                 </td>
-                <td class="title"  align="center">半場大小
+                <td class="title" align="center">半場大小
                 </td>
-                <td class="title"  align="center">半場獨贏
+                <td class="title" align="center">半場獨贏
                 </td>
-                <td class="title"  align="center">入球數
+                <td class="title" align="center">入球數
                 </td>
-                <td class="title"  align="center">波膽
+                <td class="title" align="center">波膽
                 </td>
-                <td class="title"  align="center">半全場
+                <td class="title" align="center">半全場
                 </td>
-                <td class="title"  align="center">過關
+                <td class="title" align="center">過關
                 </td>
-                <td class="title"  align="center">半場讓分大小
+                <td class="title" align="center">半場讓分大小
                 </td>
-                <td class="title"  align="center">基準分
+                <td class="title" align="center">基準分
                 </td>
             </tr>
             <tr align="left">
@@ -242,10 +242,10 @@
                 <td class="trc">
                     <asp:Button ID="btnJZFUpdate" runat="server" Text="修改" CommandName="JZF" OnClick="btnUpdate_Click" CssClass="button" /></td>
             </tr>
-            
+
             <tr align="left">
                 <td colspan="19" class="trc">
-                    <asp:Button ID="btnModify" runat="server" Text="全部修改" OnClick="btnModify_Click" CssClass="button"/></td>
+                    <asp:Button ID="btnModify" runat="server" Text="全部修改" OnClick="btnModify_Click" CssClass="button" /></td>
             </tr>
             <tr align="left">
                 <td class="trc" colspan="19">跟盤賠率：讓分差距
@@ -285,7 +285,7 @@
                 <td class="title">獨贏</td>
                 <td class="title">單雙</td>
                 <td class="title">走地讓分</td>
-                <td class="title" >走地大小</td>
+                <td class="title">走地大小</td>
             </tr>
             <tr align="left">
                 <td class="trr">
@@ -318,7 +318,7 @@
                     <asp:Button ID="btnDSJZUpdate" runat="server" Text="修改" CommandName="DS" OnClick="btnJZUpdate_Click" CssClass="button" /></td>
                 <td class="trc">
                     <asp:Button ID="btnZDRFJZUpdate" runat="server" Text="修改" CommandName="ZDRF" OnClick="btnJZUpdate_Click" CssClass="button" /></td>
-                <td class="trc" class="auto-style1">
+                <td class="trc">
                     <asp:Button ID="btnZDDXJZUpdate" runat="server" Text="修改" CommandName="ZDDX" OnClick="btnJZUpdate_Click" CssClass="button" /></td>
             </tr>
             <tr align="left">

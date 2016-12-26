@@ -374,6 +374,7 @@ public partial class GamelistControl : BasePage
             this.ShowMsg("存儲失敗");
         }
     }
+
     protected void btnModify_Click(object sender, EventArgs e)
     {
 
@@ -398,6 +399,7 @@ public partial class GamelistControl : BasePage
             this.ShowMsg("全部存儲失敗");
         }
     }
+
     protected void btnJZModify_Click(object sender, EventArgs e)
     {
 
@@ -420,6 +422,7 @@ public partial class GamelistControl : BasePage
         }
         this.ShowMsg("全部存儲成功");
     }
+
     protected void btnJZUpdate_Click(object sender, EventArgs e)
     {
 
@@ -490,6 +493,7 @@ public partial class GamelistControl : BasePage
             setJZZero();
         }
     }
+
     private void setJZZero()
     {
         this.txtRFJZRate.Text = "0";
@@ -500,6 +504,7 @@ public partial class GamelistControl : BasePage
         this.txtZDDXJZRate.Text = "0";
         //this.txtSYJZRate.Text = "0";
     }
+
     private KFB_BBKG getKFB_BBKG()
     {
         KFB_BBKG o_KFB_BBKG = new KFB_BBKG();
@@ -600,6 +605,7 @@ public partial class GamelistControl : BasePage
         o_KFB_BBKG.N_BJGPDSCJ = Convert.ToSingle(this.txtDSCJ.Text);
         return o_KFB_BBKG;
     }
+
     /// <summary>
     /// 兩邊賠率加總控管(跟盤) 取得頁面欄位值
     /// </summary>

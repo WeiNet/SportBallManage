@@ -131,6 +131,7 @@ public partial class SystemSet : BasePage
                 }
                 this.txtn_ycxz.Value = DT.Rows[0]["N_YCXZ"].ToString();
                 this.txtn_zdyc.Value = DT.Rows[0]["N_ZDYC"].ToString();
+                this.txtn_lqzdyc.Value = DT.Rows[0]["N_LQZDYC"].ToString();
                 this.drpn_gbhy.Value = DT.Rows[0]["N_GBHY"].ToString();
                 this.txtIP.Text = DT.Rows[0]["N_CPIP"].ToString();
                 //o_KFB_XTSZ.N_CX;
@@ -184,6 +185,7 @@ public partial class SystemSet : BasePage
         o_KFB_XTSZ.N_WXJE = Convert.ToDecimal(this.txtn_wxje.Value);
         o_KFB_XTSZ.N_YCXZ = Convert.ToInt32(this.txtn_ycxz.Value);
         o_KFB_XTSZ.N_ZDYC = Convert.ToInt32(this.txtn_zdyc.Value);
+        o_KFB_XTSZ.N_LQZDYC = Convert.ToInt32(this.txtn_lqzdyc.Value);
         o_KFB_XTSZ.N_ZQBPL = Convert.ToDecimal(this.txtn_zqbpl.Value);
         o_KFB_XTSZ.N_ZQAPL = Convert.ToDecimal(this.txtn_zqapl.Value);
         o_KFB_XTSZ.N_GBHY = Convert.ToInt32(this.drpn_gbhy.Value);

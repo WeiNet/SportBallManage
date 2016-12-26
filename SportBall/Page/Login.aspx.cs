@@ -80,6 +80,7 @@ public partial class Login : BasePage
     //登录
     private void LoginCo(string strUserName, string strPw)
     {
+      
         bool blnIsLogin = objLogin.IsLogin(strUserName, strPw);
         string strLEVEL = objLogin.GetLEVEL(strUserName);
         if (blnIsLogin)

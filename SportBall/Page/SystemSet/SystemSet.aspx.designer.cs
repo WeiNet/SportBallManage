@@ -120,6 +120,15 @@ public partial class SystemSet {
     protected global::System.Web.UI.HtmlControls.HtmlInputText txtn_zdyc;
     
     /// <summary>
+    /// txtn_lqzdyc 控件。
+    /// </summary>
+    /// <remarks>
+    /// 自动生成的字段。
+    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputText txtn_lqzdyc;
+    
+    /// <summary>
     /// txtn_zqapl 控件。
     /// </summary>
     /// <remarks>
@@ -172,15 +181,6 @@ public partial class SystemSet {
     /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlSelect drpn_cxbb;
-    
-    /// <summary>
-    /// Text7 控件。
-    /// </summary>
-    /// <remarks>
-    /// 自动生成的字段。
-    /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlInputText Text7;
     
     /// <summary>
     /// radIsJump 控件。

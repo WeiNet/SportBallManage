@@ -17,7 +17,6 @@
                 <h1>管理系统</h1>
                 <div class="inset">
                     <!--start-main-->
-
                     <div>
                         <h2>管理登录</h2>
                         <span>
@@ -29,11 +28,11 @@
                         <span>
                             <label>密码</label></span>
                         <span>
-                            <asp:TextBox ID="textPassWord" runat="server" class="password"  TextMode="Password"></asp:TextBox></span>
+                            <asp:TextBox ID="textPassWord" runat="server" class="password" TextMode="Password"></asp:TextBox></span>
                     </div>
                     <div class="sign">
-                        <asp:Button runat="server"  class="submit" Text="登录" ID="btnLogin" OnClick="btnLogin_Click"/>
-                        
+                        <asp:Button runat="server" class="submit" Text="登录" ID="btnLogin" OnClick="btnLogin_Click" />
+
                     </div>
 
                 </div>

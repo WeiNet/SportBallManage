@@ -78,7 +78,7 @@ public class SystemSetDB
             strSql.Append("N_HUXY=:N_HUXY,");
             strSql.Append("N_WXJE=:N_WXJE,");
             strSql.Append("N_YCXZ=:N_YCXZ,");
-            strSql.Append("N_ZDYC=:N_ZDYC,");
+            strSql.Append("N_ZDYC=:N_ZDYC,"); 
             strSql.Append("N_ZQBPL=:N_ZQBPL,");
             strSql.Append("N_ZQAPL=:N_ZQAPL,");
             strSql.Append("N_GBHY=:N_GBHY,");
@@ -104,7 +104,8 @@ public class SystemSetDB
             strSql.Append("N_ISBDLOCK=:N_ISBDLOCK,");
             strSql.Append("N_ISRQSLOCK=:N_ISRQSLOCK,");
             strSql.Append("N_ISBQCLOCK=:N_ISBQCLOCK,");
-            strSql.Append("N_ISZCLOCK=:N_ISZCLOCK");
+            strSql.Append("N_ISZCLOCK=:N_ISZCLOCK,");
+            strSql.Append("N_LQZDYC=:N_LQZDYC");
             //strSql.Append(" where N_XTMS=:N_XTMS ");
             OracleParameter[] parameters = {
 					new OracleParameter(":N_XTMS", OracleType.VarChar,50),
@@ -116,7 +117,7 @@ public class SystemSetDB
 					new OracleParameter(":N_HUXY", OracleType.Float,22),
 					new OracleParameter(":N_WXJE", OracleType.Float,22),
 					new OracleParameter(":N_YCXZ", OracleType.Number,4),
-					new OracleParameter(":N_ZDYC", OracleType.Number,4),
+					new OracleParameter(":N_ZDYC", OracleType.Number,4), 
 					new OracleParameter(":N_ZQBPL", OracleType.Float,22),
 					new OracleParameter(":N_ZQAPL", OracleType.Float,22),
 					new OracleParameter(":N_GBHY", OracleType.Number,4),
@@ -142,7 +143,9 @@ public class SystemSetDB
                     new OracleParameter(":N_ISBDLOCK", OracleType.Number),
                     new OracleParameter(":N_ISRQSLOCK", OracleType.Number),
                     new OracleParameter(":N_ISBQCLOCK", OracleType.Number),
-                    new OracleParameter(":N_ISZCLOCK", OracleType.Number)};
+                    new OracleParameter(":N_ISZCLOCK", OracleType.Number),
+                    new OracleParameter(":N_LQZDYC", OracleType.Number,4)
+                                           };
             parameters[0].Value = model.N_XTMS;
             parameters[1].Value = model.N_ZWRQ;
             parameters[2].Value = model.N_GZZWRQ;
@@ -179,6 +182,7 @@ public class SystemSetDB
             parameters[33].Value = model.N_ISRQSLOCK;
             parameters[34].Value = model.N_ISBQCLOCK;
             parameters[35].Value = model.N_ISZCLOCK;
+            parameters[36].Value = model.N_LQZDYC;
 
           return  DbHelperOra.ExecuteSql(strSql.ToString(), parameters);
         }
@@ -187,9 +191,9 @@ public class SystemSetDB
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into KFB_XTSZ(");
-            strSql.Append("N_XTMS,N_ZWRQ,N_GZZWRQ,N_BLTS,N_HL,N_HUSY,N_HUXY,N_WXJE,N_YCXZ,N_ZDYC,N_ZQBPL,N_ZQAPL,N_GBHY,N_CPIP,N_GGXS,N_CX,N_XGCZ,N_HYXX,N_RZCX,N_ISGGLOCK)");
+            strSql.Append("N_XTMS,N_ZWRQ,N_GZZWRQ,N_BLTS,N_HL,N_HUSY,N_HUXY,N_WXJE,N_YCXZ,N_ZDYC,N_ZQBPL,N_ZQAPL,N_GBHY,N_CPIP,N_GGXS,N_CX,N_XGCZ,N_HYXX,N_RZCX,N_ISGGLOCK,N_LQZDYC)");
             strSql.Append(" values (");
-            strSql.Append(":N_XTMS,:N_ZWRQ,:N_GZZWRQ,:N_BLTS,:N_HL,:N_HUSY,:N_HUXY,:N_WXJE,:N_YCXZ,:N_ZDYC,:N_ZQBPL,:N_ZQAPL,:N_GBHY,:N_CPIP,:N_GGXS,:N_CX,:N_XGCZ,:N_HYXX,:N_RZCX:N_ISGGLOCK)");
+            strSql.Append(":N_XTMS,:N_ZWRQ,:N_GZZWRQ,:N_BLTS,:N_HL,:N_HUSY,:N_HUXY,:N_WXJE,:N_YCXZ,:N_ZDYC,:N_ZQBPL,:N_ZQAPL,:N_GBHY,:N_CPIP,:N_GGXS,:N_CX,:N_XGCZ,:N_HYXX,:N_RZCX,:N_ISGGLOCK,:N_LQZDYC)");
             OracleParameter[] parameters = {
 					new OracleParameter(":N_XTMS", OracleType.VarChar,50),
 					new OracleParameter(":N_ZWRQ", OracleType.DateTime),
@@ -210,7 +214,8 @@ public class SystemSetDB
 					new OracleParameter(":N_XGCZ", OracleType.Number,4),
 					new OracleParameter(":N_HYXX", OracleType.Float,22),
 					new OracleParameter(":N_RZCX", OracleType.Number,4),
-					new OracleParameter(":N_ISGGLOCK", OracleType.Number,1)};
+					new OracleParameter(":N_ISGGLOCK", OracleType.Number,1),
+                    new OracleParameter(":N_LQZDYC", OracleType.Number,4) };
             parameters[0].Value = model.N_XTMS;
             parameters[1].Value = model.N_ZWRQ;
             parameters[2].Value = model.N_GZZWRQ;
@@ -231,6 +236,7 @@ public class SystemSetDB
             parameters[17].Value = model.N_HYXX;
             parameters[18].Value = model.N_RZCX;
             parameters[19].Value = model.N_ISGGLOCK;
+            parameters[20].Value = model.N_LQZDYC;
 
           return  DbHelperOra.ExecuteSql(strSql.ToString(), parameters);
         }

@@ -18,6 +18,7 @@ using System;
         private decimal? _n_wxje;
         private int? _n_ycxz;
         private int? _n_zdyc;
+        private int? _n_lqzdyc;
         private decimal? _n_zqbpl;
         private decimal? _n_zqapl;
         private int? _n_gbhy;
@@ -125,6 +126,14 @@ using System;
         {
             set { _n_zdyc = value; }
             get { return _n_zdyc; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? N_LQZDYC
+        {
+            set { _n_lqzdyc = value; }
+            get { return _n_lqzdyc; }
         }
         /// <summary>
         /// 
