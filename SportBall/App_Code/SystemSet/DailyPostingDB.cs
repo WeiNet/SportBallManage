@@ -277,7 +277,7 @@ public class DailyPostingDB
         //n_hyjg
         StringBuilder strSql = new StringBuilder();
         strSql.Append("insert into kfb_optzd select * from kfb_ptzd ");
-        strSql.Append("where to_char(n_zwrq,'yyyy/MM/dd')=:strzwrq and n_js='1' ");
+        strSql.Append("where to_char(n_zwrq,'yyyy/MM/dd')=:strzwrq and (n_js='1' or n_del=1) ");
 
 
         OracleParameter[] parameters = {
@@ -308,7 +308,7 @@ public class DailyPostingDB
         //n_hyjg
         StringBuilder strSql2 = new StringBuilder();
         strSql2.Append(" delete from kfb_ptzd  ");
-        strSql2.Append("where to_char(n_zwrq,'yyyy/MM/dd')=:strzwrq and n_js='1' ");
+        strSql2.Append("where to_char(n_zwrq,'yyyy/MM/dd')=:strzwrq and ( n_js='1' or n_del=1) ");
 
 
         OracleParameter[] parameters2 = {

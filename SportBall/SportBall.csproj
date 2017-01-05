@@ -84,6 +84,9 @@
     <Content Include="Images\arrow_blue.gif" />
     <Content Include="Images\arrow_r.gif" />
     <Content Include="Images\blank.gif" />
+    <Content Include="Images\bodyBg.jpg" />
+    <Content Include="Images\bodyBg2.jpg" />
+    <Content Include="Images\bodyBg3.jpg" />
     <Content Include="Images\btn_disable_orange.gif" />
     <Content Include="Images\btn_orange.gif" />
     <Content Include="Images\calendar_bd.gif" />
@@ -124,6 +127,8 @@
     <Content Include="Images\SheetBkD.gif" />
     <Content Include="Images\tab_search.png" />
     <Content Include="Images\tb_titlebg.gif" />
+    <Content Include="Images\test1.jpg" />
+    <Content Include="Images\test2.jpg" />
     <Content Include="Log\2016-08-05.txt" />
     <Content Include="Log\2016-08-08.txt" />
     <Content Include="Log\2016-08-09.txt" />
@@ -198,6 +203,7 @@
     <Content Include="Page\Games\jquery.tmpl.min.js" />
     <Content Include="Page\Games\unlimitdigital.webcontrols.pager.js" />
     <Content Include="Page\IpManagement.aspx" />
+    <Content Include="Page\JavaScript1.js" />
     <Content Include="Page\Manage\AgentManage.aspx" />
     <Content Include="Page\Manage\creditLog.js" />
     <Content Include="Page\Manage\AgentManageUpd.aspx" />
@@ -270,6 +276,7 @@
     <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="Scripts\jquery-Load.js" />
     <Content Include="Scripts\jquery.json.js" />
     <Content Include="Scripts\jquery.tmpl.min.js" />
     <Content Include="Scripts\jquery1.9.0.min.js" />
@@ -299,6 +306,7 @@
     <Content Include="Styles\football.css" />
     <Content Include="Styles\jquery-ui-1.8.20.custom.css" />
     <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\loadstyle.css" />
     <Content Include="Styles\master.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config">

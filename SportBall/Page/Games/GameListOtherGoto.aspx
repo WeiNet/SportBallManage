@@ -5,6 +5,8 @@
             height: 58px;
         }
     </style>
+      <script src="../../Scripts/jquery-Load.js" type="text/javascript"></script>
+    <link href="../../Styles/loadstyle.css" rel="stylesheet" />
     <link href="../../Styles/football.css" rel="stylesheet" />
     <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
 
@@ -168,6 +170,14 @@
                 </td>
             </tr>
         </table>
+           <div class="divCenter" id="divLoadProgressbar">
+            <!--效果开始-->
+            <div class="mvTxt">Loading<span class="mvSq">.</span><span class="mvSq">.</span><span class="mvSq">.</span></div>
+            <div class="mvBox">
+                <img class="mvBtn" src="../../Images/test1.jpg" />
+            </div>
+
+        </div>
     </div>
 
 

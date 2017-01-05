@@ -7,6 +7,7 @@ queryObj.pageSize = 50;  //分页笔数
 var pagerObj, jsonObj;
 
 function pageLoad() {
+
     $("#drpCourtType").bind("change", function () {//绑定场别事件
         $("#drpPage").val(1);//分页设置为第一页
         queryObj.pageIndex = 1;
@@ -55,6 +56,23 @@ function pageLoad() {
         }
         this.value = "-1";
     });
+    var delVal = 50;
+    function autoMove() {
+        delVal++;
+        if (delVal > 400) {
+            delVal = 50;
+        }
+        $(".mvBtn").css("left", delVal);
+    }
+    setInterval(autoMove, 8);
+    var deNum = 0;
+    function autoTsq() {
+        $(".mvSq").css("color", "#F5FAFD");
+        setTimeout(function () { $(".mvSq").eq(0).css("color", "#29B6FF") }, 0);
+        setTimeout(function () { $(".mvSq").eq(1).css("color", "#29B6FF") }, 500);
+        setTimeout(function () { $(".mvSq").eq(2).css("color", "#29B6FF") }, 2000);
+    }
+    setInterval(autoTsq, 50);
     Query();
 }
 function GetBallType(strballtype) {
@@ -226,10 +244,12 @@ function showGameList(objList) {
         pagerObj.set_PagerSoure(datasource);
         pagerObj.dataBind();
     }
+    $("#divLoadProgressbar").hide();//隐藏进度条
     $.each($("#chkAll").val().split(','), function (i) {//勾选选中的联盟
         $("#leagueContainerId").find("input[value='" + this + "']").attr("checked", "checked");
     });
     $("#btnUpdate").attr("disabled", false);
+ 
 }
 function asnyloadFunc(pager) {
     pagerObj = pager;

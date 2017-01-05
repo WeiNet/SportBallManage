@@ -141,7 +141,9 @@ function Query(){
         },
         success: function(retrunJson){
             //retrunJson为返回的数据，在这里做数据绑定
-           showGameList(retrunJson);
+
+            showGameList(retrunJson);
+           
         }
     });
 }
@@ -153,7 +155,7 @@ function showGameList(objList)
     var objLM=objList[1];//联盟资料
     var count=objList[2];//比赛总比赛
     var objDate=objList[3];//系統賬務日期
-    var objZwdate;
+    var objZwdate; 
     switch (queryObj.playType)
     {
         case "0":
@@ -205,7 +207,7 @@ function showGameList(objList)
             });
             break;
     }
-  
+    
     $("#gameContainerId").empty();        
     $("#gameTemplate").tmpl(objData).appendTo("#gameContainerId");//向比赛资料模板塞资料
   
@@ -227,7 +229,8 @@ function showGameList(objList)
     $.each($("#chkAll").val().split(','), function(i){//勾选选中的联盟
         $("#leagueContainerId").find("input[value='"+this+"']").attr("checked","checked");
     });
-    $("#btnUpdate").attr("disabled",false);
+    $("#btnUpdate").attr("disabled", false);
+  
 }
 function asnyloadFunc(pager){
     pagerObj = pager;
